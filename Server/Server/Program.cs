@@ -1,4 +1,5 @@
-﻿using Server.Server;
+﻿using Server.DataBase;
+using Server.Server;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,10 +43,14 @@ namespace Server
                     case "showusers":
                         showUsers();
                         break;
+                    case "deleteuser":
+                        DeleteUser();
+                        break;
                     case "help":
                         Console.WriteLine("Commands:");
                         Console.WriteLine("  -exit");
-                        Console.WriteLine("  -showusers");
+                        Console.WriteLine("  -showUsers");
+                        Console.WriteLine("  -deleteUser");
                         Console.WriteLine("  -help");
                         break;
                     default:
@@ -57,7 +62,26 @@ namespace Server
 
         private void showUsers()
         {
-            Console.WriteLine("No users online right now...");
+            foreach (var client in _tcpServer.DataBase.Clients)
+            {
+                Console.WriteLine(client);
+            }
+        }
+
+        private void DeleteUser()
+        {
+            Console.WriteLine("Enter a name of user u want to delete: ");
+            var name = Console.ReadLine();
+
+            Console.WriteLine("Deleting user...");
+            if (_tcpServer.DataBase.Clients.Remove(_tcpServer.DataBase.GetClientByName(name)))
+            {
+                Console.WriteLine("Done!");
+            }
+            else
+            {
+                Console.WriteLine("ERROR: THIS USER DOESN'T EXIST");
+            }
         }
     }
 }
