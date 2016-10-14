@@ -12,8 +12,6 @@ namespace Stratego
 {
     public partial class StartScreen : Form
     {
-        enum state { start = 0, login = 1, register = 2 }
-        private int currentState;
         public StartScreen()
         {
             InitializeComponent();
@@ -25,11 +23,19 @@ namespace Stratego
             label1.Visible = false;
             label2.Visible = false;
             label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+            label7.Visible = false;
+            label8.Visible = false;
             backButon.Visible = false;
             confirmButton.Visible = false;
             usernameTextbox.Visible = false;
             password1Textbox.Visible = false;
             password2Textbox.Visible = false;
+            usernameTextbox.Text = "";
+            password1Textbox.Text = "";
+            password2Textbox.Text = "";
             loginButton.Visible = false;
             Register.Visible = true;
             Login.Visible = true;
@@ -38,10 +44,8 @@ namespace Stratego
         private void Login_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = global::Stratego.Properties.Resources.startscreen;
-            label3.Visible = false;
             Login.Visible = false;
             Register.Visible = false;
-            confirmButton.Visible = false;
             usernameTextbox.Visible = true;
             password1Textbox.Visible = true;
             label1.Visible = true;
@@ -56,7 +60,6 @@ namespace Stratego
             this.BackgroundImage = global::Stratego.Properties.Resources.startscreen;
             Login.Visible = false;
             Register.Visible = false;
-            loginButton.Visible = false;
             usernameTextbox.Visible = true;
             password1Textbox.Visible = true;
             password2Textbox.Visible = true;
@@ -69,12 +72,36 @@ namespace Stratego
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-
+            label8.Visible = false;
+            label7.Visible = false;
+            if(usernameTextbox.Text == "")
+            {
+                label8.Visible = true;
+                return;
+            }
+            label7.Visible = true;
         }
 
         private void confirmButton_Click(object sender, EventArgs e)
         {
-
+            label5.Visible = false;
+            label4.Visible = false;
+            label6.Visible = false;
+            if (usernameTextbox.Text == "")
+            {
+                label6.Visible = true;
+                return;
+            }
+            if (password1Textbox.Text != password2Textbox.Text)
+            {
+                label4.Visible = true;
+                return;
+            }
+            if (password1Textbox.Text == "" && password2Textbox.Text == "")
+            {
+                label5.Visible = true;
+                return;
+            }
         }
     }
 }
