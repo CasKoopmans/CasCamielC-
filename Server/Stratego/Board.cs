@@ -14,6 +14,7 @@ namespace Stratego
         public Board()
         {
             characters = new List<Character>();
+            enemyCharacters = new List<Character>();
         }
 
         //methods for own characters
