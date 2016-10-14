@@ -54,16 +54,34 @@ namespace Stratego
                     {
                         if (attacker.rank > defender.rank)
                             board.deleteEnemyCharacter(defender);
-                        if (attacker.rank < defender.rank)
-                            board.deleteCharacter(attacker);
-                        if (attacker.rank == defender.rank)
-                        {
-                            board.deleteCharacter(attacker);
-                            board.deleteEnemyCharacter(defender);
-                        }
+
+                        else if (attacker.rank < defender.rank)
+                                board.deleteCharacter(attacker);
+
+                        else if (attacker.rank == defender.rank)
+                            {
+                                board.deleteCharacter(attacker);
+                                board.deleteEnemyCharacter(defender);
+                            }
                     }
                     break;
             }
+        }
+
+        public bool checkAvailable(Character character, int targetX, int targetY)
+        {
+            int x = character.x;
+            int y = character.y;
+
+            foreach (Character other in board.getAllCharacters())
+            {
+                if (targetX == other.x && targetY == other.y)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }

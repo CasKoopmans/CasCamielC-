@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Board.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="GameLogic.cs" />
     <Compile Include="StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>

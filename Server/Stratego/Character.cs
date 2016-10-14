@@ -31,7 +31,7 @@ namespace Stratego
                 case 7: name = "Major";break;
                 case 8: name = "Colonel";break;
                 case 9: name = "General";break;
-                case 10: name = "Marshal";break;
+                case 10: name = "Marshall";break;
                 default: Console.WriteLine("not a valid rank");break;
             }
             if (isBomb)
