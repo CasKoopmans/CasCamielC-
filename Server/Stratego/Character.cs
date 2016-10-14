@@ -12,6 +12,8 @@ namespace Stratego
         public bool isBomb { get; }
         public bool isFlag { get; }
         public String name { get; }
+        public int x { set; get;}
+        public int y { set; get; }
 
         public Character(int rank, bool isBomb, bool isFlag)
         {
