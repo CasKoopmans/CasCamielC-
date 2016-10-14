@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Stratego
 {
-    public partial class Login : Form
+    public partial class StartScreen : Form
     {
-        public Login()
+        enum state { start = 0, login = 1, register = 2 }
+        private int currentState;
+        public StartScreen()
         {
             InitializeComponent();
         }
+
+        private void Login_Click(object sender, EventArgs e)
+        {
+           
+        }
+        
     }
 }
