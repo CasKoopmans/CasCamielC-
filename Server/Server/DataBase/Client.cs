@@ -12,15 +12,13 @@ namespace Server.DataBase
         public string Passsword { get; set; }
         public string TunnelId { get; set; }
         public int UniqueId { get; set; }
-        bool IsOnline { get; set; }
         protected Status ClientStatus { get; set; }
 
-        public Client(string name, string password, string tunnelId, int uniqueId, bool isOnline)
+        public Client(string name, string password, string tunnelId, int uniqueId)
         {
             Name = name;
             Passsword = password;
             TunnelId = tunnelId;
-            IsOnline = isOnline;
             UniqueId = uniqueId == 0 ? GetUniqueId(name, password) : uniqueId;
             ClientStatus = Status.CONNECTED;
         }

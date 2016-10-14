@@ -1,0 +1,60 @@
+-Nette klasse structuur: goed gebruik OO concepten (interface, overerving, delegates)
+-Gebruik van socket communicatie
+-Gebruik van file IO
+-Gebruik van threads of TPL
+-Moet een forms applicatie zijn
+-Maak gebruik van specifieke C# constructies
+-Je kan gebruik maken van 2D graphics
+
+Server:
+-oneindig aantal client verbinden
+-twee client kunnen koppelen zodat ze tegen elkaar kunnen spelen
+-lijst met verbonden clients kunnen ophalen
+-spel afhandelen
+-thread voor verbonden client (zonder tegenstander)
+-thread die één game afhandeld met twee clients
+-accounts handelen
+-account stats bijhouden
+
+Client:
+-GUI weergeven (met states voor login, tegenstander kiezen, de game, eindscherm)
+-abstracte klasse character met daaronder alle characters
+-thread die alle info doorstuurt naar server
+-speelbord die info over het bord heeft
+-spellogica
+-login 
+
+Stratego regels:
+-Beweegbare stukken mogen 1 plek links/recht voor/achter bewegen per beurt
+-scout mag meerdere plekken bewegen in een richting.
+-bomb en flag mogen niet bewegen.
+-Hoogste waarde wint het gevecht 
+-spy>Marschall
+-Miner>bomb, bomb>alles behalve Miner bomb gaat ook dood
+-gelijkspel is beide dood.
+-Wie de flag als eerst vind wint
+-als de spy de marchall aanvalt wint de spy 
+-als de marshall de spy aanvalt wint de marshall
+-bord = 10X10
+-twee meren van 2X2 waar je niet op kunt staan
+-tegenstander wint als je geen beweegbare stukken hebt
+
+
+Flag (1x)
+Bomb (6x)
+Spy (1x)
+Scout (8x)
+Miner (5x)
+Sergeant (4x)
+Lieutenant (4x)
+Captain (4x)
+Major (3x)
+Colonel (2x)
+General (1x)
+Marshall (1x)
+
+
+
+
+
+
