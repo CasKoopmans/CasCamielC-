@@ -17,9 +17,12 @@ namespace Stratego
     public partial class StartScreen : Form
     {
         private IPAddress ipAddres = IPAddress.Parse("127.0.0.1");
+        private ServerConnection serverConnection;
 
         public StartScreen()
         {
+            serverConnection = new ServerConnection(ipAddres);
+            
             FormClosing += formClosing;
             InitializeComponent(); 
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -41,26 +44,21 @@ namespace Stratego
             label6.Visible = false;
             label7.Visible = false;
             label8.Visible = false;
+            label9.Visible = false;
             noCharacterLabel.Visible = false;
             noCharacterLabel2.Visible = false;
             noCharacterLabel3.Visible = false;
-            ipLabel.Visible = false;
             backButon.Visible = false;
             confirmButton.Visible = false;
-            confirmIP.Visible = false;
             usernameTextbox.Visible = false;
             password1Textbox.Visible = false;
             password2Textbox.Visible = false;
             usernameTextbox.Text = "";
             password1Textbox.Text = "";
             password2Textbox.Text = "";
-            ipTextbox.Text = "";
             loginButton.Visible = false;
             Register.Visible = true;
             Login.Visible = true;
-            ChangeIP.Visible = true;
-            ipTextbox.Visible = false;
-            invalidIPLabel.Visible = false;
         }
 
         private void Login_Click(object sender, EventArgs e)
@@ -68,7 +66,6 @@ namespace Stratego
             this.BackgroundImage = global::Stratego.Properties.Resources.startscreen;
             Login.Visible = false;
             Register.Visible = false;
-            ChangeIP.Visible = false;
             usernameTextbox.Visible = true;
             password1Textbox.Visible = true;
             label1.Visible = true;
@@ -83,7 +80,6 @@ namespace Stratego
             this.BackgroundImage = global::Stratego.Properties.Resources.startscreen;
             Login.Visible = false;
             Register.Visible = false;
-            ChangeIP.Visible = false;
             usernameTextbox.Visible = true;
             password1Textbox.Visible = true;
             password2Textbox.Visible = true;
@@ -103,7 +99,6 @@ namespace Stratego
                 label8.Visible = true;
                 return;
             }
-            ServerConnection serverConnection = new ServerConnection(ipAddres);
             if(!serverConnection.login(usernameTextbox.Text, password1Textbox.Text))
             {
                 label7.Visible = true;
@@ -121,6 +116,7 @@ namespace Stratego
             label5.Visible = false;
             label4.Visible = false;
             label6.Visible = false;
+            label9.Visible = false;
             noCharacterLabel.Visible = false;
             noCharacterLabel2.Visible = false;
             noCharacterLabel3.Visible = false;
@@ -151,32 +147,17 @@ namespace Stratego
                 noCharacterLabel2.Visible = true;
                 noCharacterLabel3.Visible = true;
             }
-        }
-
-        private void ChangeIP_Click_1(object sender, EventArgs e)
-        {
-            this.BackgroundImage = global::Stratego.Properties.Resources.startscreen;
-            Login.Visible = false;
-            Register.Visible = false;
-            ChangeIP.Visible = false;
-            ipLabel.Visible = true;
-            ipTextbox.Visible = true;
-            confirmIP.Visible = true;
-            backButon.Visible = true;
-        }
-
-        private void confirmIP_Click_1(object sender, EventArgs e)
-        {
-            invalidIPLabel.Visible = false;
-            if (ipTextbox.Text.Contains('.') || ipTextbox.Text.Contains('0') || ipTextbox.Text.Contains('1') || ipTextbox.Text.Contains('2') || ipTextbox.Text.Contains('3') || ipTextbox.Text.Contains('4') || ipTextbox.Text.Contains('5') || ipTextbox.Text.Contains('6') || ipTextbox.Text.Contains('7') || ipTextbox.Text.Contains('8') || ipTextbox.Text.Contains('9'))
+            if (serverConnection.register(usernameTextbox.Text, password1Textbox.Text))
             {
-                ipAddres = IPAddress.Parse(ipTextbox.Text);
-                backButon_Click(sender, e);
+                if (serverConnection.login(usernameTextbox.Text, password1Textbox.Text))
+                {
+                    Lobby lobby = new Lobby();
+                    lobby.Visible = true;
+                    Visible = false;
+                }
             }
             else
-            {
-                invalidIPLabel.Visible = true;
-            }
+                label9.Visible = true;
         }
     }
 }
