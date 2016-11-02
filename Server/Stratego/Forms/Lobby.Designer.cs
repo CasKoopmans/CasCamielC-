@@ -1,6 +1,6 @@
 ﻿namespace Stratego.Forms
 {
-    partial class GameScreen
+    partial class Lobby
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lobby));
             this.SuspendLayout();
             // 
-            // GameScreen
+            // Lobby
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.BackgroundImage = global::Stratego.Properties.Resources.startscreen;
+            this.ClientSize = new System.Drawing.Size(597, 393);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "GameScreen";
+            this.Name = "Lobby";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stratego";
             this.ResumeLayout(false);

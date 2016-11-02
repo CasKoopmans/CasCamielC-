@@ -110,8 +110,8 @@ namespace Stratego
             }
             else
             {
-                GameScreen gamescreen = new GameScreen();
-                gamescreen.Visible = true;
+                Lobby lobby = new Lobby();
+                lobby.Visible = true;
                 Visible = false; 
             }
         }
