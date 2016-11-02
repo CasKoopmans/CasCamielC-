@@ -46,6 +46,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.noCharacterLabel = new System.Windows.Forms.Label();
+            this.noCharacterLabel2 = new System.Windows.Forms.Label();
+            this.noCharacterLabel3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -252,12 +255,54 @@
             this.label8.Text = "You need to fill in a username";
             this.label8.Visible = false;
             // 
+            // noCharacterLabel
+            // 
+            this.noCharacterLabel.AutoSize = true;
+            this.noCharacterLabel.BackColor = System.Drawing.Color.Transparent;
+            this.noCharacterLabel.Font = new System.Drawing.Font("Papyrus", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noCharacterLabel.ForeColor = System.Drawing.Color.Red;
+            this.noCharacterLabel.Location = new System.Drawing.Point(261, 206);
+            this.noCharacterLabel.Name = "noCharacterLabel";
+            this.noCharacterLabel.Size = new System.Drawing.Size(233, 27);
+            this.noCharacterLabel.TabIndex = 19;
+            this.noCharacterLabel.Text = "You used invalid characters";
+            this.noCharacterLabel.Visible = false;
+            // 
+            // noCharacterLabel2
+            // 
+            this.noCharacterLabel2.AutoSize = true;
+            this.noCharacterLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.noCharacterLabel2.Font = new System.Drawing.Font("Papyrus", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noCharacterLabel2.ForeColor = System.Drawing.Color.Red;
+            this.noCharacterLabel2.Location = new System.Drawing.Point(261, 233);
+            this.noCharacterLabel2.Name = "noCharacterLabel2";
+            this.noCharacterLabel2.Size = new System.Drawing.Size(154, 27);
+            this.noCharacterLabel2.TabIndex = 20;
+            this.noCharacterLabel2.Text = "You may not use:";
+            this.noCharacterLabel2.Visible = false;
+            // 
+            // noCharacterLabel3
+            // 
+            this.noCharacterLabel3.AutoSize = true;
+            this.noCharacterLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.noCharacterLabel3.Font = new System.Drawing.Font("Papyrus", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noCharacterLabel3.ForeColor = System.Drawing.Color.Red;
+            this.noCharacterLabel3.Location = new System.Drawing.Point(261, 260);
+            this.noCharacterLabel3.Name = "noCharacterLabel3";
+            this.noCharacterLabel3.Size = new System.Drawing.Size(77, 27);
+            this.noCharacterLabel3.TabIndex = 21;
+            this.noCharacterLabel3.Text = "; / \\ - _";
+            this.noCharacterLabel3.Visible = false;
+            // 
             // StartScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Stratego.Properties.Resources.startscreenlogo;
             this.ClientSize = new System.Drawing.Size(597, 393);
+            this.Controls.Add(this.noCharacterLabel3);
+            this.Controls.Add(this.noCharacterLabel2);
+            this.Controls.Add(this.noCharacterLabel);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -302,6 +347,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label noCharacterLabel;
+        private System.Windows.Forms.Label noCharacterLabel2;
+        private System.Windows.Forms.Label noCharacterLabel3;
     }
 }
 

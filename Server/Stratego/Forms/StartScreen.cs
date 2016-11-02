@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,6 +20,7 @@ namespace Stratego
             FormClosing += formClosing;
             InitializeComponent();
             this.selectForm = selectForm;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void formClosing(object sender, FormClosingEventArgs e)
@@ -38,6 +40,9 @@ namespace Stratego
             label6.Visible = false;
             label7.Visible = false;
             label8.Visible = false;
+            noCharacterLabel.Visible = false;
+            noCharacterLabel2.Visible = false;
+            noCharacterLabel3.Visible = false;
             backButon.Visible = false;
             confirmButton.Visible = false;
             usernameTextbox.Visible = false;
@@ -97,6 +102,9 @@ namespace Stratego
             label5.Visible = false;
             label4.Visible = false;
             label6.Visible = false;
+            noCharacterLabel.Visible = false;
+            noCharacterLabel2.Visible = false;
+            noCharacterLabel3.Visible = false;
             if (usernameTextbox.Text == "")
             {
                 label6.Visible = true;
@@ -112,9 +120,18 @@ namespace Stratego
                 label5.Visible = true;
                 return;
             }
+            if (usernameTextbox.Text.Contains(';') || usernameTextbox.Text.Contains('/') || usernameTextbox.Text.Contains('\\') || usernameTextbox.Text.Contains('-') || usernameTextbox.Text.Contains('_'))
+            {
+                noCharacterLabel.Visible = true;
+                noCharacterLabel2.Visible = true;
+                noCharacterLabel3.Visible = true;
+            }
+            if (password1Textbox.Text.Contains(';') || password1Textbox.Text.Contains('/') || password1Textbox.Text.Contains('\\') || password1Textbox.Text.Contains('-') || password1Textbox.Text.Contains('_'))
+            {
+                noCharacterLabel.Visible = true;
+                noCharacterLabel2.Visible = true;
+                noCharacterLabel3.Visible = true;
+            }
         }
-
-
-
     }
 }
