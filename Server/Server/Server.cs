@@ -37,6 +37,28 @@ namespace Server
             }
         }
 
+        public List<String> getSearchingClients()
+        {
+            List<String> searchingClients = new List<String>();
+            foreach (Client c in clients)
+            {
+                if (c.findingMatch)
+                {
+                    searchingClients.Add(c.name);
+                }
+            }
+                return searchingClients;
+        }
+        public List<String> getOnlineClients()
+        {
+            List<String> onlineClients = new List<String>();
+            foreach (Client c in clients)
+            {
+                onlineClients.Add(c.name);
+            }
+            return onlineClients;
+        }
+
         private bool login(String loginInfo, NetworkStream stream)
         {
             String[] namePassword = loginInfo.Split('-');
@@ -50,11 +72,13 @@ namespace Server
                 {
                     writeToStream(stream, "login_true");
                     sr.Close();
-                    clients.Add(new Client(name, stream));
+                    sr.Dispose();
+                    clients.Add(new Client(name, stream,this));
                     return true;
                 }
             }
             sr.Close();
+            sr.Dispose();
             writeToStream(stream, "login_false");
             return false;
         }
@@ -69,20 +93,22 @@ namespace Server
             while (sr.Peek() > 0)
             {
                 String otherName = sr.ReadLine().Split('-')[0];
+                Console.WriteLine("other name = "+otherName);
                 if (otherName.Equals(name))
                 {
                     writeToStream(stream, "register_false");
                     sr.Close();
+                    sr.Dispose();
                     return false;
                 }
             }
             sr.Close();
-
+            sr.Dispose();
             StreamWriter sw = new StreamWriter("login.txt", true);
             sw.WriteLine(registerInfo);
             sw.Close();
             writeToStream(stream, "register_true");
-            clients.Add(new Client(name, stream));
+            clients.Add(new Client(name, stream,this));
             return true;
         }
 

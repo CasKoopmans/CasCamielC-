@@ -3,19 +3,63 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Server
 {
     class Client
     {
-        String name { get; }
+        public String name { get; }
+        public bool findingMatch { set; get; }
         NetworkStream stream { get; }
         NetworkStream opponentStream { get; set; }
-        public Client(String name, NetworkStream stream)
+        Server server { get; }
+        public Client(String name, NetworkStream stream,Server server)
         {
             this.name = name;
             this.stream = stream;
+            this.server = server;
+            Thread listenThread = new Thread(listen);
+            listenThread.Start();
+        }
+
+        public void listen()
+        {
+            while (true)
+            {
+                String msg = readStream(stream);
+                String[] command = msg.Split('_');
+                switch (command[0])
+                {
+                    case "getonlineclients":
+                        {
+                            List<String> onlineClients = server.getOnlineClients();
+                            //onlineClients.Remove(name);  //test purpuse
+                            foreach (String s in onlineClients)
+                            {
+                                writeToStream(stream, s);
+                            }
+                            writeToStream(stream, "getonlineclientsdone");
+                        }
+                        break;
+                    case "findmatch":
+                        {
+                            findingMatch = true;
+                        }
+                        break;
+                    case "getsearchingclients":
+                        {
+                            List<String> searchingClients = server.getSearchingClients();
+                            foreach (String s in searchingClients)
+                            {
+                                writeToStream(stream, s);
+                            }
+                            writeToStream(stream, "getsearchingclientsdone");
+                        }
+                        break;
+                }   
+            }
         }
 
 

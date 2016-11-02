@@ -11,6 +11,7 @@ namespace Stratego
     class ServerConnection
     {
         NetworkStream stream { get; }
+        public string opponentName;
         public ServerConnection(IPAddress serverIP)
         {
             TcpClient tcp = new TcpClient();
@@ -18,6 +19,35 @@ namespace Stratego
             stream = tcp.GetStream();
 
         }
+
+        public void findMatch()
+        {
+            writeToStream(stream, "findmatch_");
+            String msg = readStream(stream);
+            String[] response = msg.Split('_');
+            if (response[0].Equals("matchfound"))
+            {
+                opponentName = response[1];
+            }
+        }
+
+        public List<String> getOnlineClients()
+        {
+            List<String> onlineClients = new List<String>();
+            bool done = false;
+            writeToStream(stream, "getonlineclients_");
+            while (!done)
+            {
+                String msg = readStream(stream);
+                switch (msg)
+                {
+                    case "getonlineclientsdone":done = true;break;
+                    default: onlineClients.Add(msg);break;
+                }
+            }
+            return onlineClients;
+        }
+
         public bool register(String name, String password)
         {
             writeToStream(stream, "register_" + name + "-" + password);
