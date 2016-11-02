@@ -12,6 +12,8 @@ namespace Stratego.Forms
 {
     public partial class Lobby : Form
     {
+        ServerConnection serverConnection;
+
         public Lobby()
         {
             FormClosing += formClosing;
