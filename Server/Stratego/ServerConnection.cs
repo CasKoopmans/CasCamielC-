@@ -21,6 +21,18 @@ namespace Stratego
 
         }
 
+        public void selectMatch(String opponentName)
+        {
+            writeToStream(stream,"selectmatch_" + opponentName);
+            String msg = readStream(stream);
+            String[] response = msg.Split('_');
+            if (response[0].Equals("matchfound"))
+            {
+                opponentName = response[1];
+            }
+
+        }
+
         public void findMatch()
         {
             writeToStream(stream, "findmatch_");
@@ -30,6 +42,23 @@ namespace Stratego
             {
                 opponentName = response[1];
             }
+        }
+
+        public List<String> getSearchingClients()
+        {
+            List<String> searchingClients = new List<String>();
+            bool done = false;
+            writeToStream(stream, "getsearchingclients_");
+            while (!done)
+            {
+                String msg = readStream(stream);
+                switch (msg)
+                {
+                    case "getsearchingclientsdone": done = true; break;
+                    default: searchingClients.Add(msg); break;
+                }
+            }
+            return searchingClients;
         }
 
         public List<String> getOnlineClients()
