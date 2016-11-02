@@ -18,6 +18,18 @@ namespace Stratego
             stream = tcp.GetStream();
 
         }
+        public bool register(String name, String password)
+        {
+            writeToStream(stream, "register_" + name + "-" + password);
+            String totalResponse = readStream(stream);
+            String[] response = totalResponse.Split('_');
+            if (response[0].Equals("register") && response[1].Equals("true"))
+                return true;
+            else if (response[0].Equals("register") && response[1].Equals("false"))
+                return false;
+
+            return false;
+        }
 
         public bool login(String name, String password)
         {
