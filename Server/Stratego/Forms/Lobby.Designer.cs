@@ -83,6 +83,7 @@
             this.searchingBox.Name = "searchingBox";
             this.searchingBox.Size = new System.Drawing.Size(186, 314);
             this.searchingBox.TabIndex = 13;
+            this.searchingBox.SelectedIndexChanged += new System.EventHandler(this.searchingBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -107,6 +108,7 @@
             this.searchButton.TabIndex = 15;
             this.searchButton.Text = "Find Match";
             this.searchButton.UseVisualStyleBackColor = false;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // Lobby
             // 
