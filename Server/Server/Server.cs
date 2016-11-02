@@ -50,7 +50,7 @@ namespace Server
                 {
                     writeToStream(stream, "login_true");
                     sr.Close();
-                    new Client(name, stream);
+                    clients.Add(new Client(name, stream));
                     return true;
                 }
             }
@@ -82,7 +82,7 @@ namespace Server
             sw.WriteLine(registerInfo);
             sw.Close();
             writeToStream(stream, "register_true");
-            new Client(name, stream);
+            clients.Add(new Client(name, stream));
             return true;
         }
 
