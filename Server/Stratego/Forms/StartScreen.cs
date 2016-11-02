@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Net.Sockets;
 using System.Windows.Forms;
 using Stratego.Forms;
+using System.Threading;
 
 namespace Stratego
 {
@@ -147,12 +148,9 @@ namespace Stratego
             }
             if (ServerConnection.register(usernameTextbox.Text, password1Textbox.Text))
             {
-                if (ServerConnection.login(usernameTextbox.Text, password1Textbox.Text))
-                {
                     Lobby lobby = new Lobby();
                     lobby.Visible = true;
                     Visible = false;
-                }
             }
             else
                 label9.Visible = true;

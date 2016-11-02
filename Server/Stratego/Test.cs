@@ -11,19 +11,19 @@ namespace Stratego
     {
         public Test()
         {
-            ServerConnection server = new ServerConnection(IPAddress.Parse("127.0.0.1"));
-            //System.Diagnostics.Debug.WriteLine("register = "+ server.register("Camiel2", "abc"));
-            System.Diagnostics.Debug.WriteLine("login = "+ server.login("Cas","Cas"));
+            //ServerConnection server = new ServerConnection(IPAddress.Parse("127.0.0.1"));
+            //System.Diagnostics.Debug.WriteLine("register = " + server.register("Camiel2", "abc"));
+            //System.Diagnostics.Debug.WriteLine("login = " + server.login("Cas", "Cas"));
 
-            server = new ServerConnection(IPAddress.Parse("127.0.0.1"));
-            server.register("Camiel", "Camiel");
-            List<String> players = server.getOnlineClients();
-            foreach (String s in players)
-            {
-                System.Diagnostics.Debug.WriteLine("online player = "+s);
-            }
-            while (true)
-            { }
+            //server = new ServerConnection(IPAddress.Parse("127.0.0.1"));
+            //server.register("Camiel", "Camiel");
+            //List<String> players = server.getOnlineClients();
+            //foreach (String s in players)
+            //{
+            //    System.Diagnostics.Debug.WriteLine("online player = " + s);
+            //}
+            //while (true)
+            //{ }
 
         }
     }
