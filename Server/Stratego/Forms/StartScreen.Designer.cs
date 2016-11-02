@@ -49,11 +49,7 @@
             this.noCharacterLabel = new System.Windows.Forms.Label();
             this.noCharacterLabel2 = new System.Windows.Forms.Label();
             this.noCharacterLabel3 = new System.Windows.Forms.Label();
-            this.ipLabel = new System.Windows.Forms.Label();
-            this.ipTextbox = new System.Windows.Forms.TextBox();
-            this.invalidIPLabel = new System.Windows.Forms.Label();
-            this.ChangeIP = new System.Windows.Forms.Button();
-            this.confirmIP = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -299,68 +295,18 @@
             this.noCharacterLabel3.Text = "; / \\ - _";
             this.noCharacterLabel3.Visible = false;
             // 
-            // ipLabel
+            // label9
             // 
-            this.ipLabel.AutoSize = true;
-            this.ipLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ipLabel.Font = new System.Drawing.Font("Papyrus", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ipLabel.Location = new System.Drawing.Point(12, 59);
-            this.ipLabel.Name = "ipLabel";
-            this.ipLabel.Size = new System.Drawing.Size(203, 38);
-            this.ipLabel.TabIndex = 23;
-            this.ipLabel.Text = "New IP-Addres:";
-            this.ipLabel.Visible = false;
-            // 
-            // ipTextbox
-            // 
-            this.ipTextbox.BackColor = System.Drawing.SystemColors.Window;
-            this.ipTextbox.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ipTextbox.Location = new System.Drawing.Point(261, 58);
-            this.ipTextbox.Name = "ipTextbox";
-            this.ipTextbox.Size = new System.Drawing.Size(286, 39);
-            this.ipTextbox.TabIndex = 24;
-            this.ipTextbox.Visible = false;
-            // 
-            // invalidIPLabel
-            // 
-            this.invalidIPLabel.AutoSize = true;
-            this.invalidIPLabel.BackColor = System.Drawing.Color.Transparent;
-            this.invalidIPLabel.Font = new System.Drawing.Font("Papyrus", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.invalidIPLabel.ForeColor = System.Drawing.Color.Red;
-            this.invalidIPLabel.Location = new System.Drawing.Point(261, 100);
-            this.invalidIPLabel.Name = "invalidIPLabel";
-            this.invalidIPLabel.Size = new System.Drawing.Size(154, 27);
-            this.invalidIPLabel.TabIndex = 26;
-            this.invalidIPLabel.Text = "Invalid IP-Addres";
-            this.invalidIPLabel.Visible = false;
-            // 
-            // ChangeIP
-            // 
-            this.ChangeIP.BackColor = System.Drawing.Color.Transparent;
-            this.ChangeIP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ChangeIP.BackgroundImage")));
-            this.ChangeIP.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangeIP.ForeColor = System.Drawing.Color.Silver;
-            this.ChangeIP.Location = new System.Drawing.Point(274, 321);
-            this.ChangeIP.Name = "ChangeIP";
-            this.ChangeIP.Size = new System.Drawing.Size(125, 60);
-            this.ChangeIP.TabIndex = 27;
-            this.ChangeIP.Text = "Change IP";
-            this.ChangeIP.UseVisualStyleBackColor = true;
-            this.ChangeIP.Click += new System.EventHandler(this.ChangeIP_Click_1);
-            // 
-            // confirmIP
-            // 
-            this.confirmIP.BackColor = System.Drawing.Color.Transparent;
-            this.confirmIP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("confirmIP.BackgroundImage")));
-            this.confirmIP.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmIP.ForeColor = System.Drawing.Color.Silver;
-            this.confirmIP.Location = new System.Drawing.Point(460, 321);
-            this.confirmIP.Name = "confirmIP";
-            this.confirmIP.Size = new System.Drawing.Size(125, 60);
-            this.confirmIP.TabIndex = 28;
-            this.confirmIP.Text = "Confirm";
-            this.confirmIP.UseVisualStyleBackColor = true;
-            this.confirmIP.Click += new System.EventHandler(this.confirmIP_Click_1);
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Papyrus", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(261, 206);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(204, 27);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Username already used";
+            this.label9.Visible = false;
             // 
             // StartScreen
             // 
@@ -368,11 +314,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Stratego.Properties.Resources.startscreenlogo;
             this.ClientSize = new System.Drawing.Size(597, 393);
-            this.Controls.Add(this.confirmIP);
-            this.Controls.Add(this.ChangeIP);
-            this.Controls.Add(this.invalidIPLabel);
-            this.Controls.Add(this.ipTextbox);
-            this.Controls.Add(this.ipLabel);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.noCharacterLabel3);
             this.Controls.Add(this.noCharacterLabel2);
             this.Controls.Add(this.noCharacterLabel);
@@ -423,11 +365,7 @@
         private System.Windows.Forms.Label noCharacterLabel;
         private System.Windows.Forms.Label noCharacterLabel2;
         private System.Windows.Forms.Label noCharacterLabel3;
-        private System.Windows.Forms.Label ipLabel;
-        private System.Windows.Forms.TextBox ipTextbox;
-        private System.Windows.Forms.Label invalidIPLabel;
-        private System.Windows.Forms.Button ChangeIP;
-        private System.Windows.Forms.Button confirmIP;
+        private System.Windows.Forms.Label label9;
     }
 }
 
