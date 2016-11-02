@@ -49,11 +49,11 @@
             this.noCharacterLabel = new System.Windows.Forms.Label();
             this.noCharacterLabel2 = new System.Windows.Forms.Label();
             this.noCharacterLabel3 = new System.Windows.Forms.Label();
-            this.ChangeIP = new System.Windows.Forms.Button();
             this.ipLabel = new System.Windows.Forms.Label();
             this.ipTextbox = new System.Windows.Forms.TextBox();
-            this.confirmIP = new System.Windows.Forms.Button();
             this.invalidIPLabel = new System.Windows.Forms.Label();
+            this.ChangeIP = new System.Windows.Forms.Button();
+            this.confirmIP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -299,20 +299,6 @@
             this.noCharacterLabel3.Text = "; / \\ - _";
             this.noCharacterLabel3.Visible = false;
             // 
-            // ChangeIP
-            // 
-            this.ChangeIP.BackColor = System.Drawing.Color.Transparent;
-            this.ChangeIP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ChangeIP.BackgroundImage")));
-            this.ChangeIP.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangeIP.ForeColor = System.Drawing.Color.Silver;
-            this.ChangeIP.Location = new System.Drawing.Point(274, 321);
-            this.ChangeIP.Name = "ChangeIP";
-            this.ChangeIP.Size = new System.Drawing.Size(125, 60);
-            this.ChangeIP.TabIndex = 22;
-            this.ChangeIP.Text = "Change IP";
-            this.ChangeIP.UseVisualStyleBackColor = true;
-            this.ChangeIP.Click += new System.EventHandler(this.ChangeIP_Click);
-            // 
             // ipLabel
             // 
             this.ipLabel.AutoSize = true;
@@ -335,21 +321,6 @@
             this.ipTextbox.TabIndex = 24;
             this.ipTextbox.Visible = false;
             // 
-            // confirmIP
-            // 
-            this.confirmIP.BackColor = System.Drawing.Color.Transparent;
-            this.confirmIP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("confirmIP.BackgroundImage")));
-            this.confirmIP.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmIP.ForeColor = System.Drawing.Color.Silver;
-            this.confirmIP.Location = new System.Drawing.Point(460, 321);
-            this.confirmIP.Name = "confirmIP";
-            this.confirmIP.Size = new System.Drawing.Size(125, 60);
-            this.confirmIP.TabIndex = 25;
-            this.confirmIP.Text = "Confirm";
-            this.confirmIP.UseVisualStyleBackColor = true;
-            this.confirmIP.Visible = false;
-            this.confirmIP.Click += new System.EventHandler(this.confirmIP_Click);
-            // 
             // invalidIPLabel
             // 
             this.invalidIPLabel.AutoSize = true;
@@ -363,17 +334,45 @@
             this.invalidIPLabel.Text = "Invalid IP-Addres";
             this.invalidIPLabel.Visible = false;
             // 
+            // ChangeIP
+            // 
+            this.ChangeIP.BackColor = System.Drawing.Color.Transparent;
+            this.ChangeIP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ChangeIP.BackgroundImage")));
+            this.ChangeIP.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangeIP.ForeColor = System.Drawing.Color.Silver;
+            this.ChangeIP.Location = new System.Drawing.Point(274, 321);
+            this.ChangeIP.Name = "ChangeIP";
+            this.ChangeIP.Size = new System.Drawing.Size(125, 60);
+            this.ChangeIP.TabIndex = 27;
+            this.ChangeIP.Text = "Change IP";
+            this.ChangeIP.UseVisualStyleBackColor = true;
+            this.ChangeIP.Click += new System.EventHandler(this.ChangeIP_Click_1);
+            // 
+            // confirmIP
+            // 
+            this.confirmIP.BackColor = System.Drawing.Color.Transparent;
+            this.confirmIP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("confirmIP.BackgroundImage")));
+            this.confirmIP.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmIP.ForeColor = System.Drawing.Color.Silver;
+            this.confirmIP.Location = new System.Drawing.Point(460, 321);
+            this.confirmIP.Name = "confirmIP";
+            this.confirmIP.Size = new System.Drawing.Size(125, 60);
+            this.confirmIP.TabIndex = 28;
+            this.confirmIP.Text = "Confirm";
+            this.confirmIP.UseVisualStyleBackColor = true;
+            this.confirmIP.Click += new System.EventHandler(this.confirmIP_Click_1);
+            // 
             // StartScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Stratego.Properties.Resources.startscreenlogo;
             this.ClientSize = new System.Drawing.Size(597, 393);
-            this.Controls.Add(this.invalidIPLabel);
             this.Controls.Add(this.confirmIP);
+            this.Controls.Add(this.ChangeIP);
+            this.Controls.Add(this.invalidIPLabel);
             this.Controls.Add(this.ipTextbox);
             this.Controls.Add(this.ipLabel);
-            this.Controls.Add(this.ChangeIP);
             this.Controls.Add(this.noCharacterLabel3);
             this.Controls.Add(this.noCharacterLabel2);
             this.Controls.Add(this.noCharacterLabel);
@@ -424,11 +423,11 @@
         private System.Windows.Forms.Label noCharacterLabel;
         private System.Windows.Forms.Label noCharacterLabel2;
         private System.Windows.Forms.Label noCharacterLabel3;
-        private System.Windows.Forms.Button ChangeIP;
         private System.Windows.Forms.Label ipLabel;
         private System.Windows.Forms.TextBox ipTextbox;
-        private System.Windows.Forms.Button confirmIP;
         private System.Windows.Forms.Label invalidIPLabel;
+        private System.Windows.Forms.Button ChangeIP;
+        private System.Windows.Forms.Button confirmIP;
     }
 }
 
