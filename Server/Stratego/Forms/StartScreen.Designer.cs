@@ -53,6 +53,7 @@
             this.ipLabel = new System.Windows.Forms.Label();
             this.ipTextbox = new System.Windows.Forms.TextBox();
             this.confirmIP = new System.Windows.Forms.Button();
+            this.invalidIPLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -349,12 +350,26 @@
             this.confirmIP.Visible = false;
             this.confirmIP.Click += new System.EventHandler(this.confirmIP_Click);
             // 
+            // invalidIPLabel
+            // 
+            this.invalidIPLabel.AutoSize = true;
+            this.invalidIPLabel.BackColor = System.Drawing.Color.Transparent;
+            this.invalidIPLabel.Font = new System.Drawing.Font("Papyrus", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.invalidIPLabel.ForeColor = System.Drawing.Color.Red;
+            this.invalidIPLabel.Location = new System.Drawing.Point(261, 100);
+            this.invalidIPLabel.Name = "invalidIPLabel";
+            this.invalidIPLabel.Size = new System.Drawing.Size(154, 27);
+            this.invalidIPLabel.TabIndex = 26;
+            this.invalidIPLabel.Text = "Invalid IP-Addres";
+            this.invalidIPLabel.Visible = false;
+            // 
             // StartScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Stratego.Properties.Resources.startscreenlogo;
             this.ClientSize = new System.Drawing.Size(597, 393);
+            this.Controls.Add(this.invalidIPLabel);
             this.Controls.Add(this.confirmIP);
             this.Controls.Add(this.ipTextbox);
             this.Controls.Add(this.ipLabel);
@@ -413,6 +428,7 @@
         private System.Windows.Forms.Label ipLabel;
         private System.Windows.Forms.TextBox ipTextbox;
         private System.Windows.Forms.Button confirmIP;
+        private System.Windows.Forms.Label invalidIPLabel;
     }
 }
 

@@ -60,6 +60,7 @@ namespace Stratego
             Login.Visible = true;
             ChangeIP.Visible = true;
             ipTextbox.Visible = false;
+            invalidIPLabel.Visible = false;
         }
 
         private void Login_Click(object sender, EventArgs e)
@@ -166,7 +167,16 @@ namespace Stratego
 
         private void confirmIP_Click(object sender, EventArgs e)
         {
-
+            invalidIPLabel.Visible = false;
+            if (ipTextbox.Text.Contains('.') || ipTextbox.Text.Contains('0') || ipTextbox.Text.Contains('1') || ipTextbox.Text.Contains('2') || ipTextbox.Text.Contains('3') || ipTextbox.Text.Contains('4') || ipTextbox.Text.Contains('5') || ipTextbox.Text.Contains('6') || ipTextbox.Text.Contains('7') || ipTextbox.Text.Contains('8') || ipTextbox.Text.Contains('9'))
+            {
+                ipAddres = IPAddress.Parse(ipTextbox.Text);
+                backButon_Click(sender, e);
+            }
+            else
+            {
+                invalidIPLabel.Visible = true;
+            }
         }
     }
 }
