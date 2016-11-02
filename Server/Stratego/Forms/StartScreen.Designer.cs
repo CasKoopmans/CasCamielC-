@@ -41,6 +41,11 @@
             this.password1Textbox = new System.Windows.Forms.TextBox();
             this.password2Textbox = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -167,6 +172,7 @@
             this.password1Textbox.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password1Textbox.Location = new System.Drawing.Point(261, 108);
             this.password1Textbox.Name = "password1Textbox";
+            this.password1Textbox.PasswordChar = '•';
             this.password1Textbox.Size = new System.Drawing.Size(286, 39);
             this.password1Textbox.TabIndex = 12;
             this.password1Textbox.Visible = false;
@@ -176,17 +182,87 @@
             this.password2Textbox.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password2Textbox.Location = new System.Drawing.Point(261, 155);
             this.password2Textbox.Name = "password2Textbox";
+            this.password2Textbox.PasswordChar = '•';
             this.password2Textbox.Size = new System.Drawing.Size(286, 39);
             this.password2Textbox.TabIndex = 13;
             this.password2Textbox.Visible = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Papyrus", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(256, 206);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(238, 27);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Passwords are not the same";
+            this.label4.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Papyrus", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(256, 206);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(252, 27);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "You need to fill in a password";
+            this.label5.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Papyrus", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(257, 206);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(251, 27);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "You need to fill in a username";
+            this.label6.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Papyrus", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(257, 154);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(245, 27);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Invalid password or username";
+            this.label7.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Papyrus", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(257, 155);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(251, 27);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "You need to fill in a username";
+            this.label8.Visible = false;
+            // 
             // StartScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Stratego.Properties.Resources.startscreenlogo;
             this.ClientSize = new System.Drawing.Size(597, 393);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.password2Textbox);
             this.Controls.Add(this.password1Textbox);
             this.Controls.Add(this.usernameTextbox);
@@ -199,7 +275,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "StartScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stratego";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -219,6 +297,11 @@
         private System.Windows.Forms.TextBox password1Textbox;
         private System.Windows.Forms.TextBox password2Textbox;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
 

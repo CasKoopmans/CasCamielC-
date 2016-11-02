@@ -48,16 +48,34 @@
   <ItemGroup>
     <Compile Include="Board.cs" />
     <Compile Include="Character.cs" />
-    <Compile Include="GameLogic.cs" />
-    <Compile Include="StartScreen.cs">
+    <Compile Include="Forms\GameScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartScreen.Designer.cs">
+    <Compile Include="Forms\GameScreen.Designer.cs">
+      <DependentUpon>GameScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameLogic.cs" />
+    <Compile Include="Forms\SelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectForm.Designer.cs">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StartScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StartScreen.Designer.cs">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="StartScreen.resx">
+    <EmbeddedResource Include="Forms\GameScreen.resx">
+      <DependentUpon>GameScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectForm.resx">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
