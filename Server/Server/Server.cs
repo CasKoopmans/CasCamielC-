@@ -74,12 +74,14 @@ namespace Server
                     sr.Close();
                     sr.Dispose();
                     clients.Add(new Client(name, stream,this));
+                    Console.WriteLine(name + " logged in");
                     return true;
                 }
             }
             sr.Close();
             sr.Dispose();
             writeToStream(stream, "login_false");
+            Console.WriteLine("couldn't find user "+name);
             return false;
         }
 
@@ -93,10 +95,9 @@ namespace Server
             while (sr.Peek() > 0)
             {
                 String otherName = sr.ReadLine().Split('-')[0];
-                Console.WriteLine("other name = "+otherName);
                 if (otherName.Equals(name))
                 {
-                    writeToStream(stream, "register_false");
+                    Console.WriteLine("registername already exist = "+name);
                     sr.Close();
                     sr.Dispose();
                     return false;
@@ -109,6 +110,7 @@ namespace Server
             sw.Close();
             writeToStream(stream, "register_true");
             clients.Add(new Client(name, stream,this));
+            Console.WriteLine(name+" registered");
             return true;
         }
 

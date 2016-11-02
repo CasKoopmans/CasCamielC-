@@ -58,6 +58,7 @@ namespace Server
                             writeToStream(stream, "getsearchingclientsdone");
                         }
                         break;
+                    default: Console.WriteLine("invalid command "+command[0]+" by " + name);break;
                 }   
             }
         }
