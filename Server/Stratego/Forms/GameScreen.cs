@@ -13,7 +13,7 @@ namespace Stratego.Forms
     public partial class GameScreen : Form
     {
         private SelectForm selectForm;
-
+        
         public GameScreen(SelectForm selectForm)
         {
             FormClosing += formClosing;

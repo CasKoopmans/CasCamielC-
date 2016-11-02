@@ -18,7 +18,7 @@ namespace Stratego
         public StartScreen(SelectForm selectForm)
         {
             FormClosing += formClosing;
-            InitializeComponent();
+            InitializeComponent(); 
             this.selectForm = selectForm;
             FormBorderStyle = FormBorderStyle.FixedSingle;
         }

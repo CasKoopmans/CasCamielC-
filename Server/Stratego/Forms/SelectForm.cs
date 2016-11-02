@@ -46,7 +46,7 @@ namespace Stratego
         {
             GameScreen gamescreen = new GameScreen(this);
             gamescreen.Visible = true;
-            Visible = false;
+            Visible = false; 
         }
     }
 }
