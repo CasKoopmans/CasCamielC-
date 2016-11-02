@@ -32,6 +32,12 @@ namespace Server
                 String[] command = msg.Split('_');
                 switch (command[0])
                 {
+                    case "selectmatch":
+                        {
+                            opponentStream = server.getClient(command[1]).stream;
+                            writeToStream(opponentStream, name);
+                        }
+                        break;
                     case "getonlineclients":
                         {
                             List<String> onlineClients = server.getOnlineClients();
@@ -46,6 +52,10 @@ namespace Server
                     case "findmatch":
                         {
                             findingMatch = true;
+                            String opponentName = readStream(stream);
+                            opponentStream = server.getClient(opponentName).stream;
+                            writeToStream(opponentStream, "matchfound_" + opponentName);
+
                         }
                         break;
                     case "getsearchingclients":
@@ -63,17 +73,14 @@ namespace Server
             }
         }
 
-
-
-
         private String readStream(NetworkStream stream)
         {
-            Byte[] msgLenght = new Byte[4];
-            stream.Read(msgLenght, 0, 4);
-            int lenght = BitConverter.ToInt32(msgLenght, 0);
+                Byte[] msgLenght = new Byte[4];
+                stream.Read(msgLenght, 0, 4);
+                int lenght = BitConverter.ToInt32(msgLenght, 0);
 
-            Byte[] msg = new Byte[lenght];
-            stream.Read(msg, 0, lenght);
+                Byte[] msg = new Byte[lenght];
+                stream.Read(msg, 0, lenght);
             return Encoding.ASCII.GetString(msg);
         }
 

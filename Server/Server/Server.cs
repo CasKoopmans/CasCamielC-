@@ -37,6 +37,16 @@ namespace Server
             }
         }
 
+        public Client getClient(String name)
+        {
+            foreach (Client c in clients)
+            {
+                if (c.name.Equals(name))
+                    return c;
+            }
+            return null;
+        }
+
         public List<String> getSearchingClients()
         {
             List<String> searchingClients = new List<String>();
@@ -49,6 +59,7 @@ namespace Server
             }
                 return searchingClients;
         }
+
         public List<String> getOnlineClients()
         {
             List<String> onlineClients = new List<String>();

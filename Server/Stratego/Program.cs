@@ -16,10 +16,11 @@ namespace Stratego
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartScreen());
-            ServerConnection serverConnection = new ServerConnection(IPAddress.Parse("127.0.0.1"));
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new StartScreen());
+            //ServerConnection serverConnection = new ServerConnection(IPAddress.Parse("127.0.0.1"));
+            new Test();
         }
     }
 }
