@@ -72,11 +72,13 @@ namespace Server
                 {
                     writeToStream(stream, "login_true");
                     sr.Close();
+                    sr.Dispose();
                     clients.Add(new Client(name, stream,this));
                     return true;
                 }
             }
             sr.Close();
+            sr.Dispose();
             writeToStream(stream, "login_false");
             return false;
         }
@@ -91,15 +93,17 @@ namespace Server
             while (sr.Peek() > 0)
             {
                 String otherName = sr.ReadLine().Split('-')[0];
+                Console.WriteLine("other name = "+otherName);
                 if (otherName.Equals(name))
                 {
                     writeToStream(stream, "register_false");
                     sr.Close();
+                    sr.Dispose();
                     return false;
                 }
             }
             sr.Close();
-
+            sr.Dispose();
             StreamWriter sw = new StreamWriter("login.txt", true);
             sw.WriteLine(registerInfo);
             sw.Close();
