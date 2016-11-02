@@ -16,13 +16,11 @@ namespace Stratego
 {
     public partial class StartScreen : Form
     {
-        private IPAddress ipAddres = IPAddress.Parse("127.0.0.1");
-        private ServerConnection serverConnection;
+        public static ServerConnection ServerConnection;
 
         public StartScreen()
         {
-            serverConnection = new ServerConnection(ipAddres);
-            
+            ServerConnection = new ServerConnection();
             FormClosing += formClosing;
             InitializeComponent(); 
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -99,7 +97,7 @@ namespace Stratego
                 label8.Visible = true;
                 return;
             }
-            if(!serverConnection.login(usernameTextbox.Text, password1Textbox.Text))
+            if(!ServerConnection.login(usernameTextbox.Text, password1Textbox.Text))
             {
                 label7.Visible = true;
             }
@@ -147,9 +145,9 @@ namespace Stratego
                 noCharacterLabel2.Visible = true;
                 noCharacterLabel3.Visible = true;
             }
-            if (serverConnection.register(usernameTextbox.Text, password1Textbox.Text))
+            if (ServerConnection.register(usernameTextbox.Text, password1Textbox.Text))
             {
-                if (serverConnection.login(usernameTextbox.Text, password1Textbox.Text))
+                if (ServerConnection.login(usernameTextbox.Text, password1Textbox.Text))
                 {
                     Lobby lobby = new Lobby();
                     lobby.Visible = true;
