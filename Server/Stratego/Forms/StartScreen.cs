@@ -4,29 +4,30 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Net.Sockets;
 using System.Windows.Forms;
+using Stratego.Forms;
 
 namespace Stratego
 {
     public partial class StartScreen : Form
     {
-        private SelectForm selectForm;
+        private IPAddress ipAddres = IPAddress.Parse("127.0.0.1");
 
-        public StartScreen(SelectForm selectForm)
+        public StartScreen()
         {
             FormClosing += formClosing;
             InitializeComponent(); 
-            this.selectForm = selectForm;
             FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void formClosing(object sender, FormClosingEventArgs e)
         {
-            selectForm.Visible = true;
-            Dispose();
+            Application.Exit();
         }
 
         private void backButon_Click(object sender, EventArgs e)
@@ -43,17 +44,22 @@ namespace Stratego
             noCharacterLabel.Visible = false;
             noCharacterLabel2.Visible = false;
             noCharacterLabel3.Visible = false;
+            ipLabel.Visible = false;
             backButon.Visible = false;
             confirmButton.Visible = false;
+            confirmIP.Visible = false;
             usernameTextbox.Visible = false;
             password1Textbox.Visible = false;
             password2Textbox.Visible = false;
             usernameTextbox.Text = "";
             password1Textbox.Text = "";
             password2Textbox.Text = "";
+            ipTextbox.Text = "";
             loginButton.Visible = false;
             Register.Visible = true;
             Login.Visible = true;
+            ChangeIP.Visible = true;
+            ipTextbox.Visible = false;
         }
 
         private void Login_Click(object sender, EventArgs e)
@@ -61,6 +67,7 @@ namespace Stratego
             this.BackgroundImage = global::Stratego.Properties.Resources.startscreen;
             Login.Visible = false;
             Register.Visible = false;
+            ChangeIP.Visible = false;
             usernameTextbox.Visible = true;
             password1Textbox.Visible = true;
             label1.Visible = true;
@@ -75,6 +82,7 @@ namespace Stratego
             this.BackgroundImage = global::Stratego.Properties.Resources.startscreen;
             Login.Visible = false;
             Register.Visible = false;
+            ChangeIP.Visible = false;
             usernameTextbox.Visible = true;
             password1Textbox.Visible = true;
             password2Textbox.Visible = true;
@@ -94,7 +102,17 @@ namespace Stratego
                 label8.Visible = true;
                 return;
             }
-            label7.Visible = true;
+            ServerConnection serverConnection = new ServerConnection(ipAddres);
+            if(!serverConnection.login(usernameTextbox.Text, password1Textbox.Text))
+            {
+                label7.Visible = true;
+            }
+            else
+            {
+                GameScreen gamescreen = new GameScreen();
+                gamescreen.Visible = true;
+                Visible = false; 
+            }
         }
 
         private void confirmButton_Click(object sender, EventArgs e)
@@ -132,6 +150,23 @@ namespace Stratego
                 noCharacterLabel2.Visible = true;
                 noCharacterLabel3.Visible = true;
             }
+        }
+
+        private void ChangeIP_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = global::Stratego.Properties.Resources.startscreen;
+            Login.Visible = false;
+            Register.Visible = false;
+            ChangeIP.Visible = false;
+            ipLabel.Visible = true;
+            ipTextbox.Visible = true;
+            confirmIP.Visible = true;
+            backButon.Visible = true;
+        }
+
+        private void confirmIP_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

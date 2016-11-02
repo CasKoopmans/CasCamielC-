@@ -11,21 +11,17 @@ using System.Windows.Forms;
 namespace Stratego.Forms
 {
     public partial class GameScreen : Form
-    {
-        private SelectForm selectForm;
-        
-        public GameScreen(SelectForm selectForm)
+    {        
+        public GameScreen()
         {
             FormClosing += formClosing;
             InitializeComponent();
-            this.selectForm = selectForm;
             FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void formClosing(object sender, FormClosingEventArgs e)
         {
-            selectForm.Visible = true;
-            Dispose();
+            Application.Exit();
         }
     }
 }
