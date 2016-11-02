@@ -12,9 +12,19 @@ namespace Stratego
 {
     public partial class StartScreen : Form
     {
-        public StartScreen()
+        private SelectForm selectForm;
+
+        public StartScreen(SelectForm selectForm)
         {
+            FormClosing += formClosing;
             InitializeComponent();
+            this.selectForm = selectForm;
+        }
+
+        private void formClosing(object sender, FormClosingEventArgs e)
+        {
+            selectForm.Visible = true;
+            Dispose();
         }
 
         private void backButon_Click(object sender, EventArgs e)
@@ -103,5 +113,8 @@ namespace Stratego
                 return;
             }
         }
+
+
+
     }
 }
