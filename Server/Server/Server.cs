@@ -37,6 +37,28 @@ namespace Server
             }
         }
 
+        public List<String> getSearchingClients()
+        {
+            List<String> searchingClients = new List<String>();
+            foreach (Client c in clients)
+            {
+                if (c.findingMatch)
+                {
+                    searchingClients.Add(c.name);
+                }
+            }
+                return searchingClients;
+        }
+        public List<String> getOnlineClients()
+        {
+            List<String> onlineClients = new List<String>();
+            foreach (Client c in clients)
+            {
+                onlineClients.Add(c.name);
+            }
+            return onlineClients;
+        }
+
         private bool login(String loginInfo, NetworkStream stream)
         {
             String[] namePassword = loginInfo.Split('-');
@@ -50,7 +72,7 @@ namespace Server
                 {
                     writeToStream(stream, "login_true");
                     sr.Close();
-                    clients.Add(new Client(name, stream));
+                    clients.Add(new Client(name, stream,this));
                     return true;
                 }
             }
@@ -82,7 +104,7 @@ namespace Server
             sw.WriteLine(registerInfo);
             sw.Close();
             writeToStream(stream, "register_true");
-            clients.Add(new Client(name, stream));
+            clients.Add(new Client(name, stream,this));
             return true;
         }
 
