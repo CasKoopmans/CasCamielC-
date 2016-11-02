@@ -17,6 +17,7 @@ namespace Stratego.Forms
             FormClosing += formClosing;
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            
         }
 
         private void formClosing(object sender, FormClosingEventArgs e)

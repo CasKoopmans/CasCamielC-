@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace Stratego
 {
-    class ServerConnection
+    public class ServerConnection
     {
+        private IPAddress serverIP = IPAddress.Parse("127.0.0.1");
         NetworkStream stream { get; }
         public string opponentName;
-        public ServerConnection(IPAddress serverIP)
+        public ServerConnection()
         {
             TcpClient tcp = new TcpClient();
             tcp.Connect(serverIP, 3000);
