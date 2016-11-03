@@ -13,6 +13,7 @@ namespace Stratego
         private IPAddress serverIP = IPAddress.Parse("127.0.0.1");
         NetworkStream stream { get; }
         public string opponentName;
+
         public ServerConnection()
         {
             TcpClient tcp = new TcpClient();
