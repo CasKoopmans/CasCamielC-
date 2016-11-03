@@ -41,13 +41,13 @@ namespace Stratego.Forms
 
             for(int i = 0; i<characters.Count; i++)
             {
-                if(characters[i].isRed = isRed)
+                if(characters[i].isRed != isRed)
                 {
-                    setImage(characters[i].rank, characters[i].getPosistion());
+                    paint(characters[i].getPosistion());
                 }
                 else
                 {
-                    paint(characters[i].getPosistion());
+                    setImage(characters[i].rank, characters[i].getPosistion());
                 }
             }
         }
