@@ -49,6 +49,7 @@ namespace Stratego.Forms
 
         private void formClosing(object sender, FormClosingEventArgs e)
         {
+            StartScreen.ServerConnection.disconnect();
             Application.Exit();
         }
 
