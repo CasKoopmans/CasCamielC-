@@ -37,7 +37,6 @@ namespace Server
                     case "disconnect":
                         {
                             writeToStream(stream,"OK");
-                            stream.Close();
                             server.removeClient(name);
                             disconnect = true;
                         }
