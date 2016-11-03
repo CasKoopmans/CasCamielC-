@@ -14,10 +14,11 @@ namespace Stratego
         private IPAddress serverIP = IPAddress.Parse("145.48.118.116");
         NetworkStream stream { get; }
         public string opponentName;
-        public bool yourTurn;
+        public bool yourTurn = false;
         public bool turndone;
         public bool setup = false;
         public bool isRed;
+        public bool gaming = false;
         List<Character> characters;
         Thread ingame;
 
@@ -78,9 +79,9 @@ namespace Stratego
 
         public void play()
         {
-            bool gaming = true;
-            bool firstTime = true;
+            setup = false;
             turndone = false;
+            gaming = true;
             while (gaming)
             {
                 if (!setup)
@@ -91,6 +92,7 @@ namespace Stratego
                         characters = (List<Character>)JsonConvert.DeserializeObject(readStream(stream));
                         setup = true;
                         turndone = false;
+                        yourTurn = true;
                     }
                     else if (turndone && isRed)
                     {
@@ -98,11 +100,23 @@ namespace Stratego
                         characters = (List<Character>)JsonConvert.DeserializeObject(readStream(stream));
                         setup = true;
                         turndone = true;
+                        yourTurn = false;
                     }
                 }
                 else
                 {
-
+                    if (yourTurn && turndone)
+                    {
+                        writeToStream(stream, "gameturn_" + JsonConvert.SerializeObject(characters));
+                        yourTurn = false;
+                        turndone = false;
+                    }
+                    else
+                    {
+                        characters = (List<Character>) JsonConvert.DeserializeObject(readStream(stream));
+                        yourTurn = true;
+                        turndone = false;
+                    }
                 }
             }
         }

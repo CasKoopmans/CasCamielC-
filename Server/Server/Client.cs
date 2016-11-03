@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
@@ -95,8 +96,7 @@ namespace Server
                                 characters = readStream(stream);
                                 while (opponent.characters != null)
                                 { }
-                                characters = characters + opponent.characters;
-                                opponent.characters = characters;
+                                combineCharacters();
                                 opponent.charactersUpdated = true;
                                 writeToStream(stream, characters);
                         }
@@ -104,12 +104,30 @@ namespace Server
 
                         case "gameturn":
                             {
+                                characters = readStream(stream);
+                                opponent.characters = characters;
+                                sendCharacters();
+                                opponent.sendCharacters();
                                 
                             }
                         break;
                         default: Console.WriteLine("invalid command " + command[0] + " by " + name); break;
                 }
             }
+        }
+
+        public void sendCharacters()
+        {
+            writeToStream(stream, characters);
+        }
+
+        private void combineCharacters()
+        {
+            List<Character> ownCharacters = (List<Character>)JsonConvert.DeserializeObject(characters);
+            List<Character> enemyCharacters = (List<Character>)JsonConvert.DeserializeObject(opponent.characters);
+            ownCharacters.AddRange(enemyCharacters);
+            characters = JsonConvert.SerializeObject(ownCharacters);
+            opponent.characters = characters;
         }
 
         private String readStream(NetworkStream stream)
