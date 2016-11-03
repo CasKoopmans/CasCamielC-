@@ -121,6 +121,19 @@
     <Content Include="Images\icon.ico" />
     <Content Include="Images\startscreen.png" />
     <Content Include="Images\startscreenlogo.png" />
+    <None Include="Resources\marshall.png" />
+    <None Include="Resources\general.png" />
+    <None Include="Resources\colonel.png" />
+    <None Include="Resources\major.png" />
+    <None Include="Resources\captain.png" />
+    <None Include="Resources\lieutenant.png" />
+    <None Include="Resources\sergeant.png" />
+    <None Include="Resources\miner.png" />
+    <None Include="Resources\scout.png" />
+    <None Include="Resources\spy.png" />
+    <None Include="Resources\bomb.png" />
+    <None Include="Resources\flag1.png" />
+    <None Include="Resources\flag.png" />
     <None Include="Images\waitingBack.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
