@@ -48,9 +48,10 @@ namespace Server
         }
         public void setPosistion(String posistion)
         {
-            String[] xy = posistion.Split('x')[1].Split('y');
-            x = Int32.Parse(xy[0]);
-            y = Int32.Parse(xy[1]);
+            String X = posistion.Substring(2, 1);
+            String Y = posistion.Substring(3, 1);
+            x = Int32.Parse(X);
+            y = Int32.Parse(Y);
         }
 
     }
