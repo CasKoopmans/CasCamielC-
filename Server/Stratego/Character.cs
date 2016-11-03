@@ -11,12 +11,13 @@ namespace Stratego
         public int rank { get; }
         public bool isBomb { get; }
         public bool isFlag { get; }
-        public String name { get; }
-        public int x { set; get;}
+        public string name { get; }
+        public int x { set; get; }
         public int y { set; get; }
         public bool isRed;
+        public string position;
 
-        public Character(int rank, bool isBomb, bool isFlag,bool isRed, string position)
+        public Character(int rank, bool isBomb, bool isFlag, bool isRed, string position)
         {
             this.rank = rank;
             this.isBomb = isBomb;
@@ -25,32 +26,35 @@ namespace Stratego
             setPosistion(position);
             switch (rank)
             {
-                case 1: name = "Spy";break;
-                case 2: name = "Scout";break;
-                case 3: name = "Miner";break;
-                case 4: name = "Sergeant";break;
-                case 5: name = "Lieutenant";break;
-                case 6: name = "Captain";break;
-                case 7: name = "Major";break;
-                case 8: name = "Colonel";break;
-                case 9: name = "General";break;
-                case 10: name = "Marshall";break;
-                default: Console.WriteLine("not a valid rank");break;
+                case 1: name = "Spy"; break;
+                case 2: name = "Scout"; break;
+                case 3: name = "Miner"; break;
+                case 4: name = "Sergeant"; break;
+                case 5: name = "Lieutenant"; break;
+                case 6: name = "Captain"; break;
+                case 7: name = "Major"; break;
+                case 8: name = "Colonel"; break;
+                case 9: name = "General"; break;
+                case 10: name = "Marshall"; break;
+                default: Console.WriteLine("not a valid rank"); break;
             }
             if (isBomb)
                 name = "Bomb";
             if (isFlag)
                 name = "Flag";
         }
-        public String getPosistion()
+        public string getPosistionXY()
         {
             return "x" + x + "y" + y;
         }
-        public void setPosistion(String posistion)
+        public string getPosistion()
         {
-            String[] xy = posistion.Split('x')[1].Split('y');
-            x = Int32.Parse(xy[0]);
-            y = Int32.Parse(xy[1]);
+            return position;
+        }
+
+        public void setPosistion(string posistion)
+        {
+            position = posistion;
         }
 
     }

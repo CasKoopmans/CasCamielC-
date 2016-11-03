@@ -11,10 +11,11 @@ namespace Server
         public int rank { get; }
         public bool isBomb { get; }
         public bool isFlag { get; }
-        public String name { get; }
+        public string name { get; }
         public int x { set; get; }
         public int y { set; get; }
         public bool isRed;
+        public string position;
 
         public Character(int rank, bool isBomb, bool isFlag, bool isRed, string position)
         {
@@ -42,16 +43,18 @@ namespace Server
             if (isFlag)
                 name = "Flag";
         }
-        public String getPosistion()
+        public string getPosistionXY()
         {
             return "x" + x + "y" + y;
         }
-        public void setPosistion(String posistion)
+        public string getPosistion()
         {
-            String X = posistion.Substring(2, 1);
-            String Y = posistion.Substring(3, 1);
-            x = Int32.Parse(X);
-            y = Int32.Parse(Y);
+            return position;
+        }
+
+        public void setPosistion(string posistion)
+        {
+            position = posistion;
         }
 
     }
