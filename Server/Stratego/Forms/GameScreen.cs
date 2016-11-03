@@ -14,7 +14,7 @@ namespace Stratego.Forms
     public partial class GameScreen : Form
     {
         private string opponent, positionSelected;
-        private int tempRank, tempChar;
+        private int tempRank, tempChar =-1;
         private bool isRed, isFlag, isBomb, gameStarted = false, selected = false, myTurn;
         private List<Character> characters = new List<Character>();
 
@@ -1038,6 +1038,8 @@ namespace Stratego.Forms
 
         private void topHalfClick(string position)
         {
+            if(gameStarted)
+            characters = StartScreen.ServerConnection.characters;
             if (!isRed && !gameStarted && selected)
             {
                 for (int i = 0; i<characters.Count; i++)
@@ -1056,12 +1058,14 @@ namespace Stratego.Forms
 
             if (gameStarted && myTurn)
             {
-                if (selected)
+                if (tempChar!=-1)
                 {
+                    bool available = true;
                     for (int i = 0; i<characters.Count; i++)
                     {
                         if(characters[i].getPosistion() == position)
                         {
+                            available = false;
                             if(characters[i].isRed != isRed)
                             {
                                 int xp = position[1];
@@ -1085,45 +1089,44 @@ namespace Stratego.Forms
                                 }
                             }
                         }
-                        else
+                        
+                    }
+                    if (available)
+                    {
+                        char x = position[1];
+                        int xp = Int32.Parse(x.ToString());
+
+                        char y = position[3];
+                        int yp = Int32.Parse(y.ToString());
+
+                        char xx = positionSelected[1];
+                        int xs = Int32.Parse(xx.ToString());
+                        char yy = positionSelected[3];
+                        int ys = Int32.Parse(yy.ToString());
+
+                        if (xs == xp - 1 && ys == yp)
                         {
-                            char x = position[1];
-                            int xp = Int32.Parse(x.ToString());
-
-                            char y = position[3];
-                            int yp = Int32.Parse(y.ToString());
-
-                            char xx = positionSelected[1];
-                            int xs = Int32.Parse(xx.ToString());
-                            char yy = positionSelected[3];
-                            int ys = Int32.Parse(yy.ToString());
-
-                            if (xs == xp - 1 && ys == yp)
-                            {
-                                characters[i].setPosistion(position);
-                                GameScreen_Load();
-                                selected = false;
-                            }
-                            else if (xs == xp + 1 && ys == yp)
-                            {
-                                characters[i].setPosistion(position);
-                                GameScreen_Load();
-                                selected = false;
-                            }
-                            else if (xs == xp && ys == yp - 1)
-                            {
-                                characters[i].setPosistion(position);
-                                GameScreen_Load();
-                                selected = false;
-                            }
-                            else if (xs == xp && ys == yp + 1)
-                            {
-                                characters[i].setPosistion(position);
-                                GameScreen_Load();
-                                selected = false;
-                            }
+                            characters[tempChar].setPosistion(position);
+                            GameScreen_Load();
+                        }
+                        else if (xs == xp + 1 && ys == yp)
+                        {
+                            characters[tempChar].setPosistion(position);
+                            GameScreen_Load();
+                        }
+                        else if (xs == xp && ys == yp - 1)
+                        {
+                            characters[tempChar].setPosistion(position);
+                            GameScreen_Load();
+                        }
+                        else if (xs == xp && ys == yp + 1)
+                        {
+                            characters[tempChar].setPosistion(position);
+                            GameScreen_Load();
                         }
                     }
+                    tempChar = -1;
+                    
                 }
                 else
                 {
@@ -1144,10 +1147,14 @@ namespace Stratego.Forms
                     }
                 }
             }
+            if(gameStarted)
+            StartScreen.ServerConnection.characters = characters;
         }
 
         private void downHalfClick(string position)
         {
+            if(gameStarted)
+            characters = StartScreen.ServerConnection.characters;
             if (isRed && !gameStarted && selected)
             {
                 for (int i = 0; i < characters.Count; i++)
@@ -1166,12 +1173,14 @@ namespace Stratego.Forms
 
             if (gameStarted && myTurn)
             {
-                if (selected)
+                if (tempChar!=-1)
                 {
+                    bool available = true;
                     for (int i = 0; i < characters.Count; i++)
                     {
                         if (characters[i].getPosistion() == position)
                         {
+                            available = false;
                             if (characters[i].isRed != isRed)
                             {
                                 int xp = position[1];
@@ -1195,41 +1204,44 @@ namespace Stratego.Forms
                                 }
                             }
                         }
-                        else
+                        
+                       
+                    }
+                    if (available)
+                    {
+                        char x = position[1];
+                        int xp = Int32.Parse(x.ToString());
+
+                        char y = position[3];
+                        int yp = Int32.Parse(y.ToString());
+
+                        char xx = positionSelected[1];
+                        int xs = Int32.Parse(xx.ToString());
+                        char yy = positionSelected[3];
+                        int ys = Int32.Parse(yy.ToString());
+
+                        if (xs == xp - 1 && ys == yp)
                         {
-                            char x = position[1];
-                            int xp = Int32.Parse(x.ToString());
-
-                            char y = position[3];
-                            int yp = Int32.Parse(y.ToString());
-
-                            char xx = positionSelected[1];
-                            int xs = Int32.Parse(xx.ToString());
-                            char yy = positionSelected[3];
-                            int ys = Int32.Parse(yy.ToString());
-
-                            if (xs == xp - 1 && ys == yp)
-                            {
-                                characters[i].setPosistion(position);
-                                GameScreen_Load();
-                            }
-                            else if (xs == xp + 1 && ys == yp)
-                            {
-                                characters[i].setPosistion(position);
-                                GameScreen_Load();
-                            }
-                            else if (xs == xp && ys == yp - 1)
-                            {
-                                characters[i].setPosistion(position);
-                                GameScreen_Load();
-                            }
-                            else if (xs == xp && ys == yp + 1)
-                            {
-                                characters[i].setPosistion(position);
-                                GameScreen_Load();
-                            }
+                            characters[tempChar].setPosistion(position);
+                            GameScreen_Load();
+                        }
+                        else if (xs == xp + 1 && ys == yp)
+                        {
+                            characters[tempChar].setPosistion(position);
+                            GameScreen_Load();
+                        }
+                        else if (xs == xp && ys == yp - 1)
+                        {
+                            characters[tempChar].setPosistion(position);
+                            GameScreen_Load();
+                        }
+                        else if (xs == xp && ys == yp + 1)
+                        {
+                            characters[tempChar].setPosistion(position);
+                            GameScreen_Load();
                         }
                     }
+                    tempChar = -1;
                 }
                 else
                 {
@@ -1240,15 +1252,20 @@ namespace Stratego.Forms
                             if (characters[i].getPosistion() == position)
                             {
                                 tempChar = i;
+                                Console.WriteLine(tempRank +"before");
                                 tempRank = characters[i].rank;
+                                Console.WriteLine(tempRank);
                                 positionSelected = position;
                                 selected = true;
                                 break;
                             }
                         }
                     }
+
                 }
             }
+            if(gameStarted)
+            StartScreen.ServerConnection.characters = characters;
         }
 
         private void setImage(int rank, string position)
