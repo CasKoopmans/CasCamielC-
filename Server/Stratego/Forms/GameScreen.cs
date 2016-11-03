@@ -1058,7 +1058,7 @@ namespace Stratego.Forms
 
             if (gameStarted && myTurn)
             {
-                if (tempChar!=-1)
+                if (tempChar!=-1 && tempRank !=0 && tempRank !=11 )
                 {
                     bool available = true;
                     for (int i = 0; i<characters.Count; i++)
@@ -1173,7 +1173,7 @@ namespace Stratego.Forms
 
             if (gameStarted && myTurn)
             {
-                if (tempChar!=-1)
+                if (tempChar != -1 && tempRank != 0 && tempRank != 11)
                 {
                     bool available = true;
                     for (int i = 0; i < characters.Count; i++)
@@ -1252,10 +1252,8 @@ namespace Stratego.Forms
                             if (characters[i].getPosistion() == position)
                             {
                                 tempChar = i;
-                                Console.WriteLine(tempRank +"before");
                                 tempRank = characters[i].rank;
                                 Console.WriteLine(tempRank);
-                                positionSelected = position;
                                 selected = true;
                                 break;
                             }
@@ -1298,7 +1296,10 @@ namespace Stratego.Forms
             for(int i = 0; i<characters.Count; i++)
             {
                 if (characters[i].getPosistion() == positiondefender)
+                {
                     defender = characters[i];
+                    break;
+                }
             }
 
             switch (attacker.name)
