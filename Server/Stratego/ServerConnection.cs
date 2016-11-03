@@ -111,7 +111,7 @@ namespace Stratego
                         yourTurn = false;
                         turndone = false;
                     }
-                    else
+                    else if(!yourTurn)
                     {
                         characters = (List<Character>) JsonConvert.DeserializeObject<List<Character>>(readStream(stream));
                         yourTurn = true;

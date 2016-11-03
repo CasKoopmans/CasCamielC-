@@ -46,11 +46,12 @@ namespace Stratego.Forms
                 if (gameStarted)
                 {
                     myTurn = StartScreen.ServerConnection.yourTurn;
-                    if (myOldTurn != myTurn)
+                    if(myOldTurn != myTurn)
                     {
                         if (myTurn == false)
                         {
                             StartScreen.ServerConnection.characters = characters;
+
                         }
                         else
                         {
@@ -1053,7 +1054,7 @@ namespace Stratego.Forms
                 ConfirmSetup.Visible = false;
                 errorlabel.Visible = false;
 
-            myTurn = StartScreen.ServerConnection.yourTurn;
+            
 
                 while (!StartScreen.ServerConnection.setup)
                 {
@@ -1070,8 +1071,6 @@ namespace Stratego.Forms
 
         private void topHalfClick(string position)
         {
-            if(gameStarted)
-            characters = StartScreen.ServerConnection.characters;
 
             if (!isRed && !gameStarted && selected)
             {
@@ -1161,6 +1160,7 @@ namespace Stratego.Forms
                             characters[tempChar].setPosistion(position);
                             GameScreen_Load();
                         }
+                        StartScreen.ServerConnection.turndone = true;
                     }
                     tempChar = -1;
                     
@@ -1184,14 +1184,12 @@ namespace Stratego.Forms
                     }
                 }
             }
-            if(gameStarted)
-            StartScreen.ServerConnection.characters = characters;
+
         }
 
         private void downHalfClick(string position)
         {
-            if(gameStarted)
-            characters = StartScreen.ServerConnection.characters;
+
             if (isRed && !gameStarted && selected)
             {
                 for (int i = 0; i < characters.Count; i++)
@@ -1279,6 +1277,7 @@ namespace Stratego.Forms
                             characters[tempChar].setPosistion(position);
                             GameScreen_Load();
                         }
+                        StartScreen.ServerConnection.turndone = true;
                     }
                     tempChar = -1;
                 }
@@ -1301,8 +1300,6 @@ namespace Stratego.Forms
 
                 }
             }
-            if(gameStarted)
-            StartScreen.ServerConnection.characters = characters;
         }
 
         private void setImage(int rank, string position)
