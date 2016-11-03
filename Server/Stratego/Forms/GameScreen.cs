@@ -57,209 +57,278 @@ namespace Stratego.Forms
         #region CharacterButtons
         private void flag_Click(object sender, EventArgs e) 
         {
-            flag.Visible = false;
-            tempRank = 0;
-            isFlag = true;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                flag.Visible = false;
+                tempRank = 0;
+                isFlag = true;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void bomb1_Click(object sender, EventArgs e)
         {
-            bomb1.Visible = false;
-            tempRank = 11;
-            isFlag = false;
-            isBomb = true;
-            selected = true;
+            if (!selected)
+            {
+                bomb1.Visible = false;
+                tempRank = 11;
+                isFlag = false;
+                isBomb = true;
+                selected = true;
+            }
         }
 
         private void bomb2_Click(object sender, EventArgs e)
         {
-            bomb2.Visible = false;
-            tempRank = 11;
-            isFlag = false;
-            isBomb = true;
-            selected = true;
+            if (!selected)
+            {
+                bomb2.Visible = false;
+                tempRank = 11;
+                isFlag = false;
+                isBomb = true;
+                selected = true;
+            }
         }
 
         private void bomb3_Click(object sender, EventArgs e)
         {
-            bomb3.Visible = false;
-            tempRank = 11;
-            isFlag = false;
-            isBomb = true;
-            selected = true;
+            if (!selected)
+            {
+                bomb3.Visible = false;
+                tempRank = 11;
+                isFlag = false;
+                isBomb = true;
+                selected = true;
+            }
         }
 
         private void bomb4_Click(object sender, EventArgs e)
         {
-            bomb4.Visible = false;
-            tempRank = 11;
-            isFlag = false;
-            isBomb = true;
-            selected = true;
+            if (!selected)
+            {
+                bomb4.Visible = false;
+                tempRank = 11;
+                isFlag = false;
+                isBomb = true;
+                selected = true;
+            }
         }
 
         private void bomb5_Click(object sender, EventArgs e)
         {
-            bomb5.Visible = false;
-            tempRank = 11;
-            isFlag = false;
-            isBomb = true;
-            selected = true;
+            if (!selected)
+            {
+                bomb5.Visible = false;
+                tempRank = 11;
+                isFlag = false;
+                isBomb = true;
+                selected = true;
+            }
         }
 
         private void bomb6_Click(object sender, EventArgs e)
         {
-            bomb6.Visible = false;
-            tempRank = 11;
-            isFlag = false;
-            isBomb = true;
-            selected = true;
+            if (!selected)
+            {
+                bomb6.Visible = false;
+                tempRank = 11;
+                isFlag = false;
+                isBomb = true;
+                selected = true;
+            }
         }
 
         private void spy_Click(object sender, EventArgs e)
         {
-            spy.Visible = false;
-            tempRank = 1;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                spy.Visible = false;
+                tempRank = 1;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void scout1_Click(object sender, EventArgs e)
         {
-            scout1.Visible = false;
-            tempRank = 2;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                scout1.Visible = false;
+                tempRank = 2;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void scout2_Click(object sender, EventArgs e)
         {
-            scout2.Visible = false;
-            tempRank = 2;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                scout2.Visible = false;
+                tempRank = 2;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void scout3_Click(object sender, EventArgs e)
         {
-            scout3.Visible = false;
-            tempRank = 2;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                scout3.Visible = false;
+                tempRank = 2;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void scout4_Click(object sender, EventArgs e)
         {
-            scout4.Visible = false;
-            tempRank = 2;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                scout4.Visible = false;
+                tempRank = 2;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void scout5_Click(object sender, EventArgs e)
         {
-            scout5.Visible = false;
-            tempRank = 2;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                scout5.Visible = false;
+                tempRank = 2;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void scout6_Click(object sender, EventArgs e)
         {
-            scout6.Visible = false;
-            tempRank = 2;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                scout6.Visible = false;
+                tempRank = 2;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void scout7_Click(object sender, EventArgs e)
         {
-            scout7.Visible = false;
-            tempRank = 2;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                scout7.Visible = false;
+                tempRank = 2;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void scout8_Click(object sender, EventArgs e)
         {
-            scout8.Visible = false;
-            tempRank = 2;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                scout8.Visible = false;
+                tempRank = 2;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void miner1_Click(object sender, EventArgs e)
         {
-            miner1.Visible = false;
-            tempRank = 3;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                miner1.Visible = false;
+                tempRank = 3;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void miner2_Click(object sender, EventArgs e)
         {
-            miner2.Visible = false;
-            tempRank = 3;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                miner2.Visible = false;
+                tempRank = 3;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void miner3_Click(object sender, EventArgs e)
         {
-            miner3.Visible = false;
-            tempRank = 3;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                miner3.Visible = false;
+                tempRank = 3;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void miner4_Click(object sender, EventArgs e)
         {
-            miner4.Visible = false;
-            tempRank = 3;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                miner4.Visible = false;
+                tempRank = 3;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void miner5_Click(object sender, EventArgs e)
         {
-            miner5.Visible = false;
-            tempRank = 3;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                miner5.Visible = false;
+                tempRank = 3;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void sergeant1_Click(object sender, EventArgs e)
         {
-            sergeant1.Visible = false;
-            tempRank = 4;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                sergeant1.Visible = false;
+                tempRank = 4;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void sergeant2_Click(object sender, EventArgs e)
         {
-            sergeant2.Visible = false;
-            tempRank = 4;
-            isFlag = false;
-            isBomb = false;
-            selected = true;
+            if (!selected)
+            {
+                sergeant2.Visible = false;
+                tempRank = 4;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void sergeant3_Click(object sender, EventArgs e)
