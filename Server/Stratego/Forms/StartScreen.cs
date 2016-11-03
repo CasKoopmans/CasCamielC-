@@ -100,6 +100,7 @@ namespace Stratego
             }
             if(!ServerConnection.login(usernameTextbox.Text, password1Textbox.Text))
             {
+                ServerConnection = new ServerConnection();
                 label7.Visible = true;
             }
             else
@@ -148,12 +149,15 @@ namespace Stratego
             }
             if (ServerConnection.register(usernameTextbox.Text, password1Textbox.Text))
             {
-                    Lobby lobby = new Lobby();
-                    lobby.Visible = true;
-                    Visible = false;
+                Lobby lobby = new Lobby();
+                lobby.Visible = true;
+                Visible = false;
             }
             else
+            {
+                ServerConnection = new ServerConnection();
                 label9.Visible = true;
+            }
         }
     }
 }
