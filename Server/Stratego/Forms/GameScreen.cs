@@ -1133,7 +1133,6 @@ namespace Stratego.Forms
                         {
                             if(characters[i].getPosistion() == position)
                             {
-                                tempRank = characters[i].rank;
                                 positionSelected = position;
                                 selected = true;
                             }
