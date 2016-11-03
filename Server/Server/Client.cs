@@ -26,12 +26,20 @@ namespace Server
 
         public void listen()
         {
-            while (true)
+            bool disconnect = false;
+            while (!disconnect)
             {
                 String msg = readStream(stream);
                 String[] command = msg.Split('_');
                 switch (command[0])
                 {
+                    case "disconnect":
+                        {
+                            stream.Close();
+                            server.removeClient(name);
+                            disconnect = true;
+                        }
+                        break;
                     case "selectmatch":
                         {
                             opponentStream = server.getClient(command[1]).stream;
