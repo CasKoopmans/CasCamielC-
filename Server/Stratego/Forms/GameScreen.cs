@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,9 +13,9 @@ namespace Stratego.Forms
 {
     public partial class GameScreen : Form
     {
-        private string opponent;
+        private string opponent, positionSelected;
         private int tempRank;
-        private bool isRed, isFlag, isBomb, gameStarted = false, selected = false;
+        private bool isRed, isFlag, isBomb, gameStarted = false, selected = false, myTurn;
         private List<Character> characters = new List<Character>();
 
         public GameScreen(string opponent)
@@ -30,12 +31,25 @@ namespace Stratego.Forms
         private void formClosing(object sender, FormClosingEventArgs e)
         {
             StartScreen.ServerConnection.disconnect();
+            Environment.Exit(1);
             Application.Exit();
         }
 
-        private void GameScreen_Load(object sender, EventArgs e)
+        private void GameScreen_Load()
         {
+            GameScreen_ClearField();
 
+            for(int i = 0; i<characters.Count; i++)
+            {
+                if(characters[i].isRed = isRed)
+                {
+                    setImage(characters[i].rank, characters[i].getPosistion());
+                }
+                else
+                {
+                    paint(characters[i].getPosistion());
+                }
+            }
         }
 
         private void GameScreen_ClearField()
@@ -49,6 +63,7 @@ namespace Stratego.Forms
                     {
                         this.Controls[button].Text = "";
                         this.Controls[button].BackgroundImage = null;
+                        this.Controls[button].BackColor = Color.Gainsboro;
                     }
                 }
             }
@@ -927,12 +942,29 @@ namespace Stratego.Forms
         {
             downHalfClick("x9y9");
         }
+        #endregion
 
         private void ConfirmSetup_Click(object sender, EventArgs e)
         {
+            if (characters.Count == 40)
+            {
+                StartScreen.ServerConnection.characters = characters;
+                StartScreen.ServerConnection.turndone = true;
+                ConfirmSetup.Visible = false;
+                errorlabel.Visible = false;
+                gameStarted = true;
+                myTurn = StartScreen.ServerConnection.yourTurn;
 
+                while (!StartScreen.ServerConnection.setup)
+                {
+                    Thread.Sleep(100);
+                }
+                characters = StartScreen.ServerConnection.characters;
+                GameScreen_Load();
+            }
+            else
+                errorlabel.Visible = true;
         }
-        #endregion
 
         private void topHalfClick(string position)
         {
@@ -949,6 +981,39 @@ namespace Stratego.Forms
                     characters.Add(new Character(tempRank, isBomb, isFlag, isRed, position));
                     setImage(tempRank, position);
                     selected = false;
+                }
+            }
+
+            if (gameStarted && myTurn)
+            {
+                if (selected)
+                {
+                    for (int i = 0; i<characters.Count; i++)
+                    {
+                        if(characters[i].getPosistion() == positionSelected)
+                        {
+                            if(characters[i].isRed != isRed)
+                            {
+
+                            }
+                        }
+                        else if (position == positionSelected)
+                        {
+
+                        }
+                    }
+                }
+                else
+                {
+                    for(int i = 0; i<characters.Count; i++)
+                    {
+                        if(characters[i].isRed == isRed)
+                        {
+                            if(characters[i].getPosistion() == position)
+                            tempRank = characters[i].rank;
+                            positionSelected = position;
+                        }
+                    }
                 }
             }
         }
@@ -989,6 +1054,11 @@ namespace Stratego.Forms
                 case 10:    this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.marshall;   break;
                 case 11:    this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.bomb;       break;
             }
+        }
+
+        private void paint(string position)
+        {
+            this.Controls[position].BackColor = Color.Red;
         }
     }
 }

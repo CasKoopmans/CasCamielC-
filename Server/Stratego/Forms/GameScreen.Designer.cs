@@ -162,15 +162,17 @@
             this.bomb1 = new System.Windows.Forms.Button();
             this.flag = new System.Windows.Forms.Button();
             this.ConfirmSetup = new System.Windows.Forms.Button();
+            this.errorlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // x1y0
             // 
+            this.x1y0.BackColor = System.Drawing.Color.Gainsboro;
             this.x1y0.Location = new System.Drawing.Point(63, 12);
             this.x1y0.Name = "x1y0";
             this.x1y0.Size = new System.Drawing.Size(45, 60);
             this.x1y0.TabIndex = 1;
-            this.x1y0.UseVisualStyleBackColor = true;
+            this.x1y0.UseVisualStyleBackColor = false;
             this.x1y0.Click += new System.EventHandler(this.x1y0_Click);
             // 
             // x2y0
@@ -1440,18 +1442,34 @@
             // 
             // ConfirmSetup
             // 
+            this.ConfirmSetup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ConfirmSetup.BackgroundImage")));
+            this.ConfirmSetup.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmSetup.ForeColor = System.Drawing.Color.Silver;
             this.ConfirmSetup.Location = new System.Drawing.Point(1089, 601);
             this.ConfirmSetup.Name = "ConfirmSetup";
-            this.ConfirmSetup.Size = new System.Drawing.Size(141, 60);
+            this.ConfirmSetup.Size = new System.Drawing.Size(125, 60);
             this.ConfirmSetup.TabIndex = 142;
             this.ConfirmSetup.Text = "Confirm Setup";
             this.ConfirmSetup.UseVisualStyleBackColor = true;
             this.ConfirmSetup.Click += new System.EventHandler(this.ConfirmSetup_Click);
             // 
+            // errorlabel
+            // 
+            this.errorlabel.AutoSize = true;
+            this.errorlabel.Font = new System.Drawing.Font("Papyrus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorlabel.ForeColor = System.Drawing.Color.Red;
+            this.errorlabel.Location = new System.Drawing.Point(574, 375);
+            this.errorlabel.Name = "errorlabel";
+            this.errorlabel.Size = new System.Drawing.Size(284, 30);
+            this.errorlabel.TabIndex = 143;
+            this.errorlabel.Text = "Please place all characters first";
+            this.errorlabel.Visible = false;
+            // 
             // GameScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.errorlabel);
             this.Controls.Add(this.ConfirmSetup);
             this.Controls.Add(this.marshall);
             this.Controls.Add(this.captain1);
@@ -1590,8 +1608,8 @@
             this.Name = "GameScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stratego";
-            this.Load += new System.EventHandler(this.GameScreen_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1729,5 +1747,6 @@
         private System.Windows.Forms.Button captain1;
         private System.Windows.Forms.Button marshall;
         private System.Windows.Forms.Button ConfirmSetup;
+        private System.Windows.Forms.Label errorlabel;
     }
 }

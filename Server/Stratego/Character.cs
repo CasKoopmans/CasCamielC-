@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stratego
 {
-    class Character
+    public class Character
     {
         public int rank { get; }
         public bool isBomb { get; }

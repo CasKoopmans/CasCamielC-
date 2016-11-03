@@ -19,7 +19,7 @@ namespace Stratego
         public bool setup = false;
         public bool isRed;
         public bool gaming = false;
-        List<Character> characters;
+        public List<Character> characters { get; set; }
         Thread ingame;
 
         public ServerConnection()
