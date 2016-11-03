@@ -11,21 +11,28 @@ namespace Stratego
     {
         public Test()
         {
+            Character c = new Character(6, false, true, true);
+            c.setPosistion("x4y7");
+            System.Diagnostics.Debug.WriteLine(c.getPosistion());
+            while(true)
+                { }
+
+
             //ServerConnection server = new ServerConnection(IPAddress.Parse("127.0.0.1"));
             //System.Diagnostics.Debug.WriteLine("register = " + server.register("Camiel2", "abc"));
             //System.Diagnostics.Debug.WriteLine("login = " + server.login("Cas", "Cas"));
 
-            ServerConnection server = new ServerConnection();
-            if (server.register("Camiel3", "Camiel3"))
-                server.findMatch();
-            else
-            {
-                server.closeStream();
-                server = new ServerConnection();
-                server.register("Camiel4", "Camiel4");
-                server.selectMatch("Camiel3");
-            }
-            Console.WriteLine("match made "+server.opponentName);
+            //ServerConnection server = new ServerConnection();
+            //if (server.register("Camiel3", "Camiel3"))
+            //    server.findMatch();
+            //else
+            //{
+            //    server.closeStream();
+            //    server = new ServerConnection();
+            //    server.register("Camiel4", "Camiel4");
+            //    server.selectMatch("Camiel3");
+            //}
+            //Console.WriteLine("match made "+server.opponentName);
 
 
 

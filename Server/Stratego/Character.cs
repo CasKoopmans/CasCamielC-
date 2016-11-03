@@ -14,12 +14,14 @@ namespace Stratego
         public String name { get; }
         public int x { set; get;}
         public int y { set; get; }
+        public bool isRed;
 
-        public Character(int rank, bool isBomb, bool isFlag)
+        public Character(int rank, bool isBomb, bool isFlag,bool isRed)
         {
             this.rank = rank;
             this.isBomb = isBomb;
-            this.isFlag = isFlag;            
+            this.isFlag = isFlag;
+            this.isRed = isRed;        
             switch (rank)
             {
                 case 1: name = "Spy";break;
@@ -39,7 +41,16 @@ namespace Stratego
             if (isFlag)
                 name = "Flag";
         }
-
+        public String getPosistion()
+        {
+            return "x" + x + "y" + y;
+        }
+        public void setPosistion(String posistion)
+        {
+            String[] xy = posistion.Split('x')[1].Split('y');
+            x = Int32.Parse(xy[0]);
+            y = Int32.Parse(xy[1]);
+        }
 
     }
 }
