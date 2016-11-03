@@ -29,6 +29,7 @@ namespace Stratego
 
         private void formClosing(object sender, FormClosingEventArgs e)
         {
+            ServerConnection.closeStream();
             Application.Exit();
         }
 
