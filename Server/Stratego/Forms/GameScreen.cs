@@ -11,9 +11,12 @@ using System.Windows.Forms;
 namespace Stratego.Forms
 {
     public partial class GameScreen : Form
-    {        
-        public GameScreen()
+    {
+        private string opponent;
+
+        public GameScreen(string opponent)
         {
+            this.opponent = opponent;
             FormClosing += formClosing;
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedSingle;

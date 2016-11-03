@@ -85,6 +85,8 @@ namespace Stratego.Forms
             searchForm.Visible = true;
             Visible = false;
             StartScreen.ServerConnection.findMatch();
+            GameScreen gameScreen = new GameScreen(StartScreen.ServerConnection.opponentName);
+            gameScreen.Visible = true;
         }
 
         private void selectButton_Click(object sender, EventArgs e)
