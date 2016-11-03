@@ -14,7 +14,12 @@ namespace Stratego
         private IPAddress serverIP = IPAddress.Parse("145.48.118.116");
         NetworkStream stream { get; }
         public string opponentName;
-        bool ingame = false;
+        public bool yourTurn;
+        public bool turndone;
+        public bool setup = false;
+        public bool isRed;
+        List<Character> characters;
+        Thread ingame;
 
         public ServerConnection()
         {
@@ -50,7 +55,10 @@ namespace Stratego
             {
                 opponentName = response[1];
             }
-
+            yourTurn = false;
+            isRed = true;
+            ingame = new Thread(play);
+            ingame.Start();
         }
 
         public void findMatch()
@@ -62,7 +70,41 @@ namespace Stratego
             {
                 opponentName = response[1];
             }
-            
+            yourTurn = true;
+            isRed = false;
+            ingame = new Thread(play);
+            ingame.Start();
+        }
+
+        public void play()
+        {
+            bool gaming = true;
+            bool firstTime = true;
+            turndone = false;
+            while (gaming)
+            {
+                if (!setup)
+                {
+                    if (turndone && !isRed)
+                    {
+                        writeToStream(stream, "setupgame_" + JsonConvert.SerializeObject(characters));
+                        characters = (List<Character>)JsonConvert.DeserializeObject(readStream(stream));
+                        setup = true;
+                        turndone = false;
+                    }
+                    else if (turndone && isRed)
+                    {
+                        writeToStream(stream, "setupgame2_" + JsonConvert.SerializeObject(characters));
+                        characters = (List<Character>)JsonConvert.DeserializeObject(readStream(stream));
+                        setup = true;
+                        turndone = true;
+                    }
+                }
+                else
+                {
+
+                }
+            }
         }
 
         public List<String> getSearchingClients()
