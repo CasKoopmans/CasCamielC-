@@ -11,7 +11,7 @@ namespace Stratego
 {
     public class ServerConnection
     {
-        private IPAddress serverIP = IPAddress.Parse("145.48.118.116");
+        private IPAddress serverIP = IPAddress.Parse("145.102.75.220");
         NetworkStream stream { get; }
         public string opponentName;
         public bool yourTurn = false;
@@ -89,7 +89,7 @@ namespace Stratego
                     if (turndone && !isRed)
                     {
                         writeToStream(stream, "setupgame_" + JsonConvert.SerializeObject(characters));
-                        characters = (List<Character>)JsonConvert.DeserializeObject(readStream(stream));
+                        characters = (List<Character>)JsonConvert.DeserializeObject<List<Character>>(readStream(stream));
                         setup = true;
                         turndone = false;
                         yourTurn = true;
@@ -97,7 +97,7 @@ namespace Stratego
                     else if (turndone && isRed)
                     {
                         writeToStream(stream, "setupgame2_" + JsonConvert.SerializeObject(characters));
-                        characters = (List<Character>)JsonConvert.DeserializeObject(readStream(stream));
+                        characters = (List<Character>)JsonConvert.DeserializeObject<List<Character>>(readStream(stream));
                         setup = true;
                         turndone = true;
                         yourTurn = false;
@@ -113,7 +113,7 @@ namespace Stratego
                     }
                     else
                     {
-                        characters = (List<Character>) JsonConvert.DeserializeObject(readStream(stream));
+                        characters = (List<Character>) JsonConvert.DeserializeObject<List<Character>>(readStream(stream));
                         yourTurn = true;
                         turndone = false;
                     }
@@ -202,6 +202,7 @@ namespace Stratego
             Byte[] msg = new Byte[lenght];
             stream.Read(msg, 0, lenght);
             return Encoding.ASCII.GetString(msg);
+            Console.WriteLine("Done receiving");
         }
 
         private void writeToStream(NetworkStream stream, String msg)
@@ -213,6 +214,7 @@ namespace Stratego
             Byte[] finalMsg = new Byte[msg.Length];
             finalMsg = Encoding.ASCII.GetBytes(msg);
             stream.Write(finalMsg, 0, msg.Length);
+            Console.WriteLine("Done writing");
         }
     }
 }

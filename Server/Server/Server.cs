@@ -16,7 +16,7 @@ namespace Server
         public Server()
         {
             Console.WriteLine("Server Starting");
-            IPAddress localhost = IPAddress.Parse("145.48.118.116");
+            IPAddress localhost = IPAddress.Parse("145.102.75.220");
             Console.WriteLine("ip = " + localhost);
             TcpListener listener = new System.Net.Sockets.TcpListener(localhost, 3000);
             listener.Start();
