@@ -60,8 +60,7 @@ namespace Stratego.Forms
             flag.Visible = false;
             tempRank = 0;
             isFlag = true;
-            isBomb = false;
-        }
+            isBomb = false;        }
 
         private void bomb1_Click(object sender, EventArgs e)
         {
@@ -731,6 +730,7 @@ namespace Stratego.Forms
             if (!isRed && !gameStarted)
             {
                 characters.Add(new Character(tempRank, isBomb, isFlag, isRed, position));
+                setImage(tempRank, position);
             }
         }
 
@@ -738,8 +738,14 @@ namespace Stratego.Forms
         {
             if (isRed && !gameStarted)
             {
-                new Character(tempRank, isBomb, isFlag, isRed);
+                characters.Add(new Character(tempRank, isBomb, isFlag, isRed, position));
             }
+        }
+
+        private void setImage(int tempRank, string position)
+        {
+            if(tempRank == 0)
+                this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.flag1;
         }
     }
 }
