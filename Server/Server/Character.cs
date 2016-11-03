@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Server
 {
-    class Character
+    public class Character
     {
         public int rank { get; }
         public bool isBomb { get; }
@@ -16,12 +16,13 @@ namespace Server
         public int y { set; get; }
         public bool isRed;
 
-        public Character(int rank, bool isBomb, bool isFlag, bool isRed)
+        public Character(int rank, bool isBomb, bool isFlag, bool isRed, string position)
         {
             this.rank = rank;
             this.isBomb = isBomb;
             this.isFlag = isFlag;
             this.isRed = isRed;
+            setPosistion(position);
             switch (rank)
             {
                 case 1: name = "Spy"; break;

@@ -97,7 +97,7 @@ namespace Server
                         case "setupgame2":
                             {
                                 characters = command[1];
-                                while (opponent.characters != null)
+                                while (opponent.characters == null)
                                 { }
                                 combineCharacters();
                                 setup = true;
