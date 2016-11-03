@@ -15,8 +15,20 @@ namespace Stratego
             //System.Diagnostics.Debug.WriteLine("register = " + server.register("Camiel2", "abc"));
             //System.Diagnostics.Debug.WriteLine("login = " + server.login("Cas", "Cas"));
 
-            //server = new ServerConnection(IPAddress.Parse("127.0.0.1"));
-            //server.register("Camiel", "Camiel");
+            ServerConnection server = new ServerConnection();
+            if (server.register("Camiel3", "Camiel3"))
+                server.findMatch();
+            else
+            {
+                server.closeStream();
+                server = new ServerConnection();
+                server.register("Camiel4", "Camiel4");
+                server.selectMatch("Camiel3");
+            }
+            Console.WriteLine("match made "+server.opponentName);
+
+
+
             //List<String> players = server.getOnlineClients();
             //foreach (String s in players)
             //{
