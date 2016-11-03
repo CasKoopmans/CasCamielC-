@@ -30,6 +30,7 @@ namespace Stratego
         public void disconnect()
         {
             writeToStream(stream, "disconnect_");
+            stream.Close();
         }
 
         public void selectMatch(String opponentName)
