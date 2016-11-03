@@ -12,10 +12,12 @@ namespace Server
     {
         public String name { get; }
         public bool findingMatch { set; get; }
+        bool charactersUpdated = false;
         NetworkStream stream { get; }
         Client opponent { get; set; }
         bool ingame = false;
         Server server { get; }
+        String characters;
         public Client(String name, NetworkStream stream,Server server)
         {
             this.name = name;
@@ -30,8 +32,6 @@ namespace Server
             bool disconnect = false;
             while (!disconnect)
             {
-                if (!ingame)
-                {
                     String msg = readStream(stream);
                     String[] command = msg.Split('_');
                     Console.WriteLine(name + " send : " + command[0]);
@@ -82,16 +82,32 @@ namespace Server
                                 writeToStream(stream, "getsearchingclientsdone");
                             }
                             break;
+                        case "setupgame":
+                            {
+                                 characters = readStream(stream);
+                                 while (!charactersUpdated)
+                                 { }
+                                writeToStream(stream, characters);
+                            }
+                            break;
+                        case "setupgame2":
+                            {
+                                characters = readStream(stream);
+                                while (opponent.characters != null)
+                                { }
+                                characters = characters + opponent.characters;
+                                opponent.characters = characters;
+                                opponent.charactersUpdated = true;
+                                writeToStream(stream, characters);
+                        }
+                             break;
+
+                        case "gameturn":
+                            {
+                                
+                            }
+                        break;
                         default: Console.WriteLine("invalid command " + command[0] + " by " + name); break;
-                    }
-                }
-                else
-                {
-
-                    while (ingame)
-                    {
-
-                    }
                 }
             }
         }

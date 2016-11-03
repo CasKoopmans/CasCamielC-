@@ -19,6 +19,9 @@ namespace Stratego
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new StartScreen());
+            //new Test();
+
+
         }
     }
 }
