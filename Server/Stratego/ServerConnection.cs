@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Stratego
 {
@@ -30,6 +30,7 @@ namespace Stratego
         public void disconnect()
         {
             writeToStream(stream, "disconnect_");
+            readStream(stream);
             stream.Close();
         }
 
@@ -96,9 +97,15 @@ namespace Stratego
             String totalResponse = readStream(stream);
             String[] response = totalResponse.Split('_');
             if (response[0].Equals("register") && response[1].Equals("true"))
+            {
+                System.Diagnostics.Debug.Write("registered");
                 return true;
+            }
             else if (response[0].Equals("register") && response[1].Equals("false"))
+            {
+                System.Diagnostics.Debug.Write("register failed");
                 return false;
+            }
 
             return false;
         }
@@ -109,9 +116,15 @@ namespace Stratego
             String totalResponse = readStream(stream);
             String[] response = totalResponse.Split('_');
             if (response[0].Equals("login") && response[1].Equals("true"))
+            {
+                System.Diagnostics.Debug.Write("logged failed");
                 return true;
+            }
             else if (response[0].Equals("login") && response[1].Equals("false"))
+            {
+                System.Diagnostics.Debug.Write("login succeded");
                 return false;
+            }
 
             return false;
         }

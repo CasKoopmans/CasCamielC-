@@ -13,7 +13,7 @@ namespace Server
         public String name { get; }
         public bool findingMatch { set; get; }
         NetworkStream stream { get; }
-        NetworkStream opponentStream { get; set; }
+        Client opponent { get; set; }
         Server server { get; }
         public Client(String name, NetworkStream stream,Server server)
         {
@@ -31,10 +31,12 @@ namespace Server
             {
                 String msg = readStream(stream);
                 String[] command = msg.Split('_');
+                Console.WriteLine(name +" send : "+command[0]);
                 switch (command[0])
                 {
                     case "disconnect":
                         {
+                            writeToStream(stream,"OK");
                             stream.Close();
                             server.removeClient(name);
                             disconnect = true;
@@ -42,8 +44,9 @@ namespace Server
                         break;
                     case "selectmatch":
                         {
-                            opponentStream = server.getClient(command[1]).stream;
-                            writeToStream(opponentStream, name);
+                            opponent = server.getClient(command[1]);
+                            opponent.opponent = this;
+                            writeToStream(stream, "matchfound_"+opponent.name);
                         }
                         break;
                     case "getonlineclients":
@@ -60,9 +63,9 @@ namespace Server
                     case "findmatch":
                         {
                             findingMatch = true;
-                            String opponentName = readStream(stream);
-                            opponentStream = server.getClient(opponentName).stream;
-                            writeToStream(opponentStream, "matchfound_" + opponentName);
+                            while (opponent == null)
+                            { }
+                            writeToStream(stream, "matchfound_" + opponent.name);
 
                         }
                         break;
