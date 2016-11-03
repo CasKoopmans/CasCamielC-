@@ -42,7 +42,11 @@ namespace Server
             foreach (Client c in clients)
             {
                 if (c.name.Equals(name))
+                {
                     clients.Remove(c);
+                    Console.WriteLine(name +" disconnected");
+                    break;
+                }
 
             }
         }
