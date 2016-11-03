@@ -11,7 +11,7 @@ namespace Stratego
 {
     public class ServerConnection
     {
-        private IPAddress serverIP = IPAddress.Parse("145.48.118.116");
+        private IPAddress serverIP = IPAddress.Parse("145.102.75.220");
         NetworkStream stream { get; }
         public string opponentName;
         public bool yourTurn = false;
