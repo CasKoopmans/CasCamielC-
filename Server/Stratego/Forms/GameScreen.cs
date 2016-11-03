@@ -17,6 +17,7 @@ namespace Stratego.Forms
         private int tempRank, tempChar =-1;
         private bool isRed, isFlag, isBomb, gameStarted = false, selected = false, myTurn;
         private List<Character> characters = new List<Character>();
+        Thread updateCharacters2;
 
         public GameScreen(string opponent)
         {
@@ -26,6 +27,8 @@ namespace Stratego.Forms
             FormBorderStyle = FormBorderStyle.FixedSingle;
             GameScreen_ClearField();
             isRed = StartScreen.ServerConnection.isRed;
+            updateCharacters2 = new Thread(updateCharacters);
+
         }
 
         private void formClosing(object sender, FormClosingEventArgs e)
@@ -33,6 +36,32 @@ namespace Stratego.Forms
             StartScreen.ServerConnection.disconnect();
             Environment.Exit(1);
             Application.Exit();
+        }
+
+        private void updateCharacters()
+        {
+            bool myOldTurn = myTurn;
+            while (true)
+            {
+                if (gameStarted)
+                {
+                    myTurn = StartScreen.ServerConnection.yourTurn;
+                    if (myOldTurn != myTurn)
+                    {
+                        if (myTurn == false)
+                        {
+                            StartScreen.ServerConnection.characters = characters;
+                        }
+                        else
+                        {
+                            characters = StartScreen.ServerConnection.characters;
+                        }
+                        GameScreen_Load();
+                        myOldTurn = myTurn;
+                    }
+                }
+                Thread.Sleep(100);
+            }
         }
 
         private void GameScreen_Load()
@@ -1013,6 +1042,8 @@ namespace Stratego.Forms
         }
         #endregion
 
+        
+
         private void ConfirmSetup_Click(object sender, EventArgs e)
         {
             //if (characters.Count == 40)
@@ -1021,16 +1052,17 @@ namespace Stratego.Forms
                 StartScreen.ServerConnection.turndone = true;
                 ConfirmSetup.Visible = false;
                 errorlabel.Visible = false;
-                gameStarted = true;
-            //myTurn = StartScreen.ServerConnection.yourTurn;
-            myTurn = true;
+
+            myTurn = StartScreen.ServerConnection.yourTurn;
 
                 while (!StartScreen.ServerConnection.setup)
                 {
                     Thread.Sleep(100);
                 }
                 characters = StartScreen.ServerConnection.characters;
+                updateCharacters2.Start();
                 GameScreen_Load();
+                gameStarted = true;
             //}
             //else
             //    errorlabel.Visible = true;
@@ -1040,6 +1072,7 @@ namespace Stratego.Forms
         {
             if(gameStarted)
             characters = StartScreen.ServerConnection.characters;
+
             if (!isRed && !gameStarted && selected)
             {
                 for (int i = 0; i<characters.Count; i++)
@@ -1065,9 +1098,10 @@ namespace Stratego.Forms
                     {
                         if(characters[i].getPosistion() == position)
                         {
-                            available = false;
+                            
                             if(characters[i].isRed != isRed)
                             {
+                                available = false;
                                 int xp = position[1];
                                 int yp = position[3];
 
@@ -1087,6 +1121,7 @@ namespace Stratego.Forms
                                 {
                                     fight(characters[i], positionSelected);
                                 }
+                                myTurn = !myTurn;
                             }
                         }
                         
@@ -1180,9 +1215,10 @@ namespace Stratego.Forms
                     {
                         if (characters[i].getPosistion() == position)
                         {
-                            available = false;
+                            
                             if (characters[i].isRed != isRed)
                             {
+                                available = false;
                                 int xp = position[1];
                                 int yp = position[3];
 
@@ -1202,6 +1238,7 @@ namespace Stratego.Forms
                                 {
                                     fight(characters[i], positionSelected);
                                 }
+                                myTurn = !myTurn;
                             }
                         }
                         
