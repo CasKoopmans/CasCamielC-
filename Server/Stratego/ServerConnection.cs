@@ -21,6 +21,11 @@ namespace Stratego
 
         }
 
+        public void disconnect()
+        {
+            writeToStream(stream, "disconnect_");
+        }
+
         public void selectMatch(String opponentName)
         {
             writeToStream(stream,"selectmatch_" + opponentName);

@@ -37,6 +37,16 @@ namespace Server
             }
         }
 
+        public void removeClient(String name)
+        {
+            foreach (Client c in clients)
+            {
+                if (c.name.Equals(name))
+                    clients.Remove(c);
+
+            }
+        }
+
         public Client getClient(String name)
         {
             foreach (Client c in clients)
