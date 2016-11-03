@@ -15,7 +15,7 @@ namespace Stratego.Forms
     {
         private string opponent, positionSelected;
         private int tempRank, tempChar =-1;
-        private bool isRed, isFlag, isBomb, gameStarted = false, selected = false, myTurn;
+        private bool isRed, isFlag, isBomb, gameStarted = false, selected = false, myTurn, available;
         private List<Character> characters = new List<Character>();
         Thread updateCharacters2;
 
@@ -90,7 +90,7 @@ namespace Stratego.Forms
                     string button = "x" + i + "y" + j;
                     if (button != "x2y4" && button != "x2y5" && button != "x3y4" && button != "x3y5" && button != "x6y4" && button != "x6y5" && button != "x7y4" && button != "x7y5")
                     {
-                        this.Controls[button].Text = "";
+                        this.Controls[button].Text = "" + button;
                         this.Controls[button].BackgroundImage = null;
                         this.Controls[button].BackColor = Color.Gainsboro;
                     }
@@ -1093,7 +1093,7 @@ namespace Stratego.Forms
             {
                 if (tempChar!=-1 && tempRank !=0 && tempRank !=11 )
                 {
-                    bool available = true;
+                    available = true;   
                     for (int i = 0; i<characters.Count; i++)
                     {
                         if(characters[i].getPosistion() == position)
@@ -1212,7 +1212,7 @@ namespace Stratego.Forms
             {
                 if (tempChar != -1 && tempRank != 0 && tempRank != 11)
                 {
-                    bool available = true;
+                    available = true;
                     for (int i = 0; i < characters.Count; i++)
                     {
                         if (characters[i].getPosistion() == position)
