@@ -60,7 +60,8 @@ namespace Stratego.Forms
             flag.Visible = false;
             tempRank = 0;
             isFlag = true;
-            isBomb = false;        }
+            isBomb = false;
+        }
 
         private void bomb1_Click(object sender, EventArgs e)
         {
@@ -266,457 +267,457 @@ namespace Stratego.Forms
 
         private void x1y0_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x1y0");
         }
 
         private void x2y0_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x2y0");
         }
 
         private void x3y0_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x3y0");
         }
 
         private void x4y0_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x4y0");
         }
 
         private void x5y0_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x5y0");
         }
 
         private void x6y0_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x6y0");
         }
 
         private void x7y0_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x7y0");
         }
 
         private void x8y0_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x8y0");
         }
 
         private void x9y0_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x9y0");
         }
 
         private void x0y1_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x0y1");
         }
 
         private void x1y1_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x1y1");
         }
 
         private void x2y1_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x2y1");
         }
 
         private void x3y1_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x3y1");
         }
 
         private void x4y1_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x4y1");
         }
 
         private void x5y1_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x5y1");
         }
 
         private void x6y1_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x6y1");
         }
 
         private void x7y1_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x7y1");
         }
 
         private void x8y1_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x8y1");
         }
 
         private void x9y1_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x9y1");
         }
 
         private void x0y2_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x0y2");
         }
 
         private void x1y2_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x1y2");
         }
 
         private void x2y2_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x2y2");
         }
 
         private void x3y2_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x3y2");
         }
 
         private void x4y2_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x4y2");
         }
 
         private void x5y2_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x5y2");
         }
 
         private void x6y2_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x6y2");
         }
 
         private void x7y2_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x7y2");
         }
 
         private void x8y2_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x8y2");
         }
 
         private void x9y2_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x9y2");
         }
 
         private void x0y3_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x0y3");
         }
 
         private void x1y3_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x1y3");
         }
 
         private void x2y3_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x2y3");
         }
 
         private void x3y3_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x3y3");
         }
 
         private void x4y3_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x4y3");
         }
 
         private void x5y3_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x5y3");
         }
 
         private void x6y3_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x6y3");
         }
 
         private void x7y3_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x7y3");
         }
 
         private void x8y3_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x8y3");
         }
 
         private void x9y3_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x9y3");
         }
 
         private void x0y4_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x0y4");
         }
 
         private void x1y4_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x1y4");
         }
 
         private void x4y4_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x4y4");
         }
 
         private void x5y4_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x5y4");
         }
 
         private void x8y4_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x8y4");
         }
 
         private void x9y4_Click(object sender, EventArgs e)
         {
-            topHalfClick();
+            topHalfClick("x9y4");
         }
 
         private void x0y5_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x0y5");
         }
 
         private void x1y5_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x1y5");
         }
 
         private void x4y5_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x4y5");
         }
 
         private void x5y5_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x5y5");
         }
 
         private void x8y5_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x8y5");
         }
 
         private void x9y5_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x9y5");
         }
 
         private void x0y6_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x0y6");
         }
 
         private void x1y6_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x1y6");
         }
 
         private void x2y6_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x2y6");
         }
 
         private void x3y6_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x3y6");
         }
 
         private void x4y6_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x4y6");
         }
 
         private void x5y6_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x5y6");
         }
 
         private void x6y6_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x6y6");
         }
 
         private void x7y6_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x7y6");
         }
 
         private void x8y6_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x8y6");
         }
 
         private void x9y6_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x9y6");
         }
 
         private void x0y7_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x0y7");
         }
 
         private void x1y7_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x1y7");
         }
 
         private void x2y7_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x2y7");
         }
 
         private void x3y7_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x3y7");
         }
 
         private void x4y7_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x4y7");
         }
 
         private void x5y7_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x5y7");
         }
 
         private void x6y7_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x6y7");
         }
 
         private void x7y7_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x7y7");
         }
 
         private void x8y7_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x8y7");
         }
 
         private void x9y7_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x9y7");
         }
 
         private void x0y8_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x0y8");
         }
 
         private void x1y8_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x1y8");
         }
 
         private void x2y8_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x2y8");
         }
 
         private void x3y8_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x3y8");
         }
 
         private void x4y8_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x4y8");
         }
 
         private void x5y8_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x5y8");
         }
 
         private void x6y8_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x6y8");
         }
 
         private void x7y8_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x7y8");
         }
 
         private void x8y8_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x8y8");
         }
 
         private void x9y8_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x9y8");
         }
 
         private void x0y9_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x0y9");
         }
 
         private void x1y9_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x1y9");
         }
 
         private void x2y9_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x2y9");
         }
 
         private void x3y9_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x3y9");
         }
 
         private void x4y9_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x4y9");
         }
 
         private void x5y9_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x5y9");
         }
 
         private void x6y9_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x6y9");
         }
 
         private void x7y9_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x7y9");
         }
 
         private void x8y9_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x8y9");
         }
 
         private void x9y9_Click(object sender, EventArgs e)
         {
-            downHalfClick();
+            downHalfClick("x9y9");
         }
 
         private void ConfirmSetup_Click(object sender, EventArgs e)
