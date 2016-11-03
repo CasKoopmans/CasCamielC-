@@ -99,7 +99,7 @@ namespace Stratego
                         writeToStream(stream, "setupgame2_" + JsonConvert.SerializeObject(characters));
                         characters = (List<Character>)JsonConvert.DeserializeObject<List<Character>>(readStream(stream));
                         setup = true;
-                        turndone = true;
+                        turndone = false;
                         yourTurn = false;
                     }
                 }

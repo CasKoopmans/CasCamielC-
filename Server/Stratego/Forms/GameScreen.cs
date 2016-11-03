@@ -1121,7 +1121,7 @@ namespace Stratego.Forms
                                 {
                                     fight(characters[i], positionSelected);
                                 }
-                                myTurn = !myTurn;
+                                StartScreen.ServerConnection.turndone = true;
                             }
                         }
                         
@@ -1238,7 +1238,7 @@ namespace Stratego.Forms
                                 {
                                     fight(characters[i], positionSelected);
                                 }
-                                myTurn = !myTurn;
+                                StartScreen.ServerConnection.turndone = true;
                             }
                         }
                         
