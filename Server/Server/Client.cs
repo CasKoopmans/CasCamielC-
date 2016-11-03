@@ -64,6 +64,7 @@ namespace Server
                             findingMatch = true;
                             while (opponent == null)
                             { }
+                            findingMatch = false;
                             writeToStream(stream, "matchfound_" + opponent.name);
 
                         }
