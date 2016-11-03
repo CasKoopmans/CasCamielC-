@@ -1015,8 +1015,8 @@ namespace Stratego.Forms
 
         private void ConfirmSetup_Click(object sender, EventArgs e)
         {
-            if (characters.Count == 40)
-            {
+            //if (characters.Count == 40)
+            //{
                 StartScreen.ServerConnection.characters = characters;
                 StartScreen.ServerConnection.turndone = true;
                 ConfirmSetup.Visible = false;
@@ -1030,9 +1030,9 @@ namespace Stratego.Forms
                 }
                 characters = StartScreen.ServerConnection.characters;
                 GameScreen_Load();
-            }
-            else
-                errorlabel.Visible = true;
+            //}
+            //else
+            //    errorlabel.Visible = true;
         }
 
         private void topHalfClick(string position)
