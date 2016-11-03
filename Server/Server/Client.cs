@@ -17,8 +17,9 @@ namespace Server
         NetworkStream stream { get; }
         Client opponent { get; set; }
         bool ingame = false;
+        bool setup = false;
         Server server { get; }
-        String characters;
+        String characters =null;
         public Client(String name, NetworkStream stream,Server server)
         {
             this.name = name;
@@ -85,19 +86,21 @@ namespace Server
                             break;
                         case "setupgame":
                             {
-                                 characters = readStream(stream);
-                                 while (!charactersUpdated)
-                                 { }
+                                 characters = command[1];
+                                 while (!opponent.setupIsDone())
+                                 {
+                                    Thread.Sleep(100);
+                                 }
                                 writeToStream(stream, characters);
                             }
                             break;
                         case "setupgame2":
                             {
-                                characters = readStream(stream);
+                                characters = command[1];
                                 while (opponent.characters != null)
                                 { }
                                 combineCharacters();
-                                opponent.charactersUpdated = true;
+                                setup = true;
                                 writeToStream(stream, characters);
                         }
                              break;
@@ -116,6 +119,11 @@ namespace Server
             }
         }
 
+        public bool setupIsDone()
+        {
+            return setup;
+        }
+
         public void sendCharacters()
         {
             writeToStream(stream, characters);
@@ -123,8 +131,8 @@ namespace Server
 
         private void combineCharacters()
         {
-            List<Character> ownCharacters = (List<Character>)JsonConvert.DeserializeObject(characters);
-            List<Character> enemyCharacters = (List<Character>)JsonConvert.DeserializeObject(opponent.characters);
+            List<Character> ownCharacters = (List<Character>)JsonConvert.DeserializeObject<List<Character>>(characters);
+            List<Character> enemyCharacters = (List<Character>)JsonConvert.DeserializeObject<List<Character>>(opponent.characters);
             ownCharacters.AddRange(enemyCharacters);
             characters = JsonConvert.SerializeObject(ownCharacters);
             opponent.characters = characters;
