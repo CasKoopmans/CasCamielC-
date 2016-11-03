@@ -16,12 +16,13 @@ namespace Stratego
         public int y { set; get; }
         public bool isRed;
 
-        public Character(int rank, bool isBomb, bool isFlag,bool isRed)
+        public Character(int rank, bool isBomb, bool isFlag,bool isRed, string position)
         {
             this.rank = rank;
             this.isBomb = isBomb;
             this.isFlag = isFlag;
-            this.isRed = isRed;        
+            this.isRed = isRed;
+            setPosistion(position);
             switch (rank)
             {
                 case 1: name = "Spy";break;

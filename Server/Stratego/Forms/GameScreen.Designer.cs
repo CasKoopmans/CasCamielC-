@@ -121,46 +121,47 @@
             this.x8y8 = new System.Windows.Forms.Button();
             this.x8y9 = new System.Windows.Forms.Button();
             this.x0y0 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.marshall = new System.Windows.Forms.Button();
+            this.captain1 = new System.Windows.Forms.Button();
+            this.miner4 = new System.Windows.Forms.Button();
+            this.scout2 = new System.Windows.Forms.Button();
+            this.general = new System.Windows.Forms.Button();
+            this.lieutenant4 = new System.Windows.Forms.Button();
+            this.miner3 = new System.Windows.Forms.Button();
+            this.scout1 = new System.Windows.Forms.Button();
+            this.colonel2 = new System.Windows.Forms.Button();
+            this.lieutenant3 = new System.Windows.Forms.Button();
+            this.miner2 = new System.Windows.Forms.Button();
+            this.spy = new System.Windows.Forms.Button();
+            this.colonel1 = new System.Windows.Forms.Button();
+            this.lieutenant2 = new System.Windows.Forms.Button();
+            this.miner1 = new System.Windows.Forms.Button();
+            this.bomb6 = new System.Windows.Forms.Button();
+            this.major3 = new System.Windows.Forms.Button();
+            this.lieutenant1 = new System.Windows.Forms.Button();
+            this.scout8 = new System.Windows.Forms.Button();
+            this.bomb5 = new System.Windows.Forms.Button();
+            this.major2 = new System.Windows.Forms.Button();
+            this.sergeant4 = new System.Windows.Forms.Button();
+            this.scout7 = new System.Windows.Forms.Button();
+            this.bomb4 = new System.Windows.Forms.Button();
+            this.major1 = new System.Windows.Forms.Button();
+            this.sergeant3 = new System.Windows.Forms.Button();
+            this.scout6 = new System.Windows.Forms.Button();
+            this.bomb3 = new System.Windows.Forms.Button();
+            this.captain4 = new System.Windows.Forms.Button();
+            this.sergeant2 = new System.Windows.Forms.Button();
+            this.scout5 = new System.Windows.Forms.Button();
+            this.bomb2 = new System.Windows.Forms.Button();
+            this.captain3 = new System.Windows.Forms.Button();
+            this.sergeant1 = new System.Windows.Forms.Button();
+            this.scout4 = new System.Windows.Forms.Button();
+            this.scout3 = new System.Windows.Forms.Button();
+            this.captain2 = new System.Windows.Forms.Button();
+            this.miner5 = new System.Windows.Forms.Button();
+            this.bomb1 = new System.Windows.Forms.Button();
+            this.flag = new System.Windows.Forms.Button();
+            this.ConfirmSetup = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // x1y0
@@ -170,6 +171,7 @@
             this.x1y0.Size = new System.Drawing.Size(45, 60);
             this.x1y0.TabIndex = 1;
             this.x1y0.UseVisualStyleBackColor = true;
+            this.x1y0.Click += new System.EventHandler(this.x1y0_Click);
             // 
             // x2y0
             // 
@@ -178,6 +180,7 @@
             this.x2y0.Size = new System.Drawing.Size(45, 60);
             this.x2y0.TabIndex = 2;
             this.x2y0.UseVisualStyleBackColor = true;
+            this.x2y0.Click += new System.EventHandler(this.x2y0_Click);
             // 
             // x3y0
             // 
@@ -186,6 +189,7 @@
             this.x3y0.Size = new System.Drawing.Size(45, 60);
             this.x3y0.TabIndex = 3;
             this.x3y0.UseVisualStyleBackColor = true;
+            this.x3y0.Click += new System.EventHandler(this.x3y0_Click);
             // 
             // x4y0
             // 
@@ -194,6 +198,7 @@
             this.x4y0.Size = new System.Drawing.Size(45, 60);
             this.x4y0.TabIndex = 4;
             this.x4y0.UseVisualStyleBackColor = true;
+            this.x4y0.Click += new System.EventHandler(this.x4y0_Click);
             // 
             // x5y0
             // 
@@ -202,6 +207,7 @@
             this.x5y0.Size = new System.Drawing.Size(45, 60);
             this.x5y0.TabIndex = 5;
             this.x5y0.UseVisualStyleBackColor = true;
+            this.x5y0.Click += new System.EventHandler(this.x5y0_Click);
             // 
             // x6y0
             // 
@@ -210,6 +216,7 @@
             this.x6y0.Size = new System.Drawing.Size(45, 60);
             this.x6y0.TabIndex = 6;
             this.x6y0.UseVisualStyleBackColor = true;
+            this.x6y0.Click += new System.EventHandler(this.x6y0_Click);
             // 
             // x7y0
             // 
@@ -218,6 +225,7 @@
             this.x7y0.Size = new System.Drawing.Size(45, 60);
             this.x7y0.TabIndex = 7;
             this.x7y0.UseVisualStyleBackColor = true;
+            this.x7y0.Click += new System.EventHandler(this.x7y0_Click);
             // 
             // x8y0
             // 
@@ -226,6 +234,7 @@
             this.x8y0.Size = new System.Drawing.Size(45, 60);
             this.x8y0.TabIndex = 8;
             this.x8y0.UseVisualStyleBackColor = true;
+            this.x8y0.Click += new System.EventHandler(this.x8y0_Click);
             // 
             // x9y0
             // 
@@ -235,6 +244,7 @@
             this.x9y0.TabIndex = 9;
             this.x9y0.Text = "(9.0)";
             this.x9y0.UseVisualStyleBackColor = true;
+            this.x9y0.Click += new System.EventHandler(this.x9y0_Click);
             // 
             // x0y1
             // 
@@ -243,6 +253,7 @@
             this.x0y1.Size = new System.Drawing.Size(45, 60);
             this.x0y1.TabIndex = 11;
             this.x0y1.UseVisualStyleBackColor = true;
+            this.x0y1.Click += new System.EventHandler(this.x0y1_Click);
             // 
             // x0y2
             // 
@@ -251,6 +262,7 @@
             this.x0y2.Size = new System.Drawing.Size(45, 60);
             this.x0y2.TabIndex = 12;
             this.x0y2.UseVisualStyleBackColor = true;
+            this.x0y2.Click += new System.EventHandler(this.x0y2_Click);
             // 
             // x0y3
             // 
@@ -259,6 +271,7 @@
             this.x0y3.Size = new System.Drawing.Size(45, 60);
             this.x0y3.TabIndex = 13;
             this.x0y3.UseVisualStyleBackColor = true;
+            this.x0y3.Click += new System.EventHandler(this.x0y3_Click);
             // 
             // x0y4
             // 
@@ -267,6 +280,7 @@
             this.x0y4.Size = new System.Drawing.Size(45, 60);
             this.x0y4.TabIndex = 14;
             this.x0y4.UseVisualStyleBackColor = true;
+            this.x0y4.Click += new System.EventHandler(this.x0y4_Click);
             // 
             // x0y5
             // 
@@ -275,6 +289,7 @@
             this.x0y5.Size = new System.Drawing.Size(45, 60);
             this.x0y5.TabIndex = 15;
             this.x0y5.UseVisualStyleBackColor = true;
+            this.x0y5.Click += new System.EventHandler(this.x0y5_Click);
             // 
             // x0y6
             // 
@@ -283,6 +298,7 @@
             this.x0y6.Size = new System.Drawing.Size(45, 60);
             this.x0y6.TabIndex = 16;
             this.x0y6.UseVisualStyleBackColor = true;
+            this.x0y6.Click += new System.EventHandler(this.x0y6_Click);
             // 
             // x0y7
             // 
@@ -291,6 +307,7 @@
             this.x0y7.Size = new System.Drawing.Size(45, 60);
             this.x0y7.TabIndex = 17;
             this.x0y7.UseVisualStyleBackColor = true;
+            this.x0y7.Click += new System.EventHandler(this.x0y7_Click);
             // 
             // x0y8
             // 
@@ -299,6 +316,7 @@
             this.x0y8.Size = new System.Drawing.Size(45, 60);
             this.x0y8.TabIndex = 18;
             this.x0y8.UseVisualStyleBackColor = true;
+            this.x0y8.Click += new System.EventHandler(this.x0y8_Click);
             // 
             // x0y9
             // 
@@ -308,6 +326,7 @@
             this.x0y9.TabIndex = 19;
             this.x0y9.Text = "(0.9)";
             this.x0y9.UseVisualStyleBackColor = true;
+            this.x0y9.Click += new System.EventHandler(this.x0y9_Click);
             // 
             // x1y1
             // 
@@ -316,6 +335,7 @@
             this.x1y1.Size = new System.Drawing.Size(45, 60);
             this.x1y1.TabIndex = 20;
             this.x1y1.UseVisualStyleBackColor = true;
+            this.x1y1.Click += new System.EventHandler(this.x1y1_Click);
             // 
             // x2y1
             // 
@@ -324,6 +344,7 @@
             this.x2y1.Size = new System.Drawing.Size(45, 60);
             this.x2y1.TabIndex = 21;
             this.x2y1.UseVisualStyleBackColor = true;
+            this.x2y1.Click += new System.EventHandler(this.x2y1_Click);
             // 
             // x3y1
             // 
@@ -332,6 +353,7 @@
             this.x3y1.Size = new System.Drawing.Size(45, 60);
             this.x3y1.TabIndex = 22;
             this.x3y1.UseVisualStyleBackColor = true;
+            this.x3y1.Click += new System.EventHandler(this.x3y1_Click);
             // 
             // x4y1
             // 
@@ -340,6 +362,7 @@
             this.x4y1.Size = new System.Drawing.Size(45, 60);
             this.x4y1.TabIndex = 23;
             this.x4y1.UseVisualStyleBackColor = true;
+            this.x4y1.Click += new System.EventHandler(this.x4y1_Click);
             // 
             // x5y1
             // 
@@ -348,6 +371,7 @@
             this.x5y1.Size = new System.Drawing.Size(45, 60);
             this.x5y1.TabIndex = 24;
             this.x5y1.UseVisualStyleBackColor = true;
+            this.x5y1.Click += new System.EventHandler(this.x5y1_Click);
             // 
             // x6y1
             // 
@@ -356,6 +380,7 @@
             this.x6y1.Size = new System.Drawing.Size(45, 60);
             this.x6y1.TabIndex = 25;
             this.x6y1.UseVisualStyleBackColor = true;
+            this.x6y1.Click += new System.EventHandler(this.x6y1_Click);
             // 
             // x7y1
             // 
@@ -364,6 +389,7 @@
             this.x7y1.Size = new System.Drawing.Size(45, 60);
             this.x7y1.TabIndex = 26;
             this.x7y1.UseVisualStyleBackColor = true;
+            this.x7y1.Click += new System.EventHandler(this.x7y1_Click);
             // 
             // x8y1
             // 
@@ -372,6 +398,7 @@
             this.x8y1.Size = new System.Drawing.Size(45, 60);
             this.x8y1.TabIndex = 27;
             this.x8y1.UseVisualStyleBackColor = true;
+            this.x8y1.Click += new System.EventHandler(this.x8y1_Click);
             // 
             // x9y1
             // 
@@ -380,6 +407,7 @@
             this.x9y1.Size = new System.Drawing.Size(45, 60);
             this.x9y1.TabIndex = 28;
             this.x9y1.UseVisualStyleBackColor = true;
+            this.x9y1.Click += new System.EventHandler(this.x9y1_Click);
             // 
             // x9y2
             // 
@@ -388,6 +416,7 @@
             this.x9y2.Size = new System.Drawing.Size(45, 60);
             this.x9y2.TabIndex = 29;
             this.x9y2.UseVisualStyleBackColor = true;
+            this.x9y2.Click += new System.EventHandler(this.x9y2_Click);
             // 
             // x9y3
             // 
@@ -396,6 +425,7 @@
             this.x9y3.Size = new System.Drawing.Size(45, 60);
             this.x9y3.TabIndex = 30;
             this.x9y3.UseVisualStyleBackColor = true;
+            this.x9y3.Click += new System.EventHandler(this.x9y3_Click);
             // 
             // x9y4
             // 
@@ -404,6 +434,7 @@
             this.x9y4.Size = new System.Drawing.Size(45, 60);
             this.x9y4.TabIndex = 31;
             this.x9y4.UseVisualStyleBackColor = true;
+            this.x9y4.Click += new System.EventHandler(this.x9y4_Click);
             // 
             // x9y5
             // 
@@ -412,6 +443,7 @@
             this.x9y5.Size = new System.Drawing.Size(45, 60);
             this.x9y5.TabIndex = 32;
             this.x9y5.UseVisualStyleBackColor = true;
+            this.x9y5.Click += new System.EventHandler(this.x9y5_Click);
             // 
             // x9y6
             // 
@@ -420,6 +452,7 @@
             this.x9y6.Size = new System.Drawing.Size(45, 60);
             this.x9y6.TabIndex = 33;
             this.x9y6.UseVisualStyleBackColor = true;
+            this.x9y6.Click += new System.EventHandler(this.x9y6_Click);
             // 
             // x9y7
             // 
@@ -428,6 +461,7 @@
             this.x9y7.Size = new System.Drawing.Size(45, 60);
             this.x9y7.TabIndex = 34;
             this.x9y7.UseVisualStyleBackColor = true;
+            this.x9y7.Click += new System.EventHandler(this.x9y7_Click);
             // 
             // x9y8
             // 
@@ -436,6 +470,7 @@
             this.x9y8.Size = new System.Drawing.Size(45, 60);
             this.x9y8.TabIndex = 35;
             this.x9y8.UseVisualStyleBackColor = true;
+            this.x9y8.Click += new System.EventHandler(this.x9y8_Click);
             // 
             // x9y9
             // 
@@ -445,6 +480,7 @@
             this.x9y9.TabIndex = 36;
             this.x9y9.Text = "(9.9)";
             this.x9y9.UseVisualStyleBackColor = true;
+            this.x9y9.Click += new System.EventHandler(this.x9y9_Click);
             // 
             // x1y2
             // 
@@ -453,6 +489,7 @@
             this.x1y2.Size = new System.Drawing.Size(45, 60);
             this.x1y2.TabIndex = 37;
             this.x1y2.UseVisualStyleBackColor = true;
+            this.x1y2.Click += new System.EventHandler(this.x1y2_Click);
             // 
             // x1y3
             // 
@@ -461,6 +498,7 @@
             this.x1y3.Size = new System.Drawing.Size(45, 60);
             this.x1y3.TabIndex = 38;
             this.x1y3.UseVisualStyleBackColor = true;
+            this.x1y3.Click += new System.EventHandler(this.x1y3_Click);
             // 
             // x1y4
             // 
@@ -469,6 +507,7 @@
             this.x1y4.Size = new System.Drawing.Size(45, 60);
             this.x1y4.TabIndex = 39;
             this.x1y4.UseVisualStyleBackColor = true;
+            this.x1y4.Click += new System.EventHandler(this.x1y4_Click);
             // 
             // x1y5
             // 
@@ -477,6 +516,7 @@
             this.x1y5.Size = new System.Drawing.Size(45, 60);
             this.x1y5.TabIndex = 40;
             this.x1y5.UseVisualStyleBackColor = true;
+            this.x1y5.Click += new System.EventHandler(this.x1y5_Click);
             // 
             // x1y6
             // 
@@ -485,6 +525,7 @@
             this.x1y6.Size = new System.Drawing.Size(45, 60);
             this.x1y6.TabIndex = 41;
             this.x1y6.UseVisualStyleBackColor = true;
+            this.x1y6.Click += new System.EventHandler(this.x1y6_Click);
             // 
             // x1y7
             // 
@@ -493,6 +534,7 @@
             this.x1y7.Size = new System.Drawing.Size(45, 60);
             this.x1y7.TabIndex = 42;
             this.x1y7.UseVisualStyleBackColor = true;
+            this.x1y7.Click += new System.EventHandler(this.x1y7_Click);
             // 
             // x1y8
             // 
@@ -501,6 +543,7 @@
             this.x1y8.Size = new System.Drawing.Size(45, 60);
             this.x1y8.TabIndex = 43;
             this.x1y8.UseVisualStyleBackColor = true;
+            this.x1y8.Click += new System.EventHandler(this.x1y8_Click);
             // 
             // x1y9
             // 
@@ -509,6 +552,7 @@
             this.x1y9.Size = new System.Drawing.Size(45, 60);
             this.x1y9.TabIndex = 44;
             this.x1y9.UseVisualStyleBackColor = true;
+            this.x1y9.Click += new System.EventHandler(this.x1y9_Click);
             // 
             // x2y2
             // 
@@ -517,6 +561,7 @@
             this.x2y2.Size = new System.Drawing.Size(45, 60);
             this.x2y2.TabIndex = 45;
             this.x2y2.UseVisualStyleBackColor = true;
+            this.x2y2.Click += new System.EventHandler(this.x2y2_Click);
             // 
             // x2y3
             // 
@@ -525,6 +570,7 @@
             this.x2y3.Size = new System.Drawing.Size(45, 60);
             this.x2y3.TabIndex = 46;
             this.x2y3.UseVisualStyleBackColor = true;
+            this.x2y3.Click += new System.EventHandler(this.x2y3_Click);
             // 
             // x2y6
             // 
@@ -533,6 +579,7 @@
             this.x2y6.Size = new System.Drawing.Size(45, 60);
             this.x2y6.TabIndex = 49;
             this.x2y6.UseVisualStyleBackColor = true;
+            this.x2y6.Click += new System.EventHandler(this.x2y6_Click);
             // 
             // x2y7
             // 
@@ -541,6 +588,7 @@
             this.x2y7.Size = new System.Drawing.Size(45, 60);
             this.x2y7.TabIndex = 50;
             this.x2y7.UseVisualStyleBackColor = true;
+            this.x2y7.Click += new System.EventHandler(this.x2y7_Click);
             // 
             // x2y8
             // 
@@ -549,6 +597,7 @@
             this.x2y8.Size = new System.Drawing.Size(45, 60);
             this.x2y8.TabIndex = 51;
             this.x2y8.UseVisualStyleBackColor = true;
+            this.x2y8.Click += new System.EventHandler(this.x2y8_Click);
             // 
             // x2y9
             // 
@@ -557,6 +606,7 @@
             this.x2y9.Size = new System.Drawing.Size(45, 60);
             this.x2y9.TabIndex = 52;
             this.x2y9.UseVisualStyleBackColor = true;
+            this.x2y9.Click += new System.EventHandler(this.x2y9_Click);
             // 
             // x3y2
             // 
@@ -565,6 +615,7 @@
             this.x3y2.Size = new System.Drawing.Size(45, 60);
             this.x3y2.TabIndex = 53;
             this.x3y2.UseVisualStyleBackColor = true;
+            this.x3y2.Click += new System.EventHandler(this.x3y2_Click);
             // 
             // x3y3
             // 
@@ -573,6 +624,7 @@
             this.x3y3.Size = new System.Drawing.Size(45, 60);
             this.x3y3.TabIndex = 54;
             this.x3y3.UseVisualStyleBackColor = true;
+            this.x3y3.Click += new System.EventHandler(this.x3y3_Click);
             // 
             // x3y6
             // 
@@ -581,6 +633,7 @@
             this.x3y6.Size = new System.Drawing.Size(45, 60);
             this.x3y6.TabIndex = 57;
             this.x3y6.UseVisualStyleBackColor = true;
+            this.x3y6.Click += new System.EventHandler(this.x3y6_Click);
             // 
             // x3y7
             // 
@@ -589,6 +642,7 @@
             this.x3y7.Size = new System.Drawing.Size(45, 60);
             this.x3y7.TabIndex = 58;
             this.x3y7.UseVisualStyleBackColor = true;
+            this.x3y7.Click += new System.EventHandler(this.x3y7_Click);
             // 
             // x3y8
             // 
@@ -597,6 +651,7 @@
             this.x3y8.Size = new System.Drawing.Size(45, 60);
             this.x3y8.TabIndex = 59;
             this.x3y8.UseVisualStyleBackColor = true;
+            this.x3y8.Click += new System.EventHandler(this.x3y8_Click);
             // 
             // x3y9
             // 
@@ -605,6 +660,7 @@
             this.x3y9.Size = new System.Drawing.Size(45, 60);
             this.x3y9.TabIndex = 60;
             this.x3y9.UseVisualStyleBackColor = true;
+            this.x3y9.Click += new System.EventHandler(this.x3y9_Click);
             // 
             // x4y2
             // 
@@ -613,6 +669,7 @@
             this.x4y2.Size = new System.Drawing.Size(45, 60);
             this.x4y2.TabIndex = 61;
             this.x4y2.UseVisualStyleBackColor = true;
+            this.x4y2.Click += new System.EventHandler(this.x4y2_Click);
             // 
             // x4y3
             // 
@@ -621,6 +678,7 @@
             this.x4y3.Size = new System.Drawing.Size(45, 60);
             this.x4y3.TabIndex = 62;
             this.x4y3.UseVisualStyleBackColor = true;
+            this.x4y3.Click += new System.EventHandler(this.x4y3_Click);
             // 
             // x4y4
             // 
@@ -629,6 +687,7 @@
             this.x4y4.Size = new System.Drawing.Size(45, 60);
             this.x4y4.TabIndex = 63;
             this.x4y4.UseVisualStyleBackColor = true;
+            this.x4y4.Click += new System.EventHandler(this.x4y4_Click);
             // 
             // x4y5
             // 
@@ -637,6 +696,7 @@
             this.x4y5.Size = new System.Drawing.Size(45, 60);
             this.x4y5.TabIndex = 64;
             this.x4y5.UseVisualStyleBackColor = true;
+            this.x4y5.Click += new System.EventHandler(this.x4y5_Click);
             // 
             // x4y6
             // 
@@ -645,6 +705,7 @@
             this.x4y6.Size = new System.Drawing.Size(45, 60);
             this.x4y6.TabIndex = 65;
             this.x4y6.UseVisualStyleBackColor = true;
+            this.x4y6.Click += new System.EventHandler(this.x4y6_Click);
             // 
             // x4y7
             // 
@@ -653,6 +714,7 @@
             this.x4y7.Size = new System.Drawing.Size(45, 60);
             this.x4y7.TabIndex = 66;
             this.x4y7.UseVisualStyleBackColor = true;
+            this.x4y7.Click += new System.EventHandler(this.x4y7_Click);
             // 
             // x4y8
             // 
@@ -661,6 +723,7 @@
             this.x4y8.Size = new System.Drawing.Size(45, 60);
             this.x4y8.TabIndex = 67;
             this.x4y8.UseVisualStyleBackColor = true;
+            this.x4y8.Click += new System.EventHandler(this.x4y8_Click);
             // 
             // x4y9
             // 
@@ -669,6 +732,7 @@
             this.x4y9.Size = new System.Drawing.Size(45, 60);
             this.x4y9.TabIndex = 68;
             this.x4y9.UseVisualStyleBackColor = true;
+            this.x4y9.Click += new System.EventHandler(this.x4y9_Click);
             // 
             // x5y2
             // 
@@ -677,6 +741,7 @@
             this.x5y2.Size = new System.Drawing.Size(45, 60);
             this.x5y2.TabIndex = 69;
             this.x5y2.UseVisualStyleBackColor = true;
+            this.x5y2.Click += new System.EventHandler(this.x5y2_Click);
             // 
             // x5y3
             // 
@@ -685,6 +750,7 @@
             this.x5y3.Size = new System.Drawing.Size(45, 60);
             this.x5y3.TabIndex = 70;
             this.x5y3.UseVisualStyleBackColor = true;
+            this.x5y3.Click += new System.EventHandler(this.x5y3_Click);
             // 
             // x5y4
             // 
@@ -693,6 +759,7 @@
             this.x5y4.Size = new System.Drawing.Size(45, 60);
             this.x5y4.TabIndex = 71;
             this.x5y4.UseVisualStyleBackColor = true;
+            this.x5y4.Click += new System.EventHandler(this.x5y4_Click);
             // 
             // x5y5
             // 
@@ -701,6 +768,7 @@
             this.x5y5.Size = new System.Drawing.Size(45, 60);
             this.x5y5.TabIndex = 72;
             this.x5y5.UseVisualStyleBackColor = true;
+            this.x5y5.Click += new System.EventHandler(this.x5y5_Click);
             // 
             // x5y6
             // 
@@ -709,6 +777,7 @@
             this.x5y6.Size = new System.Drawing.Size(45, 60);
             this.x5y6.TabIndex = 73;
             this.x5y6.UseVisualStyleBackColor = true;
+            this.x5y6.Click += new System.EventHandler(this.x5y6_Click);
             // 
             // x5y7
             // 
@@ -717,6 +786,7 @@
             this.x5y7.Size = new System.Drawing.Size(45, 60);
             this.x5y7.TabIndex = 74;
             this.x5y7.UseVisualStyleBackColor = true;
+            this.x5y7.Click += new System.EventHandler(this.x5y7_Click);
             // 
             // x5y8
             // 
@@ -725,6 +795,7 @@
             this.x5y8.Size = new System.Drawing.Size(45, 60);
             this.x5y8.TabIndex = 75;
             this.x5y8.UseVisualStyleBackColor = true;
+            this.x5y8.Click += new System.EventHandler(this.x5y8_Click);
             // 
             // x5y9
             // 
@@ -733,6 +804,7 @@
             this.x5y9.Size = new System.Drawing.Size(45, 60);
             this.x5y9.TabIndex = 76;
             this.x5y9.UseVisualStyleBackColor = true;
+            this.x5y9.Click += new System.EventHandler(this.x5y9_Click);
             // 
             // x6y2
             // 
@@ -741,6 +813,7 @@
             this.x6y2.Size = new System.Drawing.Size(45, 60);
             this.x6y2.TabIndex = 77;
             this.x6y2.UseVisualStyleBackColor = true;
+            this.x6y2.Click += new System.EventHandler(this.x6y2_Click);
             // 
             // x6y3
             // 
@@ -749,6 +822,7 @@
             this.x6y3.Size = new System.Drawing.Size(45, 60);
             this.x6y3.TabIndex = 78;
             this.x6y3.UseVisualStyleBackColor = true;
+            this.x6y3.Click += new System.EventHandler(this.x6y3_Click);
             // 
             // x6y6
             // 
@@ -757,6 +831,7 @@
             this.x6y6.Size = new System.Drawing.Size(45, 60);
             this.x6y6.TabIndex = 81;
             this.x6y6.UseVisualStyleBackColor = true;
+            this.x6y6.Click += new System.EventHandler(this.x6y6_Click);
             // 
             // x6y7
             // 
@@ -765,6 +840,7 @@
             this.x6y7.Size = new System.Drawing.Size(45, 60);
             this.x6y7.TabIndex = 82;
             this.x6y7.UseVisualStyleBackColor = true;
+            this.x6y7.Click += new System.EventHandler(this.x6y7_Click);
             // 
             // x6y8
             // 
@@ -773,6 +849,7 @@
             this.x6y8.Size = new System.Drawing.Size(45, 60);
             this.x6y8.TabIndex = 83;
             this.x6y8.UseVisualStyleBackColor = true;
+            this.x6y8.Click += new System.EventHandler(this.x6y8_Click);
             // 
             // x6y9
             // 
@@ -781,6 +858,7 @@
             this.x6y9.Size = new System.Drawing.Size(45, 60);
             this.x6y9.TabIndex = 84;
             this.x6y9.UseVisualStyleBackColor = true;
+            this.x6y9.Click += new System.EventHandler(this.x6y9_Click);
             // 
             // x7y2
             // 
@@ -789,6 +867,7 @@
             this.x7y2.Size = new System.Drawing.Size(45, 60);
             this.x7y2.TabIndex = 85;
             this.x7y2.UseVisualStyleBackColor = true;
+            this.x7y2.Click += new System.EventHandler(this.x7y2_Click);
             // 
             // x7y3
             // 
@@ -797,6 +876,7 @@
             this.x7y3.Size = new System.Drawing.Size(45, 60);
             this.x7y3.TabIndex = 86;
             this.x7y3.UseVisualStyleBackColor = true;
+            this.x7y3.Click += new System.EventHandler(this.x7y3_Click);
             // 
             // x7y6
             // 
@@ -805,6 +885,7 @@
             this.x7y6.Size = new System.Drawing.Size(45, 60);
             this.x7y6.TabIndex = 89;
             this.x7y6.UseVisualStyleBackColor = true;
+            this.x7y6.Click += new System.EventHandler(this.x7y6_Click);
             // 
             // x7y7
             // 
@@ -813,6 +894,7 @@
             this.x7y7.Size = new System.Drawing.Size(45, 60);
             this.x7y7.TabIndex = 90;
             this.x7y7.UseVisualStyleBackColor = true;
+            this.x7y7.Click += new System.EventHandler(this.x7y7_Click);
             // 
             // x7y8
             // 
@@ -821,6 +903,7 @@
             this.x7y8.Size = new System.Drawing.Size(45, 60);
             this.x7y8.TabIndex = 91;
             this.x7y8.UseVisualStyleBackColor = true;
+            this.x7y8.Click += new System.EventHandler(this.x7y8_Click);
             // 
             // x7y9
             // 
@@ -829,6 +912,7 @@
             this.x7y9.Size = new System.Drawing.Size(45, 60);
             this.x7y9.TabIndex = 92;
             this.x7y9.UseVisualStyleBackColor = true;
+            this.x7y9.Click += new System.EventHandler(this.x7y9_Click);
             // 
             // x8y2
             // 
@@ -837,6 +921,7 @@
             this.x8y2.Size = new System.Drawing.Size(45, 60);
             this.x8y2.TabIndex = 93;
             this.x8y2.UseVisualStyleBackColor = true;
+            this.x8y2.Click += new System.EventHandler(this.x8y2_Click);
             // 
             // x8y3
             // 
@@ -845,6 +930,7 @@
             this.x8y3.Size = new System.Drawing.Size(45, 60);
             this.x8y3.TabIndex = 94;
             this.x8y3.UseVisualStyleBackColor = true;
+            this.x8y3.Click += new System.EventHandler(this.x8y3_Click);
             // 
             // x8y4
             // 
@@ -853,6 +939,7 @@
             this.x8y4.Size = new System.Drawing.Size(45, 60);
             this.x8y4.TabIndex = 95;
             this.x8y4.UseVisualStyleBackColor = true;
+            this.x8y4.Click += new System.EventHandler(this.x8y4_Click);
             // 
             // x8y5
             // 
@@ -861,6 +948,7 @@
             this.x8y5.Size = new System.Drawing.Size(45, 60);
             this.x8y5.TabIndex = 96;
             this.x8y5.UseVisualStyleBackColor = true;
+            this.x8y5.Click += new System.EventHandler(this.x8y5_Click);
             // 
             // x8y6
             // 
@@ -869,6 +957,7 @@
             this.x8y6.Size = new System.Drawing.Size(45, 60);
             this.x8y6.TabIndex = 97;
             this.x8y6.UseVisualStyleBackColor = true;
+            this.x8y6.Click += new System.EventHandler(this.x8y6_Click);
             // 
             // x8y7
             // 
@@ -877,6 +966,7 @@
             this.x8y7.Size = new System.Drawing.Size(45, 60);
             this.x8y7.TabIndex = 98;
             this.x8y7.UseVisualStyleBackColor = true;
+            this.x8y7.Click += new System.EventHandler(this.x8y7_Click);
             // 
             // x8y8
             // 
@@ -885,6 +975,7 @@
             this.x8y8.Size = new System.Drawing.Size(45, 60);
             this.x8y8.TabIndex = 99;
             this.x8y8.UseVisualStyleBackColor = true;
+            this.x8y8.Click += new System.EventHandler(this.x8y8_Click);
             // 
             // x8y9
             // 
@@ -893,6 +984,7 @@
             this.x8y9.Size = new System.Drawing.Size(45, 60);
             this.x8y9.TabIndex = 100;
             this.x8y9.UseVisualStyleBackColor = true;
+            this.x8y9.Click += new System.EventHandler(this.x8y9_Click);
             // 
             // x0y0
             // 
@@ -902,451 +994,503 @@
             this.x0y0.TabIndex = 101;
             this.x0y0.Text = "(0.0)";
             this.x0y0.UseVisualStyleBackColor = true;
-            // 
-            // button40
-            // 
-            this.button40.BackColor = System.Drawing.Color.Transparent;
-            this.button40.BackgroundImage = global::Stratego.Properties.Resources.marshall;
-            this.button40.Location = new System.Drawing.Point(1038, 606);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(45, 60);
-            this.button40.TabIndex = 141;
-            this.button40.UseVisualStyleBackColor = false;
-            // 
-            // button39
-            // 
-            this.button39.BackColor = System.Drawing.Color.Transparent;
-            this.button39.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button39.BackgroundImage")));
-            this.button39.Location = new System.Drawing.Point(1038, 540);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(45, 60);
-            this.button39.TabIndex = 140;
-            this.button39.UseVisualStyleBackColor = false;
-            // 
-            // button38
-            // 
-            this.button38.BackColor = System.Drawing.Color.Transparent;
-            this.button38.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button38.BackgroundImage")));
-            this.button38.Location = new System.Drawing.Point(1038, 474);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(45, 60);
-            this.button38.TabIndex = 139;
-            this.button38.UseVisualStyleBackColor = false;
-            // 
-            // button37
-            // 
-            this.button37.BackColor = System.Drawing.Color.Transparent;
-            this.button37.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button37.BackgroundImage")));
-            this.button37.Location = new System.Drawing.Point(1038, 408);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(45, 60);
-            this.button37.TabIndex = 138;
-            this.button37.UseVisualStyleBackColor = false;
-            // 
-            // button36
-            // 
-            this.button36.BackColor = System.Drawing.Color.Transparent;
-            this.button36.BackgroundImage = global::Stratego.Properties.Resources.general;
-            this.button36.Location = new System.Drawing.Point(987, 606);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(45, 60);
-            this.button36.TabIndex = 137;
-            this.button36.UseVisualStyleBackColor = false;
-            // 
-            // button35
-            // 
-            this.button35.BackColor = System.Drawing.Color.Transparent;
-            this.button35.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button35.BackgroundImage")));
-            this.button35.Location = new System.Drawing.Point(987, 540);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(45, 60);
-            this.button35.TabIndex = 136;
-            this.button35.UseVisualStyleBackColor = false;
-            // 
-            // button34
-            // 
-            this.button34.BackColor = System.Drawing.Color.Transparent;
-            this.button34.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button34.BackgroundImage")));
-            this.button34.Location = new System.Drawing.Point(987, 474);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(45, 60);
-            this.button34.TabIndex = 135;
-            this.button34.UseVisualStyleBackColor = false;
-            // 
-            // button33
-            // 
-            this.button33.BackColor = System.Drawing.Color.Transparent;
-            this.button33.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button33.BackgroundImage")));
-            this.button33.Location = new System.Drawing.Point(987, 408);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(45, 60);
-            this.button33.TabIndex = 134;
-            this.button33.UseVisualStyleBackColor = false;
-            // 
-            // button32
-            // 
-            this.button32.BackColor = System.Drawing.Color.Transparent;
-            this.button32.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button32.BackgroundImage")));
-            this.button32.Location = new System.Drawing.Point(936, 606);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(45, 60);
-            this.button32.TabIndex = 133;
-            this.button32.UseVisualStyleBackColor = false;
-            // 
-            // button31
-            // 
-            this.button31.BackColor = System.Drawing.Color.Transparent;
-            this.button31.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button31.BackgroundImage")));
-            this.button31.Location = new System.Drawing.Point(936, 540);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(45, 60);
-            this.button31.TabIndex = 132;
-            this.button31.UseVisualStyleBackColor = false;
-            // 
-            // button30
-            // 
-            this.button30.BackColor = System.Drawing.Color.Transparent;
-            this.button30.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button30.BackgroundImage")));
-            this.button30.Location = new System.Drawing.Point(936, 474);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(45, 60);
-            this.button30.TabIndex = 131;
-            this.button30.UseVisualStyleBackColor = false;
-            // 
-            // button29
-            // 
-            this.button29.BackColor = System.Drawing.Color.Transparent;
-            this.button29.BackgroundImage = global::Stratego.Properties.Resources.spy;
-            this.button29.Location = new System.Drawing.Point(936, 408);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(45, 60);
-            this.button29.TabIndex = 130;
-            this.button29.UseVisualStyleBackColor = false;
-            // 
-            // button28
-            // 
-            this.button28.BackColor = System.Drawing.Color.Transparent;
-            this.button28.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button28.BackgroundImage")));
-            this.button28.Location = new System.Drawing.Point(885, 606);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(45, 60);
-            this.button28.TabIndex = 129;
-            this.button28.UseVisualStyleBackColor = false;
-            // 
-            // button27
-            // 
-            this.button27.BackColor = System.Drawing.Color.Transparent;
-            this.button27.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button27.BackgroundImage")));
-            this.button27.Location = new System.Drawing.Point(885, 540);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(45, 60);
-            this.button27.TabIndex = 128;
-            this.button27.UseVisualStyleBackColor = false;
-            // 
-            // button26
-            // 
-            this.button26.BackColor = System.Drawing.Color.Transparent;
-            this.button26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button26.BackgroundImage")));
-            this.button26.Location = new System.Drawing.Point(885, 474);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(45, 60);
-            this.button26.TabIndex = 127;
-            this.button26.UseVisualStyleBackColor = false;
-            // 
-            // button25
-            // 
-            this.button25.BackColor = System.Drawing.Color.Transparent;
-            this.button25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button25.BackgroundImage")));
-            this.button25.Location = new System.Drawing.Point(885, 408);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(45, 60);
-            this.button25.TabIndex = 126;
-            this.button25.UseVisualStyleBackColor = false;
-            // 
-            // button24
-            // 
-            this.button24.BackColor = System.Drawing.Color.Transparent;
-            this.button24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button24.BackgroundImage")));
-            this.button24.Location = new System.Drawing.Point(834, 606);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(45, 60);
-            this.button24.TabIndex = 125;
-            this.button24.UseVisualStyleBackColor = false;
-            // 
-            // button23
-            // 
-            this.button23.BackColor = System.Drawing.Color.Transparent;
-            this.button23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button23.BackgroundImage")));
-            this.button23.Location = new System.Drawing.Point(834, 540);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(45, 60);
-            this.button23.TabIndex = 124;
-            this.button23.UseVisualStyleBackColor = false;
-            // 
-            // button22
-            // 
-            this.button22.BackColor = System.Drawing.Color.Transparent;
-            this.button22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button22.BackgroundImage")));
-            this.button22.Location = new System.Drawing.Point(834, 474);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(45, 60);
-            this.button22.TabIndex = 123;
-            this.button22.UseVisualStyleBackColor = false;
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.Transparent;
-            this.button21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button21.BackgroundImage")));
-            this.button21.Location = new System.Drawing.Point(834, 408);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(45, 60);
-            this.button21.TabIndex = 122;
-            this.button21.UseVisualStyleBackColor = false;
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.Transparent;
-            this.button20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button20.BackgroundImage")));
-            this.button20.Location = new System.Drawing.Point(783, 606);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(45, 60);
-            this.button20.TabIndex = 121;
-            this.button20.UseVisualStyleBackColor = false;
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.Color.Transparent;
-            this.button19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button19.BackgroundImage")));
-            this.button19.Location = new System.Drawing.Point(783, 540);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(45, 60);
-            this.button19.TabIndex = 120;
-            this.button19.UseVisualStyleBackColor = false;
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.Transparent;
-            this.button18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button18.BackgroundImage")));
-            this.button18.Location = new System.Drawing.Point(783, 474);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(45, 60);
-            this.button18.TabIndex = 119;
-            this.button18.UseVisualStyleBackColor = false;
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.Transparent;
-            this.button17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button17.BackgroundImage")));
-            this.button17.Location = new System.Drawing.Point(783, 408);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(45, 60);
-            this.button17.TabIndex = 118;
-            this.button17.UseVisualStyleBackColor = false;
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.Transparent;
-            this.button16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button16.BackgroundImage")));
-            this.button16.Location = new System.Drawing.Point(732, 606);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(45, 60);
-            this.button16.TabIndex = 117;
-            this.button16.UseVisualStyleBackColor = false;
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.Transparent;
-            this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
-            this.button15.Location = new System.Drawing.Point(732, 540);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(45, 60);
-            this.button15.TabIndex = 116;
-            this.button15.UseVisualStyleBackColor = false;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.Transparent;
-            this.button14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button14.BackgroundImage")));
-            this.button14.Location = new System.Drawing.Point(732, 474);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(45, 60);
-            this.button14.TabIndex = 115;
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.Transparent;
-            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
-            this.button13.Location = new System.Drawing.Point(732, 408);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(45, 60);
-            this.button13.TabIndex = 114;
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
-            this.button12.Location = new System.Drawing.Point(681, 606);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(45, 60);
-            this.button12.TabIndex = 113;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
-            this.button11.Location = new System.Drawing.Point(681, 540);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(45, 60);
-            this.button11.TabIndex = 112;
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
-            this.button10.Location = new System.Drawing.Point(681, 474);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(45, 60);
-            this.button10.TabIndex = 111;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
-            this.button9.Location = new System.Drawing.Point(681, 408);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(45, 60);
-            this.button9.TabIndex = 110;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
-            this.button8.Location = new System.Drawing.Point(630, 606);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(45, 60);
-            this.button8.TabIndex = 109;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.Location = new System.Drawing.Point(630, 540);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(45, 60);
-            this.button7.TabIndex = 108;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.Location = new System.Drawing.Point(630, 474);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(45, 60);
-            this.button6.TabIndex = 107;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.Location = new System.Drawing.Point(579, 474);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(45, 60);
-            this.button5.TabIndex = 106;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.Location = new System.Drawing.Point(579, 606);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(45, 60);
-            this.button4.TabIndex = 105;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.Location = new System.Drawing.Point(579, 540);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(45, 60);
-            this.button3.TabIndex = 104;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Image = global::Stratego.Properties.Resources.bomb;
-            this.button2.Location = new System.Drawing.Point(630, 408);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(45, 60);
-            this.button2.TabIndex = 103;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::Stratego.Properties.Resources.flag1;
-            this.button1.Location = new System.Drawing.Point(579, 408);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 60);
-            this.button1.TabIndex = 102;
-            this.button1.UseVisualStyleBackColor = false;
+            this.x0y0.Click += new System.EventHandler(this.x0y0_Click);
+            // 
+            // marshall
+            // 
+            this.marshall.BackColor = System.Drawing.Color.Transparent;
+            this.marshall.BackgroundImage = global::Stratego.Properties.Resources.marshall;
+            this.marshall.Location = new System.Drawing.Point(1038, 606);
+            this.marshall.Name = "marshall";
+            this.marshall.Size = new System.Drawing.Size(45, 60);
+            this.marshall.TabIndex = 141;
+            this.marshall.UseVisualStyleBackColor = false;
+            this.marshall.Click += new System.EventHandler(this.marshall_Click);
+            // 
+            // captain1
+            // 
+            this.captain1.BackColor = System.Drawing.Color.Transparent;
+            this.captain1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("captain1.BackgroundImage")));
+            this.captain1.Location = new System.Drawing.Point(1038, 540);
+            this.captain1.Name = "captain1";
+            this.captain1.Size = new System.Drawing.Size(45, 60);
+            this.captain1.TabIndex = 140;
+            this.captain1.UseVisualStyleBackColor = false;
+            this.captain1.Click += new System.EventHandler(this.captain1_Click);
+            // 
+            // miner4
+            // 
+            this.miner4.BackColor = System.Drawing.Color.Transparent;
+            this.miner4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("miner4.BackgroundImage")));
+            this.miner4.Location = new System.Drawing.Point(1038, 474);
+            this.miner4.Name = "miner4";
+            this.miner4.Size = new System.Drawing.Size(45, 60);
+            this.miner4.TabIndex = 139;
+            this.miner4.UseVisualStyleBackColor = false;
+            this.miner4.Click += new System.EventHandler(this.miner4_Click);
+            // 
+            // scout2
+            // 
+            this.scout2.BackColor = System.Drawing.Color.Transparent;
+            this.scout2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout2.BackgroundImage")));
+            this.scout2.Location = new System.Drawing.Point(1038, 408);
+            this.scout2.Name = "scout2";
+            this.scout2.Size = new System.Drawing.Size(45, 60);
+            this.scout2.TabIndex = 138;
+            this.scout2.UseVisualStyleBackColor = false;
+            this.scout2.Click += new System.EventHandler(this.scout2_Click);
+            // 
+            // general
+            // 
+            this.general.BackColor = System.Drawing.Color.Transparent;
+            this.general.BackgroundImage = global::Stratego.Properties.Resources.general;
+            this.general.Location = new System.Drawing.Point(987, 606);
+            this.general.Name = "general";
+            this.general.Size = new System.Drawing.Size(45, 60);
+            this.general.TabIndex = 137;
+            this.general.UseVisualStyleBackColor = false;
+            this.general.Click += new System.EventHandler(this.general_Click);
+            // 
+            // lieutenant4
+            // 
+            this.lieutenant4.BackColor = System.Drawing.Color.Transparent;
+            this.lieutenant4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lieutenant4.BackgroundImage")));
+            this.lieutenant4.Location = new System.Drawing.Point(987, 540);
+            this.lieutenant4.Name = "lieutenant4";
+            this.lieutenant4.Size = new System.Drawing.Size(45, 60);
+            this.lieutenant4.TabIndex = 136;
+            this.lieutenant4.UseVisualStyleBackColor = false;
+            this.lieutenant4.Click += new System.EventHandler(this.lieutenant4_Click);
+            // 
+            // miner3
+            // 
+            this.miner3.BackColor = System.Drawing.Color.Transparent;
+            this.miner3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("miner3.BackgroundImage")));
+            this.miner3.Location = new System.Drawing.Point(987, 474);
+            this.miner3.Name = "miner3";
+            this.miner3.Size = new System.Drawing.Size(45, 60);
+            this.miner3.TabIndex = 135;
+            this.miner3.UseVisualStyleBackColor = false;
+            this.miner3.Click += new System.EventHandler(this.miner3_Click);
+            // 
+            // scout1
+            // 
+            this.scout1.BackColor = System.Drawing.Color.Transparent;
+            this.scout1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout1.BackgroundImage")));
+            this.scout1.Location = new System.Drawing.Point(987, 408);
+            this.scout1.Name = "scout1";
+            this.scout1.Size = new System.Drawing.Size(45, 60);
+            this.scout1.TabIndex = 134;
+            this.scout1.UseVisualStyleBackColor = false;
+            this.scout1.Click += new System.EventHandler(this.scout1_Click);
+            // 
+            // colonel2
+            // 
+            this.colonel2.BackColor = System.Drawing.Color.Transparent;
+            this.colonel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("colonel2.BackgroundImage")));
+            this.colonel2.Location = new System.Drawing.Point(936, 606);
+            this.colonel2.Name = "colonel2";
+            this.colonel2.Size = new System.Drawing.Size(45, 60);
+            this.colonel2.TabIndex = 133;
+            this.colonel2.UseVisualStyleBackColor = false;
+            this.colonel2.Click += new System.EventHandler(this.colonel2_Click);
+            // 
+            // lieutenant3
+            // 
+            this.lieutenant3.BackColor = System.Drawing.Color.Transparent;
+            this.lieutenant3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lieutenant3.BackgroundImage")));
+            this.lieutenant3.Location = new System.Drawing.Point(936, 540);
+            this.lieutenant3.Name = "lieutenant3";
+            this.lieutenant3.Size = new System.Drawing.Size(45, 60);
+            this.lieutenant3.TabIndex = 132;
+            this.lieutenant3.UseVisualStyleBackColor = false;
+            this.lieutenant3.Click += new System.EventHandler(this.lieutenant3_Click);
+            // 
+            // miner2
+            // 
+            this.miner2.BackColor = System.Drawing.Color.Transparent;
+            this.miner2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("miner2.BackgroundImage")));
+            this.miner2.Location = new System.Drawing.Point(936, 474);
+            this.miner2.Name = "miner2";
+            this.miner2.Size = new System.Drawing.Size(45, 60);
+            this.miner2.TabIndex = 131;
+            this.miner2.UseVisualStyleBackColor = false;
+            this.miner2.Click += new System.EventHandler(this.miner2_Click);
+            // 
+            // spy
+            // 
+            this.spy.BackColor = System.Drawing.Color.Transparent;
+            this.spy.BackgroundImage = global::Stratego.Properties.Resources.spy;
+            this.spy.Location = new System.Drawing.Point(936, 408);
+            this.spy.Name = "spy";
+            this.spy.Size = new System.Drawing.Size(45, 60);
+            this.spy.TabIndex = 130;
+            this.spy.UseVisualStyleBackColor = false;
+            this.spy.Click += new System.EventHandler(this.spy_Click);
+            // 
+            // colonel1
+            // 
+            this.colonel1.BackColor = System.Drawing.Color.Transparent;
+            this.colonel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("colonel1.BackgroundImage")));
+            this.colonel1.Location = new System.Drawing.Point(885, 606);
+            this.colonel1.Name = "colonel1";
+            this.colonel1.Size = new System.Drawing.Size(45, 60);
+            this.colonel1.TabIndex = 129;
+            this.colonel1.UseVisualStyleBackColor = false;
+            this.colonel1.Click += new System.EventHandler(this.colonel1_Click);
+            // 
+            // lieutenant2
+            // 
+            this.lieutenant2.BackColor = System.Drawing.Color.Transparent;
+            this.lieutenant2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lieutenant2.BackgroundImage")));
+            this.lieutenant2.Location = new System.Drawing.Point(885, 540);
+            this.lieutenant2.Name = "lieutenant2";
+            this.lieutenant2.Size = new System.Drawing.Size(45, 60);
+            this.lieutenant2.TabIndex = 128;
+            this.lieutenant2.UseVisualStyleBackColor = false;
+            this.lieutenant2.Click += new System.EventHandler(this.lieutenant2_Click);
+            // 
+            // miner1
+            // 
+            this.miner1.BackColor = System.Drawing.Color.Transparent;
+            this.miner1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("miner1.BackgroundImage")));
+            this.miner1.Location = new System.Drawing.Point(885, 474);
+            this.miner1.Name = "miner1";
+            this.miner1.Size = new System.Drawing.Size(45, 60);
+            this.miner1.TabIndex = 127;
+            this.miner1.UseVisualStyleBackColor = false;
+            this.miner1.Click += new System.EventHandler(this.miner1_Click);
+            // 
+            // bomb6
+            // 
+            this.bomb6.BackColor = System.Drawing.Color.Transparent;
+            this.bomb6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bomb6.BackgroundImage")));
+            this.bomb6.Location = new System.Drawing.Point(885, 408);
+            this.bomb6.Name = "bomb6";
+            this.bomb6.Size = new System.Drawing.Size(45, 60);
+            this.bomb6.TabIndex = 126;
+            this.bomb6.UseVisualStyleBackColor = false;
+            this.bomb6.Click += new System.EventHandler(this.bomb6_Click);
+            // 
+            // major3
+            // 
+            this.major3.BackColor = System.Drawing.Color.Transparent;
+            this.major3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("major3.BackgroundImage")));
+            this.major3.Location = new System.Drawing.Point(834, 606);
+            this.major3.Name = "major3";
+            this.major3.Size = new System.Drawing.Size(45, 60);
+            this.major3.TabIndex = 125;
+            this.major3.UseVisualStyleBackColor = false;
+            this.major3.Click += new System.EventHandler(this.major3_Click);
+            // 
+            // lieutenant1
+            // 
+            this.lieutenant1.BackColor = System.Drawing.Color.Transparent;
+            this.lieutenant1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lieutenant1.BackgroundImage")));
+            this.lieutenant1.Location = new System.Drawing.Point(834, 540);
+            this.lieutenant1.Name = "lieutenant1";
+            this.lieutenant1.Size = new System.Drawing.Size(45, 60);
+            this.lieutenant1.TabIndex = 124;
+            this.lieutenant1.UseVisualStyleBackColor = false;
+            this.lieutenant1.Click += new System.EventHandler(this.lieutenant1_Click);
+            // 
+            // scout8
+            // 
+            this.scout8.BackColor = System.Drawing.Color.Transparent;
+            this.scout8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout8.BackgroundImage")));
+            this.scout8.Location = new System.Drawing.Point(834, 474);
+            this.scout8.Name = "scout8";
+            this.scout8.Size = new System.Drawing.Size(45, 60);
+            this.scout8.TabIndex = 123;
+            this.scout8.UseVisualStyleBackColor = false;
+            this.scout8.Click += new System.EventHandler(this.scout8_Click);
+            // 
+            // bomb5
+            // 
+            this.bomb5.BackColor = System.Drawing.Color.Transparent;
+            this.bomb5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bomb5.BackgroundImage")));
+            this.bomb5.Location = new System.Drawing.Point(834, 408);
+            this.bomb5.Name = "bomb5";
+            this.bomb5.Size = new System.Drawing.Size(45, 60);
+            this.bomb5.TabIndex = 122;
+            this.bomb5.UseVisualStyleBackColor = false;
+            this.bomb5.Click += new System.EventHandler(this.bomb5_Click);
+            // 
+            // major2
+            // 
+            this.major2.BackColor = System.Drawing.Color.Transparent;
+            this.major2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("major2.BackgroundImage")));
+            this.major2.Location = new System.Drawing.Point(783, 606);
+            this.major2.Name = "major2";
+            this.major2.Size = new System.Drawing.Size(45, 60);
+            this.major2.TabIndex = 121;
+            this.major2.UseVisualStyleBackColor = false;
+            this.major2.Click += new System.EventHandler(this.major2_Click);
+            // 
+            // sergeant4
+            // 
+            this.sergeant4.BackColor = System.Drawing.Color.Transparent;
+            this.sergeant4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sergeant4.BackgroundImage")));
+            this.sergeant4.Location = new System.Drawing.Point(783, 540);
+            this.sergeant4.Name = "sergeant4";
+            this.sergeant4.Size = new System.Drawing.Size(45, 60);
+            this.sergeant4.TabIndex = 120;
+            this.sergeant4.UseVisualStyleBackColor = false;
+            this.sergeant4.Click += new System.EventHandler(this.sergeant4_Click);
+            // 
+            // scout7
+            // 
+            this.scout7.BackColor = System.Drawing.Color.Transparent;
+            this.scout7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout7.BackgroundImage")));
+            this.scout7.Location = new System.Drawing.Point(783, 474);
+            this.scout7.Name = "scout7";
+            this.scout7.Size = new System.Drawing.Size(45, 60);
+            this.scout7.TabIndex = 119;
+            this.scout7.UseVisualStyleBackColor = false;
+            this.scout7.Click += new System.EventHandler(this.scout7_Click);
+            // 
+            // bomb4
+            // 
+            this.bomb4.BackColor = System.Drawing.Color.Transparent;
+            this.bomb4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bomb4.BackgroundImage")));
+            this.bomb4.Location = new System.Drawing.Point(783, 408);
+            this.bomb4.Name = "bomb4";
+            this.bomb4.Size = new System.Drawing.Size(45, 60);
+            this.bomb4.TabIndex = 118;
+            this.bomb4.UseVisualStyleBackColor = false;
+            this.bomb4.Click += new System.EventHandler(this.bomb4_Click);
+            // 
+            // major1
+            // 
+            this.major1.BackColor = System.Drawing.Color.Transparent;
+            this.major1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("major1.BackgroundImage")));
+            this.major1.Location = new System.Drawing.Point(732, 606);
+            this.major1.Name = "major1";
+            this.major1.Size = new System.Drawing.Size(45, 60);
+            this.major1.TabIndex = 117;
+            this.major1.UseVisualStyleBackColor = false;
+            this.major1.Click += new System.EventHandler(this.major1_Click);
+            // 
+            // sergeant3
+            // 
+            this.sergeant3.BackColor = System.Drawing.Color.Transparent;
+            this.sergeant3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sergeant3.BackgroundImage")));
+            this.sergeant3.Location = new System.Drawing.Point(732, 540);
+            this.sergeant3.Name = "sergeant3";
+            this.sergeant3.Size = new System.Drawing.Size(45, 60);
+            this.sergeant3.TabIndex = 116;
+            this.sergeant3.UseVisualStyleBackColor = false;
+            this.sergeant3.Click += new System.EventHandler(this.sergeant3_Click);
+            // 
+            // scout6
+            // 
+            this.scout6.BackColor = System.Drawing.Color.Transparent;
+            this.scout6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout6.BackgroundImage")));
+            this.scout6.Location = new System.Drawing.Point(732, 474);
+            this.scout6.Name = "scout6";
+            this.scout6.Size = new System.Drawing.Size(45, 60);
+            this.scout6.TabIndex = 115;
+            this.scout6.UseVisualStyleBackColor = false;
+            this.scout6.Click += new System.EventHandler(this.scout6_Click);
+            // 
+            // bomb3
+            // 
+            this.bomb3.BackColor = System.Drawing.Color.Transparent;
+            this.bomb3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bomb3.BackgroundImage")));
+            this.bomb3.Location = new System.Drawing.Point(732, 408);
+            this.bomb3.Name = "bomb3";
+            this.bomb3.Size = new System.Drawing.Size(45, 60);
+            this.bomb3.TabIndex = 114;
+            this.bomb3.UseVisualStyleBackColor = false;
+            this.bomb3.Click += new System.EventHandler(this.bomb3_Click);
+            // 
+            // captain4
+            // 
+            this.captain4.BackColor = System.Drawing.Color.Transparent;
+            this.captain4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("captain4.BackgroundImage")));
+            this.captain4.Location = new System.Drawing.Point(681, 606);
+            this.captain4.Name = "captain4";
+            this.captain4.Size = new System.Drawing.Size(45, 60);
+            this.captain4.TabIndex = 113;
+            this.captain4.UseVisualStyleBackColor = false;
+            this.captain4.Click += new System.EventHandler(this.captain4_Click);
+            // 
+            // sergeant2
+            // 
+            this.sergeant2.BackColor = System.Drawing.Color.Transparent;
+            this.sergeant2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sergeant2.BackgroundImage")));
+            this.sergeant2.Location = new System.Drawing.Point(681, 540);
+            this.sergeant2.Name = "sergeant2";
+            this.sergeant2.Size = new System.Drawing.Size(45, 60);
+            this.sergeant2.TabIndex = 112;
+            this.sergeant2.UseVisualStyleBackColor = false;
+            this.sergeant2.Click += new System.EventHandler(this.sergeant2_Click);
+            // 
+            // scout5
+            // 
+            this.scout5.BackColor = System.Drawing.Color.Transparent;
+            this.scout5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout5.BackgroundImage")));
+            this.scout5.Location = new System.Drawing.Point(681, 474);
+            this.scout5.Name = "scout5";
+            this.scout5.Size = new System.Drawing.Size(45, 60);
+            this.scout5.TabIndex = 111;
+            this.scout5.UseVisualStyleBackColor = false;
+            this.scout5.Click += new System.EventHandler(this.scout5_Click);
+            // 
+            // bomb2
+            // 
+            this.bomb2.BackColor = System.Drawing.Color.Transparent;
+            this.bomb2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bomb2.BackgroundImage")));
+            this.bomb2.Location = new System.Drawing.Point(681, 408);
+            this.bomb2.Name = "bomb2";
+            this.bomb2.Size = new System.Drawing.Size(45, 60);
+            this.bomb2.TabIndex = 110;
+            this.bomb2.UseVisualStyleBackColor = false;
+            this.bomb2.Click += new System.EventHandler(this.bomb2_Click);
+            // 
+            // captain3
+            // 
+            this.captain3.BackColor = System.Drawing.Color.Transparent;
+            this.captain3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("captain3.BackgroundImage")));
+            this.captain3.Location = new System.Drawing.Point(630, 606);
+            this.captain3.Name = "captain3";
+            this.captain3.Size = new System.Drawing.Size(45, 60);
+            this.captain3.TabIndex = 109;
+            this.captain3.UseVisualStyleBackColor = false;
+            this.captain3.Click += new System.EventHandler(this.captain3_Click);
+            // 
+            // sergeant1
+            // 
+            this.sergeant1.BackColor = System.Drawing.Color.Transparent;
+            this.sergeant1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sergeant1.BackgroundImage")));
+            this.sergeant1.Location = new System.Drawing.Point(630, 540);
+            this.sergeant1.Name = "sergeant1";
+            this.sergeant1.Size = new System.Drawing.Size(45, 60);
+            this.sergeant1.TabIndex = 108;
+            this.sergeant1.UseVisualStyleBackColor = false;
+            this.sergeant1.Click += new System.EventHandler(this.sergeant1_Click);
+            // 
+            // scout4
+            // 
+            this.scout4.BackColor = System.Drawing.Color.Transparent;
+            this.scout4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout4.BackgroundImage")));
+            this.scout4.Location = new System.Drawing.Point(630, 474);
+            this.scout4.Name = "scout4";
+            this.scout4.Size = new System.Drawing.Size(45, 60);
+            this.scout4.TabIndex = 107;
+            this.scout4.UseVisualStyleBackColor = false;
+            this.scout4.Click += new System.EventHandler(this.scout4_Click);
+            // 
+            // scout3
+            // 
+            this.scout3.BackColor = System.Drawing.Color.Transparent;
+            this.scout3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout3.BackgroundImage")));
+            this.scout3.Location = new System.Drawing.Point(579, 474);
+            this.scout3.Name = "scout3";
+            this.scout3.Size = new System.Drawing.Size(45, 60);
+            this.scout3.TabIndex = 106;
+            this.scout3.UseVisualStyleBackColor = false;
+            this.scout3.Click += new System.EventHandler(this.scout3_Click);
+            // 
+            // captain2
+            // 
+            this.captain2.BackColor = System.Drawing.Color.Transparent;
+            this.captain2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("captain2.BackgroundImage")));
+            this.captain2.Location = new System.Drawing.Point(579, 606);
+            this.captain2.Name = "captain2";
+            this.captain2.Size = new System.Drawing.Size(45, 60);
+            this.captain2.TabIndex = 105;
+            this.captain2.UseVisualStyleBackColor = false;
+            this.captain2.Click += new System.EventHandler(this.captain2_Click);
+            // 
+            // miner5
+            // 
+            this.miner5.BackColor = System.Drawing.Color.Transparent;
+            this.miner5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("miner5.BackgroundImage")));
+            this.miner5.Location = new System.Drawing.Point(579, 540);
+            this.miner5.Name = "miner5";
+            this.miner5.Size = new System.Drawing.Size(45, 60);
+            this.miner5.TabIndex = 104;
+            this.miner5.UseVisualStyleBackColor = false;
+            this.miner5.Click += new System.EventHandler(this.miner5_Click);
+            // 
+            // bomb1
+            // 
+            this.bomb1.BackColor = System.Drawing.Color.Transparent;
+            this.bomb1.Image = global::Stratego.Properties.Resources.bomb;
+            this.bomb1.Location = new System.Drawing.Point(630, 408);
+            this.bomb1.Name = "bomb1";
+            this.bomb1.Size = new System.Drawing.Size(45, 60);
+            this.bomb1.TabIndex = 103;
+            this.bomb1.UseVisualStyleBackColor = false;
+            this.bomb1.Click += new System.EventHandler(this.bomb1_Click);
+            // 
+            // flag
+            // 
+            this.flag.BackColor = System.Drawing.Color.Transparent;
+            this.flag.Image = global::Stratego.Properties.Resources.flag1;
+            this.flag.Location = new System.Drawing.Point(579, 408);
+            this.flag.Name = "flag";
+            this.flag.Size = new System.Drawing.Size(45, 60);
+            this.flag.TabIndex = 102;
+            this.flag.UseVisualStyleBackColor = false;
+            this.flag.Click += new System.EventHandler(this.flag_Click);
+            // 
+            // ConfirmSetup
+            // 
+            this.ConfirmSetup.Location = new System.Drawing.Point(1089, 601);
+            this.ConfirmSetup.Name = "ConfirmSetup";
+            this.ConfirmSetup.Size = new System.Drawing.Size(141, 60);
+            this.ConfirmSetup.TabIndex = 142;
+            this.ConfirmSetup.Text = "Confirm Setup";
+            this.ConfirmSetup.UseVisualStyleBackColor = true;
+            this.ConfirmSetup.Click += new System.EventHandler(this.ConfirmSetup_Click);
             // 
             // GameScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Controls.Add(this.button40);
-            this.Controls.Add(this.button39);
-            this.Controls.Add(this.button38);
-            this.Controls.Add(this.button37);
-            this.Controls.Add(this.button36);
-            this.Controls.Add(this.button35);
-            this.Controls.Add(this.button34);
-            this.Controls.Add(this.button33);
-            this.Controls.Add(this.button32);
-            this.Controls.Add(this.button31);
-            this.Controls.Add(this.button30);
-            this.Controls.Add(this.button29);
-            this.Controls.Add(this.button28);
-            this.Controls.Add(this.button27);
-            this.Controls.Add(this.button26);
-            this.Controls.Add(this.button25);
-            this.Controls.Add(this.button24);
-            this.Controls.Add(this.button23);
-            this.Controls.Add(this.button22);
-            this.Controls.Add(this.button21);
-            this.Controls.Add(this.button20);
-            this.Controls.Add(this.button19);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ConfirmSetup);
+            this.Controls.Add(this.marshall);
+            this.Controls.Add(this.captain1);
+            this.Controls.Add(this.miner4);
+            this.Controls.Add(this.scout2);
+            this.Controls.Add(this.general);
+            this.Controls.Add(this.lieutenant4);
+            this.Controls.Add(this.miner3);
+            this.Controls.Add(this.scout1);
+            this.Controls.Add(this.colonel2);
+            this.Controls.Add(this.lieutenant3);
+            this.Controls.Add(this.miner2);
+            this.Controls.Add(this.spy);
+            this.Controls.Add(this.colonel1);
+            this.Controls.Add(this.lieutenant2);
+            this.Controls.Add(this.miner1);
+            this.Controls.Add(this.bomb6);
+            this.Controls.Add(this.major3);
+            this.Controls.Add(this.lieutenant1);
+            this.Controls.Add(this.scout8);
+            this.Controls.Add(this.bomb5);
+            this.Controls.Add(this.major2);
+            this.Controls.Add(this.sergeant4);
+            this.Controls.Add(this.scout7);
+            this.Controls.Add(this.bomb4);
+            this.Controls.Add(this.major1);
+            this.Controls.Add(this.sergeant3);
+            this.Controls.Add(this.scout6);
+            this.Controls.Add(this.bomb3);
+            this.Controls.Add(this.captain4);
+            this.Controls.Add(this.sergeant2);
+            this.Controls.Add(this.scout5);
+            this.Controls.Add(this.bomb2);
+            this.Controls.Add(this.captain3);
+            this.Controls.Add(this.sergeant1);
+            this.Controls.Add(this.scout4);
+            this.Controls.Add(this.scout3);
+            this.Controls.Add(this.captain2);
+            this.Controls.Add(this.miner5);
+            this.Controls.Add(this.bomb1);
+            this.Controls.Add(this.flag);
             this.Controls.Add(this.x0y0);
             this.Controls.Add(this.x8y9);
             this.Controls.Add(this.x8y8);
@@ -1542,45 +1686,46 @@
         private System.Windows.Forms.Button x8y8;
         private System.Windows.Forms.Button x8y9;
         private System.Windows.Forms.Button x0y0;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button36;
-        private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Button button38;
-        private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.Button button40;
+        private System.Windows.Forms.Button flag;
+        private System.Windows.Forms.Button bomb1;
+        private System.Windows.Forms.Button miner5;
+        private System.Windows.Forms.Button captain2;
+        private System.Windows.Forms.Button scout3;
+        private System.Windows.Forms.Button scout4;
+        private System.Windows.Forms.Button sergeant1;
+        private System.Windows.Forms.Button captain3;
+        private System.Windows.Forms.Button bomb2;
+        private System.Windows.Forms.Button scout5;
+        private System.Windows.Forms.Button sergeant2;
+        private System.Windows.Forms.Button captain4;
+        private System.Windows.Forms.Button bomb3;
+        private System.Windows.Forms.Button scout6;
+        private System.Windows.Forms.Button sergeant3;
+        private System.Windows.Forms.Button major1;
+        private System.Windows.Forms.Button bomb4;
+        private System.Windows.Forms.Button scout7;
+        private System.Windows.Forms.Button sergeant4;
+        private System.Windows.Forms.Button major2;
+        private System.Windows.Forms.Button bomb5;
+        private System.Windows.Forms.Button scout8;
+        private System.Windows.Forms.Button lieutenant1;
+        private System.Windows.Forms.Button major3;
+        private System.Windows.Forms.Button bomb6;
+        private System.Windows.Forms.Button miner1;
+        private System.Windows.Forms.Button lieutenant2;
+        private System.Windows.Forms.Button colonel1;
+        private System.Windows.Forms.Button spy;
+        private System.Windows.Forms.Button miner2;
+        private System.Windows.Forms.Button lieutenant3;
+        private System.Windows.Forms.Button colonel2;
+        private System.Windows.Forms.Button scout1;
+        private System.Windows.Forms.Button miner3;
+        private System.Windows.Forms.Button lieutenant4;
+        private System.Windows.Forms.Button general;
+        private System.Windows.Forms.Button scout2;
+        private System.Windows.Forms.Button miner4;
+        private System.Windows.Forms.Button captain1;
+        private System.Windows.Forms.Button marshall;
+        private System.Windows.Forms.Button ConfirmSetup;
     }
 }
