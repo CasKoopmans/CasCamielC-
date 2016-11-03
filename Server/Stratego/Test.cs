@@ -11,11 +11,11 @@ namespace Stratego
     {
         public Test()
         {
-            Character c = new Character(6, false, true, true);
-            c.setPosistion("x4y7");
-            System.Diagnostics.Debug.WriteLine(c.getPosistion());
-            while(true)
-                { }
+            //Character c = new Character(6, false, true, true);
+            //c.setPosistion("x4y7");
+            //System.Diagnostics.Debug.WriteLine(c.getPosistion());
+            //while(true)
+            //    { }
 
 
             //ServerConnection server = new ServerConnection(IPAddress.Parse("127.0.0.1"));

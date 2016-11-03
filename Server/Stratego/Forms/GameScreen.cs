@@ -713,7 +713,7 @@ namespace Stratego.Forms
         private void x8y9_Click(object sender, EventArgs e)
         {
             downHalfClick("x8y9");
-        }
+        } 
 
         private void x9y9_Click(object sender, EventArgs e)
         {
