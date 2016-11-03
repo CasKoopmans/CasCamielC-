@@ -1010,7 +1010,7 @@
             // captain1
             // 
             this.captain1.BackColor = System.Drawing.Color.Transparent;
-            this.captain1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("captain1.BackgroundImage")));
+            this.captain1.BackgroundImage = global::Stratego.Properties.Resources.captain;
             this.captain1.Location = new System.Drawing.Point(1038, 540);
             this.captain1.Name = "captain1";
             this.captain1.Size = new System.Drawing.Size(45, 60);
@@ -1021,7 +1021,7 @@
             // miner4
             // 
             this.miner4.BackColor = System.Drawing.Color.Transparent;
-            this.miner4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("miner4.BackgroundImage")));
+            this.miner4.BackgroundImage = global::Stratego.Properties.Resources.miner;
             this.miner4.Location = new System.Drawing.Point(1038, 474);
             this.miner4.Name = "miner4";
             this.miner4.Size = new System.Drawing.Size(45, 60);
@@ -1032,7 +1032,7 @@
             // scout2
             // 
             this.scout2.BackColor = System.Drawing.Color.Transparent;
-            this.scout2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout2.BackgroundImage")));
+            this.scout2.BackgroundImage = global::Stratego.Properties.Resources.scout;
             this.scout2.Location = new System.Drawing.Point(1038, 408);
             this.scout2.Name = "scout2";
             this.scout2.Size = new System.Drawing.Size(45, 60);
@@ -1054,7 +1054,7 @@
             // lieutenant4
             // 
             this.lieutenant4.BackColor = System.Drawing.Color.Transparent;
-            this.lieutenant4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lieutenant4.BackgroundImage")));
+            this.lieutenant4.BackgroundImage = global::Stratego.Properties.Resources.lieutenant;
             this.lieutenant4.Location = new System.Drawing.Point(987, 540);
             this.lieutenant4.Name = "lieutenant4";
             this.lieutenant4.Size = new System.Drawing.Size(45, 60);
@@ -1065,7 +1065,7 @@
             // miner3
             // 
             this.miner3.BackColor = System.Drawing.Color.Transparent;
-            this.miner3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("miner3.BackgroundImage")));
+            this.miner3.BackgroundImage = global::Stratego.Properties.Resources.miner;
             this.miner3.Location = new System.Drawing.Point(987, 474);
             this.miner3.Name = "miner3";
             this.miner3.Size = new System.Drawing.Size(45, 60);
@@ -1076,7 +1076,7 @@
             // scout1
             // 
             this.scout1.BackColor = System.Drawing.Color.Transparent;
-            this.scout1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout1.BackgroundImage")));
+            this.scout1.BackgroundImage = global::Stratego.Properties.Resources.scout;
             this.scout1.Location = new System.Drawing.Point(987, 408);
             this.scout1.Name = "scout1";
             this.scout1.Size = new System.Drawing.Size(45, 60);
@@ -1087,7 +1087,7 @@
             // colonel2
             // 
             this.colonel2.BackColor = System.Drawing.Color.Transparent;
-            this.colonel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("colonel2.BackgroundImage")));
+            this.colonel2.BackgroundImage = global::Stratego.Properties.Resources.colonel;
             this.colonel2.Location = new System.Drawing.Point(936, 606);
             this.colonel2.Name = "colonel2";
             this.colonel2.Size = new System.Drawing.Size(45, 60);
@@ -1098,7 +1098,7 @@
             // lieutenant3
             // 
             this.lieutenant3.BackColor = System.Drawing.Color.Transparent;
-            this.lieutenant3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lieutenant3.BackgroundImage")));
+            this.lieutenant3.BackgroundImage = global::Stratego.Properties.Resources.lieutenant;
             this.lieutenant3.Location = new System.Drawing.Point(936, 540);
             this.lieutenant3.Name = "lieutenant3";
             this.lieutenant3.Size = new System.Drawing.Size(45, 60);
@@ -1109,7 +1109,7 @@
             // miner2
             // 
             this.miner2.BackColor = System.Drawing.Color.Transparent;
-            this.miner2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("miner2.BackgroundImage")));
+            this.miner2.BackgroundImage = global::Stratego.Properties.Resources.miner;
             this.miner2.Location = new System.Drawing.Point(936, 474);
             this.miner2.Name = "miner2";
             this.miner2.Size = new System.Drawing.Size(45, 60);
@@ -1131,7 +1131,7 @@
             // colonel1
             // 
             this.colonel1.BackColor = System.Drawing.Color.Transparent;
-            this.colonel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("colonel1.BackgroundImage")));
+            this.colonel1.BackgroundImage = global::Stratego.Properties.Resources.colonel;
             this.colonel1.Location = new System.Drawing.Point(885, 606);
             this.colonel1.Name = "colonel1";
             this.colonel1.Size = new System.Drawing.Size(45, 60);
@@ -1142,7 +1142,7 @@
             // lieutenant2
             // 
             this.lieutenant2.BackColor = System.Drawing.Color.Transparent;
-            this.lieutenant2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lieutenant2.BackgroundImage")));
+            this.lieutenant2.BackgroundImage = global::Stratego.Properties.Resources.lieutenant;
             this.lieutenant2.Location = new System.Drawing.Point(885, 540);
             this.lieutenant2.Name = "lieutenant2";
             this.lieutenant2.Size = new System.Drawing.Size(45, 60);
@@ -1153,7 +1153,7 @@
             // miner1
             // 
             this.miner1.BackColor = System.Drawing.Color.Transparent;
-            this.miner1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("miner1.BackgroundImage")));
+            this.miner1.BackgroundImage = global::Stratego.Properties.Resources.miner;
             this.miner1.Location = new System.Drawing.Point(885, 474);
             this.miner1.Name = "miner1";
             this.miner1.Size = new System.Drawing.Size(45, 60);
@@ -1164,7 +1164,7 @@
             // bomb6
             // 
             this.bomb6.BackColor = System.Drawing.Color.Transparent;
-            this.bomb6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bomb6.BackgroundImage")));
+            this.bomb6.BackgroundImage = global::Stratego.Properties.Resources.bomb;
             this.bomb6.Location = new System.Drawing.Point(885, 408);
             this.bomb6.Name = "bomb6";
             this.bomb6.Size = new System.Drawing.Size(45, 60);
@@ -1175,7 +1175,7 @@
             // major3
             // 
             this.major3.BackColor = System.Drawing.Color.Transparent;
-            this.major3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("major3.BackgroundImage")));
+            this.major3.BackgroundImage = global::Stratego.Properties.Resources.major;
             this.major3.Location = new System.Drawing.Point(834, 606);
             this.major3.Name = "major3";
             this.major3.Size = new System.Drawing.Size(45, 60);
@@ -1186,7 +1186,7 @@
             // lieutenant1
             // 
             this.lieutenant1.BackColor = System.Drawing.Color.Transparent;
-            this.lieutenant1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lieutenant1.BackgroundImage")));
+            this.lieutenant1.BackgroundImage = global::Stratego.Properties.Resources.lieutenant;
             this.lieutenant1.Location = new System.Drawing.Point(834, 540);
             this.lieutenant1.Name = "lieutenant1";
             this.lieutenant1.Size = new System.Drawing.Size(45, 60);
@@ -1197,7 +1197,7 @@
             // scout8
             // 
             this.scout8.BackColor = System.Drawing.Color.Transparent;
-            this.scout8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout8.BackgroundImage")));
+            this.scout8.BackgroundImage = global::Stratego.Properties.Resources.scout;
             this.scout8.Location = new System.Drawing.Point(834, 474);
             this.scout8.Name = "scout8";
             this.scout8.Size = new System.Drawing.Size(45, 60);
@@ -1208,7 +1208,7 @@
             // bomb5
             // 
             this.bomb5.BackColor = System.Drawing.Color.Transparent;
-            this.bomb5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bomb5.BackgroundImage")));
+            this.bomb5.BackgroundImage = global::Stratego.Properties.Resources.bomb;
             this.bomb5.Location = new System.Drawing.Point(834, 408);
             this.bomb5.Name = "bomb5";
             this.bomb5.Size = new System.Drawing.Size(45, 60);
@@ -1219,7 +1219,7 @@
             // major2
             // 
             this.major2.BackColor = System.Drawing.Color.Transparent;
-            this.major2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("major2.BackgroundImage")));
+            this.major2.BackgroundImage = global::Stratego.Properties.Resources.major;
             this.major2.Location = new System.Drawing.Point(783, 606);
             this.major2.Name = "major2";
             this.major2.Size = new System.Drawing.Size(45, 60);
@@ -1230,7 +1230,7 @@
             // sergeant4
             // 
             this.sergeant4.BackColor = System.Drawing.Color.Transparent;
-            this.sergeant4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sergeant4.BackgroundImage")));
+            this.sergeant4.BackgroundImage = global::Stratego.Properties.Resources.sergeant;
             this.sergeant4.Location = new System.Drawing.Point(783, 540);
             this.sergeant4.Name = "sergeant4";
             this.sergeant4.Size = new System.Drawing.Size(45, 60);
@@ -1241,7 +1241,7 @@
             // scout7
             // 
             this.scout7.BackColor = System.Drawing.Color.Transparent;
-            this.scout7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout7.BackgroundImage")));
+            this.scout7.BackgroundImage = global::Stratego.Properties.Resources.scout;
             this.scout7.Location = new System.Drawing.Point(783, 474);
             this.scout7.Name = "scout7";
             this.scout7.Size = new System.Drawing.Size(45, 60);
@@ -1252,7 +1252,7 @@
             // bomb4
             // 
             this.bomb4.BackColor = System.Drawing.Color.Transparent;
-            this.bomb4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bomb4.BackgroundImage")));
+            this.bomb4.BackgroundImage = global::Stratego.Properties.Resources.bomb;
             this.bomb4.Location = new System.Drawing.Point(783, 408);
             this.bomb4.Name = "bomb4";
             this.bomb4.Size = new System.Drawing.Size(45, 60);
@@ -1263,7 +1263,7 @@
             // major1
             // 
             this.major1.BackColor = System.Drawing.Color.Transparent;
-            this.major1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("major1.BackgroundImage")));
+            this.major1.BackgroundImage = global::Stratego.Properties.Resources.major;
             this.major1.Location = new System.Drawing.Point(732, 606);
             this.major1.Name = "major1";
             this.major1.Size = new System.Drawing.Size(45, 60);
@@ -1274,7 +1274,7 @@
             // sergeant3
             // 
             this.sergeant3.BackColor = System.Drawing.Color.Transparent;
-            this.sergeant3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sergeant3.BackgroundImage")));
+            this.sergeant3.BackgroundImage = global::Stratego.Properties.Resources.sergeant;
             this.sergeant3.Location = new System.Drawing.Point(732, 540);
             this.sergeant3.Name = "sergeant3";
             this.sergeant3.Size = new System.Drawing.Size(45, 60);
@@ -1285,7 +1285,7 @@
             // scout6
             // 
             this.scout6.BackColor = System.Drawing.Color.Transparent;
-            this.scout6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout6.BackgroundImage")));
+            this.scout6.BackgroundImage = global::Stratego.Properties.Resources.scout;
             this.scout6.Location = new System.Drawing.Point(732, 474);
             this.scout6.Name = "scout6";
             this.scout6.Size = new System.Drawing.Size(45, 60);
@@ -1296,7 +1296,7 @@
             // bomb3
             // 
             this.bomb3.BackColor = System.Drawing.Color.Transparent;
-            this.bomb3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bomb3.BackgroundImage")));
+            this.bomb3.BackgroundImage = global::Stratego.Properties.Resources.bomb;
             this.bomb3.Location = new System.Drawing.Point(732, 408);
             this.bomb3.Name = "bomb3";
             this.bomb3.Size = new System.Drawing.Size(45, 60);
@@ -1307,7 +1307,7 @@
             // captain4
             // 
             this.captain4.BackColor = System.Drawing.Color.Transparent;
-            this.captain4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("captain4.BackgroundImage")));
+            this.captain4.BackgroundImage = global::Stratego.Properties.Resources.captain;
             this.captain4.Location = new System.Drawing.Point(681, 606);
             this.captain4.Name = "captain4";
             this.captain4.Size = new System.Drawing.Size(45, 60);
@@ -1318,7 +1318,7 @@
             // sergeant2
             // 
             this.sergeant2.BackColor = System.Drawing.Color.Transparent;
-            this.sergeant2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sergeant2.BackgroundImage")));
+            this.sergeant2.BackgroundImage = global::Stratego.Properties.Resources.sergeant;
             this.sergeant2.Location = new System.Drawing.Point(681, 540);
             this.sergeant2.Name = "sergeant2";
             this.sergeant2.Size = new System.Drawing.Size(45, 60);
@@ -1329,7 +1329,7 @@
             // scout5
             // 
             this.scout5.BackColor = System.Drawing.Color.Transparent;
-            this.scout5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout5.BackgroundImage")));
+            this.scout5.BackgroundImage = global::Stratego.Properties.Resources.scout;
             this.scout5.Location = new System.Drawing.Point(681, 474);
             this.scout5.Name = "scout5";
             this.scout5.Size = new System.Drawing.Size(45, 60);
@@ -1340,7 +1340,7 @@
             // bomb2
             // 
             this.bomb2.BackColor = System.Drawing.Color.Transparent;
-            this.bomb2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bomb2.BackgroundImage")));
+            this.bomb2.BackgroundImage = global::Stratego.Properties.Resources.bomb;
             this.bomb2.Location = new System.Drawing.Point(681, 408);
             this.bomb2.Name = "bomb2";
             this.bomb2.Size = new System.Drawing.Size(45, 60);
@@ -1351,7 +1351,7 @@
             // captain3
             // 
             this.captain3.BackColor = System.Drawing.Color.Transparent;
-            this.captain3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("captain3.BackgroundImage")));
+            this.captain3.BackgroundImage = global::Stratego.Properties.Resources.captain;
             this.captain3.Location = new System.Drawing.Point(630, 606);
             this.captain3.Name = "captain3";
             this.captain3.Size = new System.Drawing.Size(45, 60);
@@ -1362,7 +1362,7 @@
             // sergeant1
             // 
             this.sergeant1.BackColor = System.Drawing.Color.Transparent;
-            this.sergeant1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sergeant1.BackgroundImage")));
+            this.sergeant1.BackgroundImage = global::Stratego.Properties.Resources.sergeant;
             this.sergeant1.Location = new System.Drawing.Point(630, 540);
             this.sergeant1.Name = "sergeant1";
             this.sergeant1.Size = new System.Drawing.Size(45, 60);
@@ -1373,7 +1373,7 @@
             // scout4
             // 
             this.scout4.BackColor = System.Drawing.Color.Transparent;
-            this.scout4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout4.BackgroundImage")));
+            this.scout4.BackgroundImage = global::Stratego.Properties.Resources.scout;
             this.scout4.Location = new System.Drawing.Point(630, 474);
             this.scout4.Name = "scout4";
             this.scout4.Size = new System.Drawing.Size(45, 60);
@@ -1384,7 +1384,7 @@
             // scout3
             // 
             this.scout3.BackColor = System.Drawing.Color.Transparent;
-            this.scout3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scout3.BackgroundImage")));
+            this.scout3.BackgroundImage = global::Stratego.Properties.Resources.scout;
             this.scout3.Location = new System.Drawing.Point(579, 474);
             this.scout3.Name = "scout3";
             this.scout3.Size = new System.Drawing.Size(45, 60);
@@ -1395,7 +1395,7 @@
             // captain2
             // 
             this.captain2.BackColor = System.Drawing.Color.Transparent;
-            this.captain2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("captain2.BackgroundImage")));
+            this.captain2.BackgroundImage = global::Stratego.Properties.Resources.captain;
             this.captain2.Location = new System.Drawing.Point(579, 606);
             this.captain2.Name = "captain2";
             this.captain2.Size = new System.Drawing.Size(45, 60);
@@ -1406,7 +1406,7 @@
             // miner5
             // 
             this.miner5.BackColor = System.Drawing.Color.Transparent;
-            this.miner5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("miner5.BackgroundImage")));
+            this.miner5.BackgroundImage = global::Stratego.Properties.Resources.miner;
             this.miner5.Location = new System.Drawing.Point(579, 540);
             this.miner5.Name = "miner5";
             this.miner5.Size = new System.Drawing.Size(45, 60);
@@ -1417,6 +1417,7 @@
             // bomb1
             // 
             this.bomb1.BackColor = System.Drawing.Color.Transparent;
+            this.bomb1.BackgroundImage = global::Stratego.Properties.Resources.bomb;
             this.bomb1.Image = global::Stratego.Properties.Resources.bomb;
             this.bomb1.Location = new System.Drawing.Point(630, 408);
             this.bomb1.Name = "bomb1";
@@ -1428,6 +1429,7 @@
             // flag
             // 
             this.flag.BackColor = System.Drawing.Color.Transparent;
+            this.flag.BackgroundImage = global::Stratego.Properties.Resources.flag1;
             this.flag.Image = global::Stratego.Properties.Resources.flag1;
             this.flag.Location = new System.Drawing.Point(579, 408);
             this.flag.Name = "flag";
