@@ -30,8 +30,6 @@ namespace Server
             bool disconnect = false;
             while (!disconnect)
             {
-                if (!ingame)
-                {
                     String msg = readStream(stream);
                     String[] command = msg.Split('_');
                     Console.WriteLine(name + " send : " + command[0]);
@@ -83,15 +81,6 @@ namespace Server
                             }
                             break;
                         default: Console.WriteLine("invalid command " + command[0] + " by " + name); break;
-                    }
-                }
-                else
-                {
-
-                    while (ingame)
-                    {
-
-                    }
                 }
             }
         }

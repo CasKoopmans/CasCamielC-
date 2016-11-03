@@ -11,9 +11,10 @@ namespace Stratego
 {
     public class ServerConnection
     {
-        private IPAddress serverIP = IPAddress.Parse("127.0.0.1");
+        private IPAddress serverIP = IPAddress.Parse("145.48.118.116");
         NetworkStream stream { get; }
         public string opponentName;
+        bool ingame = false;
 
         public ServerConnection()
         {
@@ -61,6 +62,7 @@ namespace Stratego
             {
                 opponentName = response[1];
             }
+            
         }
 
         public List<String> getSearchingClients()
