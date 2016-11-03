@@ -1098,18 +1098,18 @@ namespace Stratego.Forms
                     {
                         if(characters[i].getPosistion() == position)
                         {
-                            
-                            if(characters[i].isRed != isRed)
+
+                            if (characters[i].isRed != isRed)
                             {
                                 available = false;
                                 int xp = position[1];
                                 int yp = position[3];
 
-                                if(characters[i].getPositionX() == xp - 1 && characters[i].getPositionY() == yp)
+                                if (characters[i].getPositionX() == xp - 1 && characters[i].getPositionY() == yp)
                                 {
                                     fight(characters[i], positionSelected);
                                 }
-                                else if(characters[i].getPositionX() == xp + 1 && characters[i].getPositionY() == yp)
+                                else if (characters[i].getPositionX() == xp + 1 && characters[i].getPositionY() == yp)
                                 {
                                     fight(characters[i], positionSelected);
                                 }
@@ -1123,6 +1123,8 @@ namespace Stratego.Forms
                                 }
                                 myTurn = !myTurn;
                             }
+                            else
+                                return;
                         }
                         
                     }
