@@ -25,6 +25,7 @@ namespace Stratego
             FormClosing += formClosing;
             InitializeComponent(); 
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            
         }
 
         private void formClosing(object sender, FormClosingEventArgs e)
@@ -36,6 +37,11 @@ namespace Stratego
 
         private void backButon_Click(object sender, EventArgs e)
         {
+            string stringie = "x2y2";
+            char x = stringie[1];
+            int xx = Int32.Parse(x.ToString());
+            Console.WriteLine("x: " + xx + "------------------------");
+
             this.BackgroundImage = global::Stratego.Properties.Resources.startscreenlogo;
             label1.Visible = false;
             label2.Visible = false;

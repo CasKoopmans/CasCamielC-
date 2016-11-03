@@ -1022,7 +1022,8 @@ namespace Stratego.Forms
                 ConfirmSetup.Visible = false;
                 errorlabel.Visible = false;
                 gameStarted = true;
-                myTurn = StartScreen.ServerConnection.yourTurn;
+            //myTurn = StartScreen.ServerConnection.yourTurn;
+            myTurn = true;
 
                 while (!StartScreen.ServerConnection.setup)
                 {
@@ -1059,16 +1060,68 @@ namespace Stratego.Forms
                 {
                     for (int i = 0; i<characters.Count; i++)
                     {
-                        if(characters[i].getPosistion() == positionSelected)
+                        if(characters[i].getPosistion() == position)
                         {
                             if(characters[i].isRed != isRed)
                             {
+                                int xp = position[1];
+                                int yp = position[3];
 
+                                if(characters[i].getPositionX() == xp - 1 && characters[i].getPositionY() == yp)
+                                {
+                                    fight(characters[i], positionSelected);
+                                }
+                                else if(characters[i].getPositionX() == xp + 1 && characters[i].getPositionY() == yp)
+                                {
+                                    fight(characters[i], positionSelected);
+                                }
+                                else if (characters[i].getPositionX() == xp && characters[i].getPositionY() == yp - 1)
+                                {
+                                    fight(characters[i], positionSelected);
+                                }
+                                else if (characters[i].getPositionX() == xp && characters[i].getPositionY() == yp + 1)
+                                {
+                                    fight(characters[i], positionSelected);
+                                }
                             }
                         }
-                        else if (position == positionSelected)
+                        else
                         {
+                            char x = position[1];
+                            int xp = Int32.Parse(x.ToString());
 
+                            char y = position[1];
+                            int yp = Int32.Parse(y.ToString());
+
+                            char xx = positionSelected[1];
+                            int xs = Int32.Parse(xx.ToString());
+                            char yy = positionSelected[3];
+                            int ys = Int32.Parse(yy.ToString());
+
+                            if (xs == xp - 1 && ys == yp)
+                            {
+                                characters[i].setPosistion(position);
+                                GameScreen_Load();
+                                selected = false;
+                            }
+                            else if (xs == xp + 1 && ys == yp)
+                            {
+                                characters[i].setPosistion(position);
+                                GameScreen_Load();
+                                selected = false;
+                            }
+                            else if (xs == xp && ys == yp - 1)
+                            {
+                                characters[i].setPosistion(position);
+                                GameScreen_Load();
+                                selected = false;
+                            }
+                            else if (xs == xp && ys == yp + 1)
+                            {
+                                characters[i].setPosistion(position);
+                                GameScreen_Load();
+                                selected = false;
+                            }
                         }
                     }
                 }
@@ -1079,8 +1132,11 @@ namespace Stratego.Forms
                         if(characters[i].isRed == isRed)
                         {
                             if(characters[i].getPosistion() == position)
-                            tempRank = characters[i].rank;
-                            positionSelected = position;
+                            {
+                                tempRank = characters[i].rank;
+                                positionSelected = position;
+                                selected = true;
+                            }
                         }
                     }
                 }
@@ -1102,6 +1158,89 @@ namespace Stratego.Forms
                     characters.Add(new Character(tempRank, isBomb, isFlag, isRed, position));
                     setImage(tempRank, position);
                     selected = false;
+                }
+            }
+
+            if (gameStarted && myTurn)
+            {
+                if (selected)
+                {
+                    for (int i = 0; i < characters.Count; i++)
+                    {
+                        if (characters[i].getPosistion() == position)
+                        {
+                            if (characters[i].isRed != isRed)
+                            {
+                                int xp = position[1];
+                                int yp = position[3];
+
+                                if (characters[i].getPositionX() == xp - 1 && characters[i].getPositionY() == yp)
+                                {
+                                    fight(characters[i], positionSelected);
+                                }
+                                else if (characters[i].getPositionX() == xp + 1 && characters[i].getPositionY() == yp)
+                                {
+                                    fight(characters[i], positionSelected);
+                                }
+                                else if (characters[i].getPositionX() == xp && characters[i].getPositionY() == yp - 1)
+                                {
+                                    fight(characters[i], positionSelected);
+                                }
+                                else if (characters[i].getPositionX() == xp && characters[i].getPositionY() == yp + 1)
+                                {
+                                    fight(characters[i], positionSelected);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            char x = position[1];
+                            int xp = Int32.Parse(x.ToString());
+
+                            char y = position[1];
+                            int yp = Int32.Parse(y.ToString());
+
+                            char xx = positionSelected[1];
+                            int xs = Int32.Parse(xx.ToString());
+                            char yy = positionSelected[3];
+                            int ys = Int32.Parse(yy.ToString());
+
+                            if (xs == xp - 1 && ys == yp)
+                            {
+                                characters[i].setPosistion(position);
+                                GameScreen_Load();
+                            }
+                            else if (xs == xp + 1 && ys == yp)
+                            {
+                                characters[i].setPosistion(position);
+                                GameScreen_Load();
+                            }
+                            else if (xs == xp && ys == yp - 1)
+                            {
+                                characters[i].setPosistion(position);
+                                GameScreen_Load();
+                            }
+                            else if (xs == xp && ys == yp + 1)
+                            {
+                                characters[i].setPosistion(position);
+                                GameScreen_Load();
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < characters.Count; i++)
+                    {
+                        if (characters[i].isRed == isRed)
+                        {
+                            if (characters[i].getPosistion() == position)
+                            {
+                                tempRank = characters[i].rank;
+                                positionSelected = position;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1128,6 +1267,77 @@ namespace Stratego.Forms
         private void paint(string position)
         {
             this.Controls[position].BackColor = Color.Red;
+        }
+
+        public void fight(Character attacker, string positiondefender)
+        {
+            Character defender= null;
+            for(int i = 0; i<characters.Count; i++)
+            {
+                if (characters[i].getPosistion() == positiondefender)
+                    defender = characters[i];
+            }
+
+            switch (attacker.name)
+            {
+                case "Spy":
+                    {
+                        if (defender.name == "Marshall")
+                        {
+                            characters.Remove(defender);
+                            attacker.setPosistion(defender.getPosistion());
+                            GameScreen_Load();
+                            return;
+                        }
+                    }
+                    break;
+                case "Miner":
+                    {
+                        if (defender.name == "Bomb")
+                        {
+                            characters.Remove(defender);
+                            attacker.setPosistion(defender.getPosistion());
+                            GameScreen_Load();
+                            return;
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            }
+            switch (defender.name)
+            {
+                case "Bomb":
+                    characters.Remove(attacker);
+                    defender.setPosistion(attacker.getPosistion());
+                    break;
+                case "Flag":
+                    Console.WriteLine("YOU WIN");
+                    break;
+                default:
+                    {
+                        if (attacker.rank > defender.rank)
+                        {
+                            characters.Remove(defender);
+                            attacker.setPosistion(defender.getPosistion());
+                        }
+
+                        else if (attacker.rank < defender.rank)
+                        {
+                            characters.Remove(attacker);
+                            defender.setPosistion(attacker.getPosistion());
+                        }
+
+                        else if (attacker.rank == defender.rank)
+                        {
+                            characters.Remove(attacker);
+                            characters.Remove(defender);
+                        }
+                    }
+                    break;
+            }
+            selected = false;
+            GameScreen_Load();
         }
     }
 }
