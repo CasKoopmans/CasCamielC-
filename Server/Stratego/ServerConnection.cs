@@ -21,6 +21,11 @@ namespace Stratego
 
         }
 
+        public void closeStream()
+        {
+            stream.Close();
+        }
+
         public void disconnect()
         {
             writeToStream(stream, "disconnect_");
