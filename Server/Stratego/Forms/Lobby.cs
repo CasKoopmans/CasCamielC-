@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -80,12 +81,18 @@ namespace Stratego.Forms
 
         private void searchButton_Click(object sender, EventArgs e)
         {
+            SearchForm searchForm = new SearchForm();
+            searchForm.Visible = true;
+            Visible = false;
             StartScreen.ServerConnection.findMatch();
         }
 
-        private void searchingBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void selectButton_Click(object sender, EventArgs e)
         {
-
+            if (searchingBox.Text != "" || searchingBox.Text != null)
+            {
+                StartScreen.ServerConnection.selectMatch(searchingBox.Text);
+            }
         }
     }
 }

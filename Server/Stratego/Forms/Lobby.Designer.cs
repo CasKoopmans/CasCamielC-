@@ -35,6 +35,7 @@
             this.searchingBox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.searchButton = new System.Windows.Forms.Button();
+            this.selectButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // onlineBox
@@ -54,9 +55,9 @@
             this.refreshButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("refreshButton.BackgroundImage")));
             this.refreshButton.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshButton.ForeColor = System.Drawing.Color.Silver;
-            this.refreshButton.Location = new System.Drawing.Point(460, 289);
+            this.refreshButton.Location = new System.Drawing.Point(460, 304);
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(125, 75);
+            this.refreshButton.Size = new System.Drawing.Size(125, 60);
             this.refreshButton.TabIndex = 11;
             this.refreshButton.Text = "Refresh";
             this.refreshButton.UseVisualStyleBackColor = false;
@@ -83,7 +84,6 @@
             this.searchingBox.Name = "searchingBox";
             this.searchingBox.Size = new System.Drawing.Size(186, 314);
             this.searchingBox.TabIndex = 13;
-            this.searchingBox.SelectedIndexChanged += new System.EventHandler(this.searchingBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -102,19 +102,34 @@
             this.searchButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchButton.BackgroundImage")));
             this.searchButton.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.ForeColor = System.Drawing.Color.Silver;
-            this.searchButton.Location = new System.Drawing.Point(460, 208);
+            this.searchButton.Location = new System.Drawing.Point(460, 238);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(125, 75);
+            this.searchButton.Size = new System.Drawing.Size(125, 60);
             this.searchButton.TabIndex = 15;
             this.searchButton.Text = "Find Match";
             this.searchButton.UseVisualStyleBackColor = false;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // selectButton
+            // 
+            this.selectButton.BackColor = System.Drawing.Color.Transparent;
+            this.selectButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("selectButton.BackgroundImage")));
+            this.selectButton.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectButton.ForeColor = System.Drawing.Color.Silver;
+            this.selectButton.Location = new System.Drawing.Point(460, 172);
+            this.selectButton.Name = "selectButton";
+            this.selectButton.Size = new System.Drawing.Size(125, 60);
+            this.selectButton.TabIndex = 16;
+            this.selectButton.Text = "Select Player";
+            this.selectButton.UseVisualStyleBackColor = false;
+            this.selectButton.Click += new System.EventHandler(this.selectButton_Click);
             // 
             // Lobby
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackgroundImage = global::Stratego.Properties.Resources.startscreen;
             this.ClientSize = new System.Drawing.Size(597, 393);
+            this.Controls.Add(this.selectButton);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.searchingBox);
@@ -139,5 +154,6 @@
         private System.Windows.Forms.ListBox searchingBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Button selectButton;
     }
 }
