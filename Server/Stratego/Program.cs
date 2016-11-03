@@ -16,12 +16,18 @@ namespace Stratego
         [STAThread]
         static void Main()
         {
+<<<<<<< HEAD
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new StartScreen());
             //new Test();
 
+=======
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new StartScreen());
+>>>>>>> 31c6b7a8ed87c47cb3b453e3e14789fdd7d5b861
         }
     }
 }
