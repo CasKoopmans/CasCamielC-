@@ -14,7 +14,7 @@ namespace Stratego.Forms
     public partial class GameScreen : Form
     {
         private string opponent, positionSelected;
-        private int tempRank;
+        private int tempRank, tempChar;
         private bool isRed, isFlag, isBomb, gameStarted = false, selected = false, myTurn;
         private List<Character> characters = new List<Character>();
 
@@ -1090,7 +1090,7 @@ namespace Stratego.Forms
                             char x = position[1];
                             int xp = Int32.Parse(x.ToString());
 
-                            char y = position[1];
+                            char y = position[3];
                             int yp = Int32.Parse(y.ToString());
 
                             char xx = positionSelected[1];
@@ -1133,9 +1133,12 @@ namespace Stratego.Forms
                         {
                             if(characters[i].getPosistion() == position)
                             {
+
+                                tempChar = i;
                                 tempRank = characters[i].rank;
                                 positionSelected = position;
                                 selected = true;
+                                break;
                             }
                         }
                     }
@@ -1197,7 +1200,7 @@ namespace Stratego.Forms
                             char x = position[1];
                             int xp = Int32.Parse(x.ToString());
 
-                            char y = position[1];
+                            char y = position[3];
                             int yp = Int32.Parse(y.ToString());
 
                             char xx = positionSelected[1];
@@ -1236,8 +1239,11 @@ namespace Stratego.Forms
                         {
                             if (characters[i].getPosistion() == position)
                             {
+                                tempChar = i;
                                 tempRank = characters[i].rank;
                                 positionSelected = position;
+                                selected = true;
+                                break;
                             }
                         }
                     }
