@@ -85,6 +85,7 @@ namespace Stratego.Forms
             searchForm.Visible = true;
             Visible = false;
             StartScreen.ServerConnection.findMatch();
+            searchForm.Visible = false;
             GameScreen gameScreen = new GameScreen(StartScreen.ServerConnection.opponentName);
             gameScreen.Visible = true;
         }
@@ -94,6 +95,9 @@ namespace Stratego.Forms
             if (searchingBox.Text != "" || searchingBox.Text != null)
             {
                 StartScreen.ServerConnection.selectMatch(searchingBox.Text);
+                Visible = false;
+                GameScreen gameScreen = new GameScreen(StartScreen.ServerConnection.opponentName);
+                gameScreen.Visible = true;
             }
         }
     }
