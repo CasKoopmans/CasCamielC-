@@ -14,6 +14,7 @@ namespace Server
         public bool findingMatch { set; get; }
         NetworkStream stream { get; }
         Client opponent { get; set; }
+        bool ingame = false;
         Server server { get; }
         public Client(String name, NetworkStream stream,Server server)
         {
@@ -29,57 +30,69 @@ namespace Server
             bool disconnect = false;
             while (!disconnect)
             {
-                String msg = readStream(stream);
-                String[] command = msg.Split('_');
-                Console.WriteLine(name +" send : "+command[0]);
-                switch (command[0])
+                if (!ingame)
                 {
-                    case "disconnect":
-                        {
-                            writeToStream(stream,"OK");
-                            server.removeClient(name);
-                            disconnect = true;
-                        }
-                        break;
-                    case "selectmatch":
-                        {
-                            opponent = server.getClient(command[1]);
-                            opponent.opponent = this;
-                            writeToStream(stream, "matchfound_"+opponent.name);
-                        }
-                        break;
-                    case "getonlineclients":
-                        {
-                            List<String> onlineClients = server.getOnlineClients();
-                            //onlineClients.Remove(name);  //test purpuse
-                            foreach (String s in onlineClients)
+                    String msg = readStream(stream);
+                    String[] command = msg.Split('_');
+                    Console.WriteLine(name + " send : " + command[0]);
+                    switch (command[0])
+                    {
+                        case "disconnect":
                             {
-                                writeToStream(stream, s);
+                                writeToStream(stream, "OK");
+                                server.removeClient(name);
+                                disconnect = true;
                             }
-                            writeToStream(stream, "getonlineclientsdone");
-                        }
-                        break;
-                    case "findmatch":
-                        {
-                            findingMatch = true;
-                            while (opponent == null)
-                            { }
-                            writeToStream(stream, "matchfound_" + opponent.name);
+                            break;
+                        case "selectmatch":
+                            {
+                                opponent = server.getClient(command[1]);
+                                opponent.opponent = this;
+                                writeToStream(stream, "matchfound_" + opponent.name);
+                            }
+                            break;
+                        case "getonlineclients":
+                            {
+                                List<String> onlineClients = server.getOnlineClients();
+                                //onlineClients.Remove(name);  //test purpuse
+                                foreach (String s in onlineClients)
+                                {
+                                    writeToStream(stream, s);
+                                }
+                                writeToStream(stream, "getonlineclientsdone");
+                            }
+                            break;
+                        case "findmatch":
+                            {
+                                findingMatch = true;
+                                while (opponent == null)
+                                { }
+                                findingMatch = false;
+                                writeToStream(stream, "matchfound_" + opponent.name);
 
-                        }
-                        break;
-                    case "getsearchingclients":
-                        {
-                            List<String> searchingClients = server.getSearchingClients();
-                            foreach (String s in searchingClients)
-                            {
-                                writeToStream(stream, s);
                             }
-                            writeToStream(stream, "getsearchingclientsdone");
-                        }
-                        break;
-                    default: Console.WriteLine("invalid command "+command[0]+" by " + name);break;
-                }   
+                            break;
+                        case "getsearchingclients":
+                            {
+                                List<String> searchingClients = server.getSearchingClients();
+                                foreach (String s in searchingClients)
+                                {
+                                    writeToStream(stream, s);
+                                }
+                                writeToStream(stream, "getsearchingclientsdone");
+                            }
+                            break;
+                        default: Console.WriteLine("invalid command " + command[0] + " by " + name); break;
+                    }
+                }
+                else
+                {
+
+                    while (ingame)
+                    {
+
+                    }
+                }
             }
         }
 

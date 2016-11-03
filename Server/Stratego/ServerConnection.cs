@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using Newtonsoft.Json;
 
 namespace Stratego
 {
@@ -33,6 +34,11 @@ namespace Stratego
             readStream(stream);
             stream.Close(100);
         }
+
+        //public void sendBoard(Board board)
+        //{
+        //    JsonConvert.SerializeObject(board);
+        //}
 
         public void selectMatch(String opponentName)
         {
