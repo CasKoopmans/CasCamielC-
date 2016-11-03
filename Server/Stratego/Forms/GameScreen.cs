@@ -14,7 +14,7 @@ namespace Stratego.Forms
     {
         private string opponent;
         private int tempRank;
-        private bool isRed, isFlag, isBomb, gameStarted = false;
+        private bool isRed, isFlag, isBomb, gameStarted = false, selected = false;
         private List<Character> characters = new List<Character>();
 
         public GameScreen(string opponent)
@@ -61,201 +61,409 @@ namespace Stratego.Forms
             tempRank = 0;
             isFlag = true;
             isBomb = false;
+            selected = true;
         }
 
         private void bomb1_Click(object sender, EventArgs e)
         {
-
+            bomb1.Visible = false;
+            tempRank = 11;
+            isFlag = false;
+            isBomb = true;
+            selected = true;
         }
 
         private void bomb2_Click(object sender, EventArgs e)
         {
-
+            bomb2.Visible = false;
+            tempRank = 11;
+            isFlag = false;
+            isBomb = true;
+            selected = true;
         }
 
         private void bomb3_Click(object sender, EventArgs e)
         {
-
+            bomb3.Visible = false;
+            tempRank = 11;
+            isFlag = false;
+            isBomb = true;
+            selected = true;
         }
 
         private void bomb4_Click(object sender, EventArgs e)
         {
-
+            bomb4.Visible = false;
+            tempRank = 11;
+            isFlag = false;
+            isBomb = true;
+            selected = true;
         }
 
         private void bomb5_Click(object sender, EventArgs e)
         {
-
+            bomb5.Visible = false;
+            tempRank = 11;
+            isFlag = false;
+            isBomb = true;
+            selected = true;
         }
 
         private void bomb6_Click(object sender, EventArgs e)
         {
-
+            bomb6.Visible = false;
+            tempRank = 11;
+            isFlag = false;
+            isBomb = true;
+            selected = true;
         }
 
         private void spy_Click(object sender, EventArgs e)
         {
-
+            spy.Visible = false;
+            tempRank = 1;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void scout1_Click(object sender, EventArgs e)
         {
-
+            scout1.Visible = false;
+            tempRank = 2;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void scout2_Click(object sender, EventArgs e)
         {
-
+            scout2.Visible = false;
+            tempRank = 2;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void scout3_Click(object sender, EventArgs e)
         {
-
+            scout3.Visible = false;
+            tempRank = 2;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void scout4_Click(object sender, EventArgs e)
         {
-
+            scout4.Visible = false;
+            tempRank = 2;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void scout5_Click(object sender, EventArgs e)
         {
-
+            scout5.Visible = false;
+            tempRank = 2;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void scout6_Click(object sender, EventArgs e)
         {
-
+            scout6.Visible = false;
+            tempRank = 2;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void scout7_Click(object sender, EventArgs e)
         {
-
+            scout7.Visible = false;
+            tempRank = 2;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void scout8_Click(object sender, EventArgs e)
         {
-
+            scout8.Visible = false;
+            tempRank = 2;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void miner1_Click(object sender, EventArgs e)
         {
-
+            miner1.Visible = false;
+            tempRank = 3;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void miner2_Click(object sender, EventArgs e)
         {
-
+            miner2.Visible = false;
+            tempRank = 3;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void miner3_Click(object sender, EventArgs e)
         {
-
+            miner3.Visible = false;
+            tempRank = 3;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void miner4_Click(object sender, EventArgs e)
         {
-
+            miner4.Visible = false;
+            tempRank = 3;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void miner5_Click(object sender, EventArgs e)
         {
-
+            miner5.Visible = false;
+            tempRank = 3;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void sergeant1_Click(object sender, EventArgs e)
         {
-
+            sergeant1.Visible = false;
+            tempRank = 4;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void sergeant2_Click(object sender, EventArgs e)
         {
-
+            sergeant2.Visible = false;
+            tempRank = 4;
+            isFlag = false;
+            isBomb = false;
+            selected = true;
         }
 
         private void sergeant3_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                sergeant3.Visible = false;
+                tempRank = 4;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void sergeant4_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                sergeant4.Visible = false;
+                tempRank = 4;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void lieutenant1_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                lieutenant1.Visible = false;
+                tempRank = 5;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void lieutenant2_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                lieutenant2.Visible = false;
+                tempRank = 5;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void lieutenant3_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                lieutenant3.Visible = false;
+                tempRank = 5;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void lieutenant4_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                lieutenant4.Visible = false;
+                tempRank = 5;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void captain1_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                captain1.Visible = false;
+                tempRank = 6;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void captain2_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                captain2.Visible = false;
+                tempRank = 6;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void captain3_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                captain3.Visible = false;
+                tempRank = 6;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void captain4_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                captain4.Visible = false;
+                tempRank = 6;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void major1_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                major1.Visible = false;
+                tempRank = 7;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void major2_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                major2.Visible = false;
+                tempRank = 7;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void major3_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                major3.Visible = false;
+                tempRank = 7;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void colonel1_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                colonel1.Visible = false;
+                tempRank = 8;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void colonel2_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                colonel2.Visible = false;
+                tempRank = 8;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void general_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                general.Visible = false;
+                tempRank = 9;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
 
         private void marshall_Click(object sender, EventArgs e)
         {
-
+            if (!selected)
+            {
+                marshall.Visible = false;
+                tempRank = 10;
+                isFlag = false;
+                isBomb = false;
+                selected = true;
+            }
         }
         #endregion
 
@@ -728,25 +936,59 @@ namespace Stratego.Forms
 
         private void topHalfClick(string position)
         {
-            if (!isRed && !gameStarted)
+            if (!isRed && !gameStarted && selected)
             {
-                characters.Add(new Character(tempRank, isBomb, isFlag, isRed, position));
-                setImage(tempRank, position);
+                for (int i = 0; i<characters.Count; i++)
+                {
+                    if (characters[i].getPosistion() == position)
+                        return;
+                }
+
+                if (position != "x0y4" && position != "x1y4" && position != "x4y4" && position != "x5y4" && position != "x8y4" && position != "x9y4")
+                {
+                    characters.Add(new Character(tempRank, isBomb, isFlag, isRed, position));
+                    setImage(tempRank, position);
+                    selected = false;
+                }
             }
         }
 
         private void downHalfClick(string position)
         {
-            if (isRed && !gameStarted)
+            if (isRed && !gameStarted && selected)
             {
-                characters.Add(new Character(tempRank, isBomb, isFlag, isRed, position));
+                for (int i = 0; i < characters.Count; i++)
+                {
+                    if (characters[i].getPosistion() == position)
+                        return;
+                }
+
+                if (position != "x0y5" && position != "x1y5" && position != "x4y5" && position != "x5y5" && position != "x8y5" && position != "x9y5")
+                {
+                    characters.Add(new Character(tempRank, isBomb, isFlag, isRed, position));
+                    setImage(tempRank, position);
+                    selected = false;
+                }
             }
         }
 
-        private void setImage(int tempRank, string position)
+        private void setImage(int rank, string position)
         {
-            if(tempRank == 0)
-                this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.flag1;
+            switch (rank)
+            {
+                case 0:     this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.flag1;      break;
+                case 1:     this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.spy;        break;
+                case 2:     this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.scout;      break;
+                case 3:     this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.miner;      break;
+                case 4:     this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.sergeant;   break;
+                case 5:     this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.lieutenant; break;
+                case 6:     this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.captain;    break;
+                case 7:     this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.major;      break;
+                case 8:     this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.colonel;    break;
+                case 9:     this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.general;    break;
+                case 10:    this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.marshall;   break;
+                case 11:    this.Controls[position].BackgroundImage = global::Stratego.Properties.Resources.bomb;       break;
+            }
         }
     }
 }
