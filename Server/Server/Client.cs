@@ -107,9 +107,8 @@ namespace Server
 
                         case "gameturn":
                             {
-                                characters = readStream(stream);
+                                characters = command[1];
                                 opponent.characters = characters;
-                                sendCharacters();
                                 opponent.sendCharacters();
                                 
                             }

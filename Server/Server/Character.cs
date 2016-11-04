@@ -47,6 +47,21 @@ namespace Server
         {
             return "x" + x + "y" + y;
         }
+
+        public int getPositionX()
+        {
+            char x = position[1];
+            int xx = Int32.Parse(x.ToString());
+            return xx;
+        }
+
+        public int getPositionY()
+        {
+            char y = position[3];
+            int yy = Int32.Parse(y.ToString());
+            return yy;
+        }
+
         public string getPosistion()
         {
             return position;

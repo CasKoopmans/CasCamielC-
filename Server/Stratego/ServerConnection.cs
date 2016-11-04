@@ -19,6 +19,7 @@ namespace Stratego
         public bool setup = false;
         public bool isRed;
         public bool gaming = false;
+        public bool ready = false;
         public List<Character> characters { get; set; }
         Thread ingame;
 
@@ -109,11 +110,11 @@ namespace Stratego
                     {
                         writeToStream(stream, "gameturn_" + JsonConvert.SerializeObject(characters));
                         yourTurn = false;
-                        turndone = false;
+                        turndone = false;                       
                     }
                     else if(!yourTurn)
-                    {
-                        characters = (List<Character>) JsonConvert.DeserializeObject<List<Character>>(readStream(stream));
+                    {                      
+                        characters = (List<Character>)JsonConvert.DeserializeObject<List<Character>>(readStream(stream));
                         yourTurn = true;
                         turndone = false;
                     }
